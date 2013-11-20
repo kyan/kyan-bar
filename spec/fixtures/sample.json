@@ -1,0 +1,1015 @@
+{
+  "rating": {
+    "positive_ratings": [
+      "Gav"
+    ],
+    "rating_class": "positive_1",
+    "negative_ratings": [],
+    "file": "gavin/John Grant/Pale Green Ghosts/09 Ernest Borgnine.mp3",
+    "rating": 1
+  },
+  "track": {
+    "artist": "John Grant",
+    "added_by": "Gav",
+    "dbid": 29404,
+    "rating": 1,
+    "file": "gavin/John Grant/Pale Green Ghosts/09 Ernest Borgnine.mp3",
+    "title": "Ernest Borgnine",
+    "duration": "04:53",
+    "album": "Pale Green Ghosts",
+    "artwork_url": "http://ecx.images-amazon.com/images/I/51OTk9vdQML.jpg",
+    "rating_class": "positive_1"
+  },
+  "volume": "59",
+  "state": "play",
+  "time": "40",
+  "playlist": {
+    "current_track": "gavin/John Grant/Pale Green Ghosts/09 Ernest Borgnine.mp3",
+    "tracks": [
+      {
+        "negative_ratings": [],
+        "kyan_track": {
+          "track": {
+            "negative_ratings": [],
+            "owner": "robert",
+            "id": 193398,
+            "created_at": "2013-10-15T12:26:06Z",
+            "positive_ratings": [
+              "PS"
+            ],
+            "filename": "robert/BLDG5_Ground_Floor/09 - Astronauts, etc - sadie.mp3",
+            "updated_at": "2013-11-19T15:34:00Z",
+            "current_rating": 1,
+            "rating_class": "positive_1",
+            "artwork_url": null
+          }
+        },
+        "album": "Ground Floor",
+        "file": "robert/BLDG5_Ground_Floor/09 - Astronauts, etc - sadie.mp3",
+        "pos": 0,
+        "dbid": 29390,
+        "eta": "",
+        "rating": 1,
+        "time": "200",
+        "added_by": "RE",
+        "rating_class": "positive_1",
+        "title": "Sadie",
+        "positive_ratings": [
+          "PS"
+        ],
+        "song_id": 29390,
+        "track": "09",
+        "duration": "03:20",
+        "artwork_url": null,
+        "artist": "Astronauts, etc",
+        "current_song_position": 14
+      },
+      {
+        "negative_ratings": [],
+        "kyan_track": {
+          "track": {
+            "negative_ratings": [],
+            "owner": "robert",
+            "id": 193397,
+            "created_at": "2013-10-15T12:26:06Z",
+            "positive_ratings": [
+              "PS",
+              "RE"
+            ],
+            "filename": "robert/BLDG5_Ground_Floor/10 - Rotem Or - Whois.mp3",
+            "updated_at": "2013-11-19T15:34:01Z",
+            "current_rating": 2,
+            "rating_class": "positive_2",
+            "artwork_url": null
+          }
+        },
+        "album": "Ground Floor",
+        "file": "robert/BLDG5_Ground_Floor/10 - Rotem Or - Whois.mp3",
+        "pos": 1,
+        "dbid": 29391,
+        "eta": "",
+        "rating": 2,
+        "time": "288",
+        "added_by": "RE",
+        "rating_class": "positive_2",
+        "title": "Whois",
+        "positive_ratings": [
+          "PS",
+          "RE"
+        ],
+        "song_id": 29391,
+        "track": "10",
+        "duration": "04:48",
+        "artwork_url": null,
+        "artist": "Rotem Or",
+        "current_song_position": 14
+      },
+      {
+        "negative_ratings": [],
+        "kyan_track": {
+          "track": {
+            "negative_ratings": [],
+            "owner": "robert",
+            "id": 193391,
+            "created_at": "2013-10-15T12:26:05Z",
+            "positive_ratings": [
+              "RE"
+            ],
+            "filename": "robert/BLDG5_Ground_Floor/11 - Garden City Movement - Move On (Teen Daze Rmx).mp3",
+            "updated_at": "2013-11-19T15:38:24Z",
+            "current_rating": 1,
+            "rating_class": "positive_1",
+            "artwork_url": null
+          }
+        },
+        "album": "Ground Floor",
+        "file": "robert/BLDG5_Ground_Floor/11 - Garden City Movement - Move On (Teen Daze Rmx).mp3",
+        "pos": 2,
+        "dbid": 29392,
+        "eta": "",
+        "rating": 1,
+        "time": "312",
+        "added_by": "RE",
+        "rating_class": "positive_1",
+        "title": "Move On (Teen Daze Rmx)",
+        "positive_ratings": [
+          "RE"
+        ],
+        "song_id": 29392,
+        "track": "11",
+        "duration": "05:12",
+        "artwork_url": null,
+        "artist": "Garden City Movement",
+        "current_song_position": 14
+      },
+      {
+        "negative_ratings": [],
+        "kyan_track": {
+          "track": {
+            "negative_ratings": [],
+            "owner": "robert",
+            "id": 193393,
+            "created_at": "2013-10-15T12:26:06Z",
+            "positive_ratings": [
+              "ⓡⓦ"
+            ],
+            "filename": "robert/BLDG5_Ground_Floor/13 - 3421 - Dropping.mp3",
+            "updated_at": "2013-11-19T15:38:24Z",
+            "current_rating": 1,
+            "rating_class": "positive_1",
+            "artwork_url": null
+          }
+        },
+        "album": "Ground Floor",
+        "file": "robert/BLDG5_Ground_Floor/13 - 3421 - Dropping.mp3",
+        "pos": 3,
+        "dbid": 29393,
+        "eta": "",
+        "rating": 1,
+        "time": "336",
+        "added_by": "RE",
+        "rating_class": "positive_1",
+        "title": "Dropping",
+        "positive_ratings": [
+          "ⓡⓦ"
+        ],
+        "song_id": 29393,
+        "track": "12",
+        "duration": "05:36",
+        "artwork_url": null,
+        "artist": "3421",
+        "current_song_position": 14
+      },
+      {
+        "negative_ratings": [],
+        "kyan_track": {
+          "track": {
+            "negative_ratings": [],
+            "owner": "robert",
+            "id": 193394,
+            "created_at": "2013-10-15T12:26:06Z",
+            "positive_ratings": [
+              "RE"
+            ],
+            "filename": "robert/BLDG5_Ground_Floor/14 - Foolk -1995.mp3",
+            "updated_at": "2013-11-19T15:38:24Z",
+            "current_rating": 1,
+            "rating_class": "positive_1",
+            "artwork_url": null
+          }
+        },
+        "album": "Ground Floor",
+        "file": "robert/BLDG5_Ground_Floor/14 - Foolk -1995.mp3",
+        "pos": 4,
+        "dbid": 29394,
+        "eta": "",
+        "rating": 1,
+        "time": "165",
+        "added_by": "RE",
+        "rating_class": "positive_1",
+        "title": "1995",
+        "positive_ratings": [
+          "RE"
+        ],
+        "song_id": 29394,
+        "track": "13",
+        "duration": "02:45",
+        "artwork_url": null,
+        "artist": "Foolk",
+        "current_song_position": 14
+      },
+      {
+        "negative_ratings": [],
+        "kyan_track": {
+          "track": {
+            "negative_ratings": [],
+            "owner": "robert",
+            "id": 193403,
+            "created_at": "2013-10-15T12:26:06Z",
+            "positive_ratings": [],
+            "filename": "robert/BLDG5_Ground_Floor/12 - Luxury - Faith.mp3",
+            "updated_at": "2013-11-19T15:38:25Z",
+            "current_rating": null,
+            "rating_class": "unrated",
+            "artwork_url": null
+          }
+        },
+        "album": "Ground Floor",
+        "file": "robert/BLDG5_Ground_Floor/12 - Luxury - Faith.mp3",
+        "pos": 5,
+        "dbid": 29395,
+        "eta": "",
+        "rating": null,
+        "time": "238",
+        "added_by": "RE",
+        "rating_class": "unrated",
+        "title": "Faith",
+        "positive_ratings": [],
+        "song_id": 29395,
+        "track": "14",
+        "duration": "03:58",
+        "artwork_url": null,
+        "artist": "Luxury",
+        "current_song_position": 14
+      },
+      {
+        "negative_ratings": [],
+        "kyan_track": {
+          "track": {
+            "negative_ratings": [],
+            "owner": "gavin",
+            "id": 177198,
+            "created_at": "2013-03-12T12:36:54Z",
+            "positive_ratings": [
+              "Gav",
+              "ⓡⓦ",
+              "Al",
+              "RE"
+            ],
+            "filename": "gavin/John Grant/Pale Green Ghosts/01 Pale Green Ghosts.mp3",
+            "updated_at": "2013-11-19T16:31:19Z",
+            "current_rating": 4,
+            "rating_class": "positive_3",
+            "artwork_url": "http://ecx.images-amazon.com/images/I/51OTk9vdQML.jpg"
+          }
+        },
+        "album": "Pale Green Ghosts",
+        "file": "gavin/John Grant/Pale Green Ghosts/01 Pale Green Ghosts.mp3",
+        "pos": 6,
+        "dbid": 29396,
+        "eta": "",
+        "rating": 4,
+        "time": "364",
+        "added_by": "Gav",
+        "rating_class": "positive_3",
+        "title": "Pale Green Ghosts",
+        "positive_ratings": [
+          "Gav",
+          "ⓡⓦ",
+          "Al",
+          "RE"
+        ],
+        "song_id": 29396,
+        "track": "01",
+        "duration": "06:04",
+        "artwork_url": "http://ecx.images-amazon.com/images/I/51OTk9vdQML.jpg",
+        "artist": "John Grant",
+        "current_song_position": 14
+      },
+      {
+        "negative_ratings": [],
+        "kyan_track": {
+          "track": {
+            "negative_ratings": [],
+            "owner": "gavin",
+            "id": 177199,
+            "created_at": "2013-03-12T12:36:54Z",
+            "positive_ratings": [
+              "Gav",
+              "RE"
+            ],
+            "filename": "gavin/John Grant/Pale Green Ghosts/02 Black Belt.mp3",
+            "updated_at": "2013-11-19T16:39:57Z",
+            "current_rating": 2,
+            "rating_class": "positive_2",
+            "artwork_url": "http://ecx.images-amazon.com/images/I/51OTk9vdQML.jpg"
+          }
+        },
+        "album": "Pale Green Ghosts",
+        "file": "gavin/John Grant/Pale Green Ghosts/02 Black Belt.mp3",
+        "pos": 7,
+        "dbid": 29397,
+        "eta": "",
+        "rating": 2,
+        "time": "259",
+        "added_by": "Gav",
+        "rating_class": "positive_2",
+        "title": "Black Belt",
+        "positive_ratings": [
+          "Gav",
+          "RE"
+        ],
+        "song_id": 29397,
+        "track": "02",
+        "duration": "04:19",
+        "artwork_url": "http://ecx.images-amazon.com/images/I/51OTk9vdQML.jpg",
+        "artist": "John Grant",
+        "current_song_position": 14
+      },
+      {
+        "negative_ratings": [],
+        "kyan_track": {
+          "track": {
+            "negative_ratings": [],
+            "owner": "gavin",
+            "id": 177200,
+            "created_at": "2013-03-12T12:36:54Z",
+            "positive_ratings": [
+              "ρβ",
+              "Gav",
+              "PS",
+              "Al",
+              "RE"
+            ],
+            "filename": "gavin/John Grant/Pale Green Ghosts/03 GMF.mp3",
+            "updated_at": "2013-11-19T15:41:33Z",
+            "current_rating": 5,
+            "rating_class": "positive_5",
+            "artwork_url": "http://ecx.images-amazon.com/images/I/51OTk9vdQML.jpg"
+          }
+        },
+        "album": "Pale Green Ghosts",
+        "file": "gavin/John Grant/Pale Green Ghosts/03 GMF.mp3",
+        "pos": 8,
+        "dbid": 29398,
+        "eta": "",
+        "rating": 5,
+        "time": "313",
+        "added_by": "Gav",
+        "rating_class": "positive_5",
+        "title": "GMF",
+        "positive_ratings": [
+          "ρβ",
+          "Gav",
+          "PS",
+          "Al",
+          "RE"
+        ],
+        "song_id": 29398,
+        "track": "03",
+        "duration": "05:13",
+        "artwork_url": "http://ecx.images-amazon.com/images/I/51OTk9vdQML.jpg",
+        "artist": "John Grant",
+        "current_song_position": 14
+      },
+      {
+        "negative_ratings": [],
+        "kyan_track": {
+          "track": {
+            "negative_ratings": [],
+            "owner": "gavin",
+            "id": 177201,
+            "created_at": "2013-03-12T12:36:54Z",
+            "positive_ratings": [
+              "Gav"
+            ],
+            "filename": "gavin/John Grant/Pale Green Ghosts/04 Vietnam.mp3",
+            "updated_at": "2013-11-19T15:41:34Z",
+            "current_rating": 1,
+            "rating_class": "positive_1",
+            "artwork_url": "http://ecx.images-amazon.com/images/I/51OTk9vdQML.jpg"
+          }
+        },
+        "album": "Pale Green Ghosts",
+        "file": "gavin/John Grant/Pale Green Ghosts/04 Vietnam.mp3",
+        "pos": 9,
+        "dbid": 29399,
+        "eta": "",
+        "rating": 1,
+        "time": "330",
+        "added_by": "Gav",
+        "rating_class": "positive_1",
+        "title": "Vietnam",
+        "positive_ratings": [
+          "Gav"
+        ],
+        "song_id": 29399,
+        "track": "04",
+        "duration": "05:30",
+        "artwork_url": "http://ecx.images-amazon.com/images/I/51OTk9vdQML.jpg",
+        "artist": "John Grant",
+        "current_song_position": 14
+      },
+      {
+        "negative_ratings": [],
+        "kyan_track": {
+          "track": {
+            "negative_ratings": [],
+            "owner": "gavin",
+            "id": 177202,
+            "created_at": "2013-03-12T12:36:54Z",
+            "positive_ratings": [
+              "Gav",
+              "RE"
+            ],
+            "filename": "gavin/John Grant/Pale Green Ghosts/05 It Doesn't Matter to Him.mp3",
+            "updated_at": "2013-11-19T16:56:19Z",
+            "current_rating": 2,
+            "rating_class": "positive_2",
+            "artwork_url": "http://ecx.images-amazon.com/images/I/51OTk9vdQML.jpg"
+          }
+        },
+        "album": "Pale Green Ghosts",
+        "file": "gavin/John Grant/Pale Green Ghosts/05 It Doesn't Matter to Him.mp3",
+        "pos": 10,
+        "dbid": 29400,
+        "eta": "",
+        "rating": 2,
+        "time": "387",
+        "added_by": "Gav",
+        "rating_class": "positive_2",
+        "title": "It Doesn't Matter to Him",
+        "positive_ratings": [
+          "Gav",
+          "RE"
+        ],
+        "song_id": 29400,
+        "track": "05",
+        "duration": "06:27",
+        "artwork_url": "http://ecx.images-amazon.com/images/I/51OTk9vdQML.jpg",
+        "artist": "John Grant",
+        "current_song_position": 14
+      },
+      {
+        "negative_ratings": [],
+        "kyan_track": {
+          "track": {
+            "negative_ratings": [],
+            "owner": "gavin",
+            "id": 177203,
+            "created_at": "2013-03-12T12:36:54Z",
+            "positive_ratings": [
+              "Gav"
+            ],
+            "filename": "gavin/John Grant/Pale Green Ghosts/06 Why Don't You Love Me Anymore.mp3",
+            "updated_at": "2013-11-19T17:01:39Z",
+            "current_rating": 1,
+            "rating_class": "positive_1",
+            "artwork_url": "http://ecx.images-amazon.com/images/I/51OTk9vdQML.jpg"
+          }
+        },
+        "album": "Pale Green Ghosts",
+        "file": "gavin/John Grant/Pale Green Ghosts/06 Why Don't You Love Me Anymore.mp3",
+        "pos": 11,
+        "dbid": 29401,
+        "eta": "",
+        "rating": 1,
+        "time": "371",
+        "added_by": "Gav",
+        "rating_class": "positive_1",
+        "title": "Why Don't You Love Me Anymore",
+        "positive_ratings": [
+          "Gav"
+        ],
+        "song_id": 29401,
+        "track": "06",
+        "duration": "06:11",
+        "artwork_url": "http://ecx.images-amazon.com/images/I/51OTk9vdQML.jpg",
+        "artist": "John Grant",
+        "current_song_position": 14
+      },
+      {
+        "negative_ratings": [],
+        "kyan_track": {
+          "track": {
+            "negative_ratings": [],
+            "owner": "gavin",
+            "id": 177204,
+            "created_at": "2013-03-12T12:36:54Z",
+            "positive_ratings": [
+              "Gav",
+              "ⓡⓦ"
+            ],
+            "filename": "gavin/John Grant/Pale Green Ghosts/07 You Don't Have To.mp3",
+            "updated_at": "2013-11-19T17:04:39Z",
+            "current_rating": 2,
+            "rating_class": "positive_2",
+            "artwork_url": "http://ecx.images-amazon.com/images/I/51OTk9vdQML.jpg"
+          }
+        },
+        "album": "Pale Green Ghosts",
+        "file": "gavin/John Grant/Pale Green Ghosts/07 You Don't Have To.mp3",
+        "pos": 12,
+        "dbid": 29402,
+        "eta": "",
+        "rating": 2,
+        "time": "352",
+        "added_by": "Gav",
+        "rating_class": "positive_2",
+        "title": "You Don't Have To",
+        "positive_ratings": [
+          "Gav",
+          "ⓡⓦ"
+        ],
+        "song_id": 29402,
+        "track": "07",
+        "duration": "05:52",
+        "artwork_url": "http://ecx.images-amazon.com/images/I/51OTk9vdQML.jpg",
+        "artist": "John Grant",
+        "current_song_position": 14
+      },
+      {
+        "negative_ratings": [],
+        "kyan_track": {
+          "track": {
+            "negative_ratings": [],
+            "owner": "gavin",
+            "id": 177205,
+            "created_at": "2013-03-12T12:36:54Z",
+            "positive_ratings": [
+              "Gav"
+            ],
+            "filename": "gavin/John Grant/Pale Green Ghosts/08 Sensitive New Age Guy.mp3",
+            "updated_at": "2013-11-19T15:41:39Z",
+            "current_rating": 1,
+            "rating_class": "positive_1",
+            "artwork_url": "http://ecx.images-amazon.com/images/I/51OTk9vdQML.jpg"
+          }
+        },
+        "album": "Pale Green Ghosts",
+        "file": "gavin/John Grant/Pale Green Ghosts/08 Sensitive New Age Guy.mp3",
+        "pos": 13,
+        "dbid": 29403,
+        "eta": "",
+        "rating": 1,
+        "time": "281",
+        "added_by": "Gav",
+        "rating_class": "positive_1",
+        "title": "Sensitive New Age Guy",
+        "positive_ratings": [
+          "Gav"
+        ],
+        "song_id": 29403,
+        "track": "08",
+        "duration": "04:41",
+        "artwork_url": "http://ecx.images-amazon.com/images/I/51OTk9vdQML.jpg",
+        "artist": "John Grant",
+        "current_song_position": 14
+      },
+      {
+        "negative_ratings": [],
+        "kyan_track": {
+          "track": {
+            "negative_ratings": [],
+            "owner": "gavin",
+            "id": 177206,
+            "created_at": "2013-03-12T12:36:54Z",
+            "positive_ratings": [
+              "Gav"
+            ],
+            "filename": "gavin/John Grant/Pale Green Ghosts/09 Ernest Borgnine.mp3",
+            "updated_at": "2013-11-19T15:41:42Z",
+            "current_rating": 1,
+            "rating_class": "positive_1",
+            "artwork_url": "http://ecx.images-amazon.com/images/I/51OTk9vdQML.jpg"
+          }
+        },
+        "album": "Pale Green Ghosts",
+        "file": "gavin/John Grant/Pale Green Ghosts/09 Ernest Borgnine.mp3",
+        "pos": 14,
+        "dbid": 29404,
+        "eta": "",
+        "rating": 1,
+        "time": "293",
+        "added_by": "Gav",
+        "rating_class": "positive_1",
+        "title": "Ernest Borgnine",
+        "positive_ratings": [
+          "Gav"
+        ],
+        "song_id": 29404,
+        "track": "09",
+        "duration": "04:53",
+        "artwork_url": "http://ecx.images-amazon.com/images/I/51OTk9vdQML.jpg",
+        "artist": "John Grant",
+        "current_song_position": 14
+      },
+      {
+        "negative_ratings": [],
+        "kyan_track": {
+          "track": {
+            "negative_ratings": [],
+            "owner": "gavin",
+            "id": 177207,
+            "created_at": "2013-03-12T12:36:54Z",
+            "positive_ratings": [],
+            "filename": "gavin/John Grant/Pale Green Ghosts/10 I Hate This Town.mp3",
+            "updated_at": "2013-11-19T15:41:45Z",
+            "current_rating": null,
+            "rating_class": "unrated",
+            "artwork_url": "http://ecx.images-amazon.com/images/I/51OTk9vdQML.jpg"
+          }
+        },
+        "album": "Pale Green Ghosts",
+        "file": "gavin/John Grant/Pale Green Ghosts/10 I Hate This Town.mp3",
+        "pos": 15,
+        "dbid": 29405,
+        "eta": "17:19",
+        "rating": null,
+        "time": "242",
+        "added_by": "Gav",
+        "rating_class": "unrated",
+        "title": "I Hate This Town",
+        "positive_ratings": [],
+        "song_id": 29405,
+        "track": "10",
+        "duration": "04:02",
+        "artwork_url": "http://ecx.images-amazon.com/images/I/51OTk9vdQML.jpg",
+        "artist": "John Grant",
+        "current_song_position": 14
+      },
+      {
+        "negative_ratings": [],
+        "kyan_track": {
+          "track": {
+            "negative_ratings": [],
+            "owner": "gavin",
+            "id": 177208,
+            "created_at": "2013-03-12T12:36:54Z",
+            "positive_ratings": [
+              "Gav"
+            ],
+            "filename": "gavin/John Grant/Pale Green Ghosts/11 Glacier.mp3",
+            "updated_at": "2013-11-19T15:41:47Z",
+            "current_rating": 1,
+            "rating_class": "positive_1",
+            "artwork_url": "http://ecx.images-amazon.com/images/I/51OTk9vdQML.jpg"
+          }
+        },
+        "album": "Pale Green Ghosts",
+        "file": "gavin/John Grant/Pale Green Ghosts/11 Glacier.mp3",
+        "pos": 16,
+        "dbid": 29406,
+        "eta": "17:23",
+        "rating": 1,
+        "time": "454",
+        "added_by": "Gav",
+        "rating_class": "positive_1",
+        "title": "Glacier",
+        "positive_ratings": [
+          "Gav"
+        ],
+        "song_id": 29406,
+        "track": "11",
+        "duration": "07:34",
+        "artwork_url": "http://ecx.images-amazon.com/images/I/51OTk9vdQML.jpg",
+        "artist": "John Grant",
+        "current_song_position": 14
+      },
+      {
+        "negative_ratings": [],
+        "kyan_track": {
+          "track": {
+            "negative_ratings": [],
+            "owner": "gavin",
+            "id": 77660,
+            "created_at": "2009-06-19T09:54:06Z",
+            "positive_ratings": [
+              "Gav",
+              "ⓡⓦ",
+              "PS",
+              "RE",
+              "JG"
+            ],
+            "filename": "gavin/funk/theme - peanuts.mp3",
+            "updated_at": "2013-11-19T16:26:10Z",
+            "current_rating": 5,
+            "rating_class": "positive_5",
+            "artwork_url": null
+          }
+        },
+        "album": null,
+        "file": "gavin/funk/theme - peanuts.mp3",
+        "pos": 17,
+        "dbid": 29407,
+        "eta": "17:31",
+        "rating": 5,
+        "time": "185",
+        "added_by": "RE",
+        "rating_class": "positive_5",
+        "title": "peanuts",
+        "positive_ratings": [
+          "Gav",
+          "ⓡⓦ",
+          "PS",
+          "RE",
+          "JG"
+        ],
+        "song_id": 29407,
+        "track": null,
+        "duration": "03:05",
+        "artwork_url": null,
+        "artist": "vince guaraldi trio",
+        "current_song_position": 14
+      },
+      {
+        "negative_ratings": [],
+        "kyan_track": {
+          "track": {
+            "negative_ratings": [],
+            "owner": "duncan",
+            "id": 167454,
+            "created_at": "2012-10-09T15:45:48Z",
+            "positive_ratings": [],
+            "filename": "duncan/Vince Guaraldi/Vince Guaraldi and the Lost Cues from the Charlie Brown Television Specials/10 Joe Cool (vocal).m4a",
+            "updated_at": "2013-11-19T16:36:02Z",
+            "current_rating": null,
+            "rating_class": "unrated",
+            "artwork_url": null
+          }
+        },
+        "album": "Vince Guaraldi and the Lost Cues from the Charlie Brown Television Specials",
+        "file": "duncan/Vince Guaraldi/Vince Guaraldi and the Lost Cues from the Charlie Brown Television Specials/10 Joe Cool (vocal).m4a",
+        "pos": 18,
+        "dbid": 29408,
+        "eta": "17:34",
+        "rating": null,
+        "time": "163",
+        "added_by": "Gav",
+        "rating_class": "unrated",
+        "title": "Joe Cool (vocal)",
+        "positive_ratings": [],
+        "song_id": 29408,
+        "track": "10",
+        "duration": "02:43",
+        "artwork_url": null,
+        "artist": "Vince Guaraldi",
+        "current_song_position": 14
+      },
+      {
+        "negative_ratings": [],
+        "kyan_track": {
+          "track": {
+            "negative_ratings": [],
+            "owner": "gavin",
+            "id": 27673,
+            "created_at": "2009-05-15T10:41:47Z",
+            "positive_ratings": [
+              "Gav"
+            ],
+            "filename": "gavin/Vince Guaraldi/Greatest Hits/Vince Guaraldi_Greatest Hits_01_Cast your Fate To The Wind.mp3",
+            "updated_at": "2013-11-19T16:36:18Z",
+            "current_rating": 1,
+            "rating_class": "positive_1",
+            "artwork_url": "http://ecx.images-amazon.com/images/I/51Q5PWKsqvL.jpg"
+          }
+        },
+        "album": "Greatest Hits",
+        "file": "gavin/Vince Guaraldi/Greatest Hits/Vince Guaraldi_Greatest Hits_01_Cast your Fate To The Wind.mp3",
+        "pos": 19,
+        "dbid": 29409,
+        "eta": "17:37",
+        "rating": 1,
+        "time": "188",
+        "added_by": "Gav",
+        "rating_class": "positive_1",
+        "title": "Cast your Fate To The Wind",
+        "positive_ratings": [
+          "Gav"
+        ],
+        "song_id": 29409,
+        "track": "1",
+        "duration": "03:08",
+        "artwork_url": "http://ecx.images-amazon.com/images/I/51Q5PWKsqvL.jpg",
+        "artist": "Vince Guaraldi",
+        "current_song_position": 14
+      },
+      {
+        "negative_ratings": [],
+        "kyan_track": {
+          "track": {
+            "negative_ratings": [],
+            "owner": "gavin",
+            "id": 123684,
+            "created_at": "2011-01-04T13:42:24Z",
+            "positive_ratings": [
+              "Gav",
+              "ⓡⓦ",
+              "RE"
+            ],
+            "filename": "gavin/John Grant/Queen Of Denmark/05 Chicken Bones.mp3",
+            "updated_at": "2013-11-19T16:39:50Z",
+            "current_rating": 3,
+            "rating_class": "positive_3",
+            "artwork_url": "http://ecx.images-amazon.com/images/I/413%2BO%2BlSD6L.jpg"
+          }
+        },
+        "album": "Queen Of Denmark",
+        "file": "gavin/John Grant/Queen Of Denmark/05 Chicken Bones.mp3",
+        "pos": 20,
+        "dbid": 29410,
+        "eta": "17:40",
+        "rating": 3,
+        "time": "218",
+        "added_by": "Gav",
+        "rating_class": "positive_3",
+        "title": "Chicken Bones",
+        "positive_ratings": [
+          "Gav",
+          "ⓡⓦ",
+          "RE"
+        ],
+        "song_id": 29410,
+        "track": "5",
+        "duration": "03:38",
+        "artwork_url": "http://ecx.images-amazon.com/images/I/413%2BO%2BlSD6L.jpg",
+        "artist": "John Grant",
+        "current_song_position": 14
+      },
+      {
+        "negative_ratings": [],
+        "kyan_track": {
+          "track": {
+            "negative_ratings": [],
+            "owner": "gavin",
+            "id": 123691,
+            "created_at": "2011-01-04T13:42:24Z",
+            "positive_ratings": [
+              "Gav"
+            ],
+            "filename": "gavin/John Grant/Queen Of Denmark/12 Queen of Denmark.mp3",
+            "updated_at": "2013-11-19T16:50:38Z",
+            "current_rating": 1,
+            "rating_class": "positive_1",
+            "artwork_url": "http://ecx.images-amazon.com/images/I/51dc1%2B1U-uL.jpg"
+          }
+        },
+        "album": "Queen Of Denmark",
+        "file": "gavin/John Grant/Queen Of Denmark/12 Queen of Denmark.mp3",
+        "pos": 21,
+        "dbid": 29411,
+        "eta": "17:44",
+        "rating": 1,
+        "time": "289",
+        "added_by": "Gav",
+        "rating_class": "positive_1",
+        "title": "Queen of Denmark",
+        "positive_ratings": [
+          "Gav"
+        ],
+        "song_id": 29411,
+        "track": "12",
+        "duration": "04:49",
+        "artwork_url": "http://ecx.images-amazon.com/images/I/51dc1%2B1U-uL.jpg",
+        "artist": "John Grant",
+        "current_song_position": 14
+      },
+      {
+        "negative_ratings": [],
+        "kyan_track": {
+          "track": {
+            "negative_ratings": [],
+            "owner": "gavin",
+            "id": 136308,
+            "created_at": "2011-07-20T13:22:41Z",
+            "positive_ratings": [
+              "Gav",
+              "OK",
+              "ρβ",
+              "RE",
+              "ⓡⓦ"
+            ],
+            "filename": "gavin/Gus Gus/Arabian Horse/01 Selfoss.mp3",
+            "updated_at": "2013-11-19T16:51:09Z",
+            "current_rating": 5,
+            "rating_class": "positive_5",
+            "artwork_url": "http://ecx.images-amazon.com/images/I/4148pTNYwkL.jpg"
+          }
+        },
+        "album": "Arabian Horse",
+        "file": "gavin/Gus Gus/Arabian Horse/01 Selfoss.mp3",
+        "pos": 22,
+        "dbid": 29412,
+        "eta": "17:48",
+        "rating": 5,
+        "time": "341",
+        "added_by": "Gav",
+        "rating_class": "positive_5",
+        "title": "Selfoss",
+        "positive_ratings": [
+          "Gav",
+          "OK",
+          "ρβ",
+          "RE",
+          "ⓡⓦ"
+        ],
+        "song_id": 29412,
+        "track": "1",
+        "duration": "05:41",
+        "artwork_url": "http://ecx.images-amazon.com/images/I/4148pTNYwkL.jpg",
+        "artist": "Gus Gus",
+        "current_song_position": 14
+      },
+      {
+        "negative_ratings": [],
+        "kyan_track": {
+          "track": {
+            "negative_ratings": [],
+            "owner": "gavin",
+            "id": 136314,
+            "created_at": "2011-07-20T13:22:41Z",
+            "positive_ratings": [
+              "Gav",
+              "OK",
+              "ⓡⓦ"
+            ],
+            "filename": "gavin/Gus Gus/Arabian Horse/07 Magnified Love.mp3",
+            "updated_at": "2013-11-19T16:51:14Z",
+            "current_rating": 3,
+            "rating_class": "positive_3",
+            "artwork_url": "http://ecx.images-amazon.com/images/I/4148pTNYwkL.jpg"
+          }
+        },
+        "album": "Arabian Horse",
+        "file": "gavin/Gus Gus/Arabian Horse/07 Magnified Love.mp3",
+        "pos": 23,
+        "dbid": 29413,
+        "eta": "17:54",
+        "rating": 3,
+        "time": "293",
+        "added_by": "Gav",
+        "rating_class": "positive_3",
+        "title": "Magnified Love",
+        "positive_ratings": [
+          "Gav",
+          "OK",
+          "ⓡⓦ"
+        ],
+        "song_id": 29413,
+        "track": "7",
+        "duration": "04:53",
+        "artwork_url": "http://ecx.images-amazon.com/images/I/4148pTNYwkL.jpg",
+        "artist": "Gus Gus",
+        "current_song_position": 14
+      },
+      {
+        "negative_ratings": [],
+        "kyan_track": {
+          "track": {
+            "negative_ratings": [],
+            "owner": "gavin",
+            "id": 136317,
+            "created_at": "2011-07-20T13:22:41Z",
+            "positive_ratings": [
+              "Gav"
+            ],
+            "filename": "gavin/Gus Gus/Arabian Horse/10 Benched.mp3",
+            "updated_at": "2013-11-19T16:51:15Z",
+            "current_rating": 1,
+            "rating_class": "positive_1",
+            "artwork_url": "http://ecx.images-amazon.com/images/I/4148pTNYwkL.jpg"
+          }
+        },
+        "album": "Arabian Horse",
+        "file": "gavin/Gus Gus/Arabian Horse/10 Benched.mp3",
+        "pos": 24,
+        "dbid": 29414,
+        "eta": "17:59",
+        "rating": 1,
+        "time": "500",
+        "added_by": "Gav",
+        "rating_class": "positive_1",
+        "title": "Benched",
+        "positive_ratings": [
+          "Gav"
+        ],
+        "song_id": 29414,
+        "track": "10",
+        "duration": "08:20",
+        "artwork_url": "http://ecx.images-amazon.com/images/I/4148pTNYwkL.jpg",
+        "artist": "Gus Gus",
+        "current_song_position": 14
+      }
+    ]
+  }
+}

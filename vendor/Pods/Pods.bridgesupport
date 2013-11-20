@@ -1,0 +1,160 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<constant const='true' declared_type='NSString*' name='SRWebSocketErrorDomain' type='@'/>
+<enum name='SR_CLOSED' value='3'/>
+<enum name='SR_CLOSING' value='2'/>
+<enum name='SR_CONNECTING' value='0'/>
+<enum name='SR_OPEN' value='1'/>
+<function name='b64_ntop'>
+<arg const='true' declared_type='u_char*' name='src' type='*'/>
+<arg declared_type='size_t' name='srclength' type='L' type64='Q'/>
+<arg declared_type='char*' name='target' type='*'/>
+<arg declared_type='size_t' name='targsize' type='L' type64='Q'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='b64_pton'>
+<arg const='true' declared_type='char*' name='src' type='*'/>
+<arg declared_type='u_char*' name='target' type='*'/>
+<arg declared_type='size_t' name='targsize' type='L' type64='Q'/>
+<retval declared_type='int' type='i'/>
+</function>
+<class name='NSData'>
+<method selector='SR_stringByBase64Encoding'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='NSMutableURLRequest'>
+<method selector='SR_SSLPinnedCertificates'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='setSR_SSLPinnedCertificates:'>
+<arg declared_type='NSArray*' index='0' name='SR_SSLPinnedCertificates' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='webSocket:didCloseWithCode:reason:wasClean:'>
+<arg declared_type='SRWebSocket*' index='0' name='webSocket' type='@'/>
+<arg declared_type='NSInteger' index='1' name='code' type='i' type64='q'/>
+<arg declared_type='NSString*' index='2' name='reason' type='@'/>
+<arg declared_type='BOOL' index='3' name='wasClean' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='webSocket:didFailWithError:'>
+<arg declared_type='SRWebSocket*' index='0' name='webSocket' type='@'/>
+<arg declared_type='NSError*' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='webSocket:didReceiveMessage:'>
+<arg declared_type='SRWebSocket*' index='0' name='webSocket' type='@'/>
+<arg declared_type='id' index='1' name='message' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='webSocketDidOpen:'>
+<arg declared_type='SRWebSocket*' index='0' name='webSocket' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NSRunLoop'>
+<method class_method='true' selector='SR_networkRunLoop'>
+<retval declared_type='NSRunLoop*' type='@'/>
+</method>
+</class>
+<class name='NSURLRequest'>
+<method selector='SR_SSLPinnedCertificates'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+</class>
+<class name='SRWebSocket'>
+<method selector='close'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='closeWithCode:reason:'>
+<arg declared_type='NSInteger' index='0' name='code' type='i' type64='q'/>
+<arg declared_type='NSString*' index='1' name='reason' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithURL:'>
+<arg declared_type='NSURL*' index='0' name='url' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithURL:protocols:'>
+<arg declared_type='NSURL*' index='0' name='url' type='@'/>
+<arg declared_type='NSArray*' index='1' name='protocols' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithURLRequest:'>
+<arg declared_type='NSURLRequest*' index='0' name='request' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithURLRequest:protocols:'>
+<arg declared_type='NSURLRequest*' index='0' name='request' type='@'/>
+<arg declared_type='NSArray*' index='1' name='protocols' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='open'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='protocol'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='readyState'>
+<retval declared_type='SRReadyState' type='i'/>
+</method>
+<method selector='scheduleInRunLoop:forMode:'>
+<arg declared_type='NSRunLoop*' index='0' name='aRunLoop' type='@'/>
+<arg declared_type='NSString*' index='1' name='mode' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='send:'>
+<arg declared_type='id' index='0' name='data' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegateDispatchQueue:'>
+<arg declared_type='dispatch_queue_t' index='0' name='queue' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegateOperationQueue:'>
+<arg declared_type='NSOperationQueue*' index='0' name='queue' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='unscheduleFromRunLoop:forMode:'>
+<arg declared_type='NSRunLoop*' index='0' name='aRunLoop' type='@'/>
+<arg declared_type='NSString*' index='1' name='mode' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='url'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+</class>
+<informal_protocol name='SRWebSocketDelegate'>
+<method selector='webSocket:didCloseWithCode:reason:wasClean:' type='v24@0:4@8i12@16B20' type64='v44@0:8@16q24@32B40'>
+<arg declared_type='SRWebSocket*' index='0' name='webSocket' type='@'/>
+<arg declared_type='NSInteger' index='1' name='code' type='i' type64='q'/>
+<arg declared_type='NSString*' index='2' name='reason' type='@'/>
+<arg declared_type='BOOL' index='3' name='wasClean' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='webSocket:didFailWithError:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='SRWebSocket*' index='0' name='webSocket' type='@'/>
+<arg declared_type='NSError*' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='webSocket:didReceiveMessage:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='SRWebSocket*' index='0' name='webSocket' type='@'/>
+<arg declared_type='id' index='1' name='message' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='webSocketDidOpen:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='SRWebSocket*' index='0' name='webSocket' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+</signatures>
