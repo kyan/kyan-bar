@@ -12,8 +12,8 @@ Motion::Project::App.setup do |app|
   # Use `rake config' to see complete project settings.
   app.name = 'KyanBar'
   app.icon = "icon.icns"
-  app.version = "1.0.1"
-  app.short_version = '1'
+  # app.version = "1.0.2"
+  # app.short_version = '1'
   app.identifier = 'com.kyan.'
   app.deployment_target = '10.8'
 
@@ -25,7 +25,7 @@ Motion::Project::App.setup do |app|
   end
 
   app.sparkle do
-    release :base_url, 'https://github.com/kyan/kyan_bar'
+    release :base_url, 'https://raw.github.com/kyan/kyan_bar/master'
     release :version, '1.0.2'
 
     # Optional settings
