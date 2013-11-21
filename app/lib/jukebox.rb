@@ -10,13 +10,15 @@ module JukeBox
     end
 
     def track
-      return nil if  @data['track'].nil?
-      @track ||= Track.build @data['track']
+      if  @data && !@data['track'].nil?
+        @track ||= Track.build @data['track']
+      end
     end
 
     def rating
-      return nil if  @data['rating'].nil?
-      @rating ||= Rating.build @data['rating']
+      if  @data && !@data['track'].nil?
+        @rating ||= Rating.build @data['rating']
+      end
     end
 
     def notifications
