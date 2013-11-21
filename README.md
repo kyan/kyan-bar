@@ -23,6 +23,7 @@ which will create a real app in the `build` dir, you can put in your Application
 
 <pre>
 rake sparkle:clean
+rake build:release
 rake sparkle:package
 </pre>
 
