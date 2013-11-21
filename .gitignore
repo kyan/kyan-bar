@@ -14,3 +14,9 @@ nbproject
 .eprj
 .sass-cache
 .idea
+sparkle/release
+sparkle/release/*
+sparkle/config/dsa_priv.pem
+sparkle/release
+sparkle/release/*
+sparkle/config/dsa_priv.pem
