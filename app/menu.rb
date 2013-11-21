@@ -8,6 +8,12 @@ class AppDelegate
     mi.action = 'orderFrontStandardAboutPanel:'
     menu.addItem mi
 
+    mi = NSMenuItem.new
+    mi.title = 'Check for updates...'
+    mi.action = 'checkForUpdates:'
+    mi.target = SUUpdater.new
+    menu.addItem mi
+
     add_seperator(menu)
 
     links.each_with_index do |data, i|

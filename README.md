@@ -18,3 +18,12 @@ or build a real app using:
 `rake build`
 
 which will create a real app in the `build` dir, you can put in your Applications folder.
+
+# Build new version
+
+<pre>
+rake sparkle:clean
+rake sparkle:package
+</pre>
+
+You will need to copy the contents of sparkle/releases into the root files
