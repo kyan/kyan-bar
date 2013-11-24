@@ -24,6 +24,12 @@ class AppDelegate
     bar.setMenu(@menu)
   end
 
+  def build_preferences(sender)
+    @preferences ||= PreferencesController.alloc.init
+    @preferences.window.makeKeyAndOrderFront(self)
+    App.shared.activateIgnoringOtherApps(true)
+  end
+
   def connect_to_websocket_server
     url = NSURL.URLWithString("ws://jukebox.local:8080")
     @websocket = SRWebSocket.new

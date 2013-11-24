@@ -3,19 +3,6 @@ class AppDelegate
     menu = NSMenu.new
     menu.initWithTitle App.name
 
-    mi = NSMenuItem.new
-    mi.title = 'About'
-    mi.action = 'orderFrontStandardAboutPanel:'
-    menu.addItem mi
-
-    mi = NSMenuItem.new
-    mi.title = 'Check for updates...'
-    mi.action = 'checkForUpdates:'
-    mi.target = SUUpdater.new
-    menu.addItem mi
-
-    add_seperator(menu)
-
     links.each_with_index do |data, i|
       m = NSMenuItem.new
       m.title = data.first
@@ -26,6 +13,17 @@ class AppDelegate
     end
 
     add_seperator(menu)
+
+    mi = NSMenuItem.new
+    mi.title = 'Preferences...'
+    mi.action = 'build_preferences:'
+    menu.addItem mi
+
+    mi = NSMenuItem.new
+    mi.title = 'Check for updates...'
+    mi.action = 'checkForUpdates:'
+    mi.target = SUUpdater.new
+    menu.addItem mi
 
     mi = NSMenuItem.new
     mi.title = 'Quit'

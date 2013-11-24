@@ -22,8 +22,8 @@ which will create a real app in the `build` dir, you can put in your Application
 # Build new version
 
 <pre>
-rake sparkle:clean
 rake build:release
+rake sparkle:clean
 rake sparkle:package
 </pre>
 
