@@ -3,6 +3,14 @@ class AppDelegate
     menu = NSMenu.new
     menu.initWithTitle App.name
 
+    # mi = NSMenuItem.new
+    # @jukebox_menu = JukeboxViewController.alloc.initWithNibName("Jukebox", bundle:nil)
+    # @jukebox_menu.setRepresentedObject(App.shared.delegate.jukebox)
+    # mi.view = @jukebox_menu.view
+    # menu.addItem mi
+
+    # add_seperator(menu)
+
     links.each_with_index do |data, i|
       m = NSMenuItem.new
       m.title = data.first

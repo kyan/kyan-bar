@@ -1,11 +1,10 @@
 class SRWebSocketDelegate
 
   def self.webSocket(webSocket, didReceiveMessage:msg)
-    @jukebox = JukeBox::Notify.new(msg)
-
-    puts msg
-
-    @jukebox.notifications.each do |message|
+    puts "Message: #{msg}"
+    jukebox = App.shared.delegate.jukebox
+    jukebox.update!(msg.dataUsingEncoding(NSUTF8StringEncoding))
+    jukebox.notifications.each do |message|
       notification = NSUserNotification.alloc.init
       notification.title = message.heading
       notification.subtitle = message.subtitle

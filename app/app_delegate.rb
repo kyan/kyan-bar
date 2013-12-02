@@ -1,8 +1,9 @@
 class AppDelegate
 
-  attr_accessor :reconn_interval
+  attr_accessor :reconn_interval, :jukebox
 
   def applicationDidFinishLaunching(notification)
+    build_jukebox
     buildStatus
     handle_notifications
 
@@ -30,8 +31,13 @@ class AppDelegate
     App.shared.activateIgnoringOtherApps(true)
   end
 
+  def build_jukebox
+    @jukebox ||= KyanJukebox::Notify.new([:track])
+    @jukebox.json_parser = BW::JSON
+  end
+
   def connect_to_websocket_server
-    url = NSURL.URLWithString("ws://jukebox.local:8080")
+    url = NSURL.URLWithString(WEBSOCKET_URL)
     @websocket = SRWebSocket.new
     @websocket.initWithURL(url)
     @websocket.delegate = SRWebSocketDelegate

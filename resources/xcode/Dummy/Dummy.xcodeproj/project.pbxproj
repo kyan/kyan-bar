@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE1FAC861843EFDF001CDEB9 /* Jukebox.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE1FAC851843EFDE001CDEB9 /* Jukebox.xib */; };
+		AE1FAC891843F017001CDEB9 /* JukeboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1FAC881843F017001CDEB9 /* JukeboxViewController.m */; };
 		AE6856BE184003490096F02D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6856BD184003490096F02D /* Cocoa.framework */; };
 		AE6856DD184003490096F02D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6856DC184003490096F02D /* XCTest.framework */; };
 		AE6856DE184003490096F02D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6856BD184003490096F02D /* Cocoa.framework */; };
@@ -25,12 +27,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AE6856BA184003490096F02D /* Dummy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Dummy.app; path = /Users/duncan/_dev/osx/KyanBar/resources/xcode/Dummy/build/Debug/Dummy.app; sourceTree = "<absolute>"; };
+		AE1FAC831843EF8E001CDEB9 /* Dummy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dummy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE1FAC841843EF8E001CDEB9 /* DummyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DummyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE1FAC851843EFDE001CDEB9 /* Jukebox.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Jukebox.xib; path = ../../Jukebox.xib; sourceTree = "<group>"; };
+		AE1FAC871843F017001CDEB9 /* JukeboxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JukeboxViewController.h; sourceTree = "<group>"; };
+		AE1FAC881843F017001CDEB9 /* JukeboxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JukeboxViewController.m; sourceTree = "<group>"; };
 		AE6856BD184003490096F02D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		AE6856C0184003490096F02D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		AE6856C1184003490096F02D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		AE6856C2184003490096F02D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		AE6856DB184003490096F02D /* DummyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = DummyTests.xctest; path = /Users/duncan/_dev/osx/KyanBar/resources/xcode/Dummy/build/Debug/DummyTests.xctest; sourceTree = "<absolute>"; };
 		AE6856DC184003490096F02D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		AE6856F11840036F0096F02D /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Preferences.xib; path = ../../Preferences.xib; sourceTree = "<group>"; };
 		AE6856F3184003A40096F02D /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
@@ -61,10 +66,15 @@
 		AE6856B1184003490096F02D = {
 			isa = PBXGroup;
 			children = (
+				AE1FAC871843F017001CDEB9 /* JukeboxViewController.h */,
+				AE1FAC881843F017001CDEB9 /* JukeboxViewController.m */,
 				AE6856F3184003A40096F02D /* PreferencesController.h */,
 				AE6856F4184003A40096F02D /* PreferencesController.m */,
 				AE6856F11840036F0096F02D /* Preferences.xib */,
+				AE1FAC851843EFDE001CDEB9 /* Jukebox.xib */,
 				AE6856BC184003490096F02D /* Frameworks */,
+				AE1FAC831843EF8E001CDEB9 /* Dummy.app */,
+				AE1FAC841843EF8E001CDEB9 /* DummyTests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,7 +115,7 @@
 			);
 			name = Dummy;
 			productName = Dummy;
-			productReference = AE6856BA184003490096F02D /* Dummy.app */;
+			productReference = AE1FAC831843EF8E001CDEB9 /* Dummy.app */;
 			productType = "com.apple.product-type.application";
 		};
 		AE6856DA184003490096F02D /* DummyTests */ = {
@@ -123,7 +133,7 @@
 			);
 			name = DummyTests;
 			productName = DummyTests;
-			productReference = AE6856DB184003490096F02D /* DummyTests.xctest */;
+			productReference = AE1FAC841843EF8E001CDEB9 /* DummyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -164,6 +174,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE1FAC861843EFDF001CDEB9 /* Jukebox.xib in Resources */,
 				AE6856F21840036F0096F02D /* Preferences.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE6856F5184003A40096F02D /* PreferencesController.m in Sources */,
+				AE1FAC891843F017001CDEB9 /* JukeboxViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

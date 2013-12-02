@@ -1,0 +1,1 @@
+WEBSOCKET_URL = 'ws://jukebox.local:8080'
