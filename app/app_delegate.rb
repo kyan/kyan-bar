@@ -4,14 +4,14 @@ class AppDelegate
 
   def applicationDidFinishLaunching(notification)
     build_jukebox
-    buildStatus
+    build_status
     handle_notifications
 
     @reconn_interval = 0.0
     connect_to_websocket_server
   end
 
-  def buildStatus
+  def build_status
     @status_bar_image = NSImage.imageNamed("k_logo_col_18x18")
     @status_bar_image_alt = NSImage.imageNamed("k_logo_bw_18x18")
 
@@ -32,7 +32,7 @@ class AppDelegate
   end
 
   def build_jukebox
-    @jukebox ||= KyanJukebox::Notify.new([:track])
+    @jukebox ||= KyanJukebox::Notify.new([:track, :playlist])
     @jukebox.json_parser = BW::JSON
   end
 

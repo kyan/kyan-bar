@@ -1,7 +1,6 @@
 class SRWebSocketDelegate
 
   def self.webSocket(webSocket, didReceiveMessage:msg)
-    puts "Message: #{msg}"
     jukebox = App.shared.delegate.jukebox
     jukebox.update!(msg.dataUsingEncoding(NSUTF8StringEncoding))
     jukebox.notifications.each do |message|
@@ -15,13 +14,10 @@ class SRWebSocketDelegate
   end
 
   def self.webSocketDidOpen(webSocket)
-    puts "Socket connection opened!"
     App.shared.delegate.reconn_interval = 0.0
   end
 
   def self.webSocket(webSocket, didFailWithError:error)
-    puts "Lost Connection!!"
-
     NSTimer.scheduledTimerWithTimeInterval(App.shared.delegate.reconn_interval,
       target:App.shared.delegate,
       selector:'reconnect_to_websocket_server',
@@ -31,6 +27,6 @@ class SRWebSocketDelegate
   end
 
   def self.webSocket(webSocket, didCloseWithCode:code, reason:reason, wasClean:wasClean)
-    puts "Bang again!!"
+    # Bang!
   end
 end
