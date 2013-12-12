@@ -2,7 +2,6 @@ class AppDelegate
   def setupMenu
     @menu = NSMenu.new
     @menu.initWithTitle App.name
-    @jukebox = App.shared.delegate.jukebox
 
     build_now_playing
     add_seperator_for(@menu)
@@ -11,10 +10,6 @@ class AppDelegate
     mi = NSMenuItem.new
     mi.view = @track_list.view
     @menu.addItem mi
-
-    unless jukebox.playlist.empty?
-      build_upcoming_tracks
-    end
 
     links.each_with_index do |data, i|
       m = NSMenuItem.new
@@ -70,7 +65,7 @@ class AppDelegate
   def build_now_playing
     @jukebox_menu = NSViewController.alloc.initWithNibName("Jukebox", bundle:nil)
     @jukebox_view = @jukebox_menu.view
-    @jukebox_view.jukebox = @jukebox
+    @jukebox_view.jukebox = jukebox
 
     mi = NSMenuItem.new
     mi.view = @jukebox_view
