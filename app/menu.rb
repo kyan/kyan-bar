@@ -2,7 +2,6 @@ class AppDelegate
   def setupMenu
     @menu = NSMenu.new
     @menu.initWithTitle App.name
-    @jukebox = App.shared.delegate.jukebox
 
     build_now_playing
     add_seperator
@@ -56,7 +55,7 @@ class AppDelegate
   def build_now_playing
     @jukebox_menu = NSViewController.alloc.initWithNibName("Jukebox", bundle:nil)
     @jukebox_view = @jukebox_menu.view
-    @jukebox_view.jukebox = @jukebox
+    @jukebox_view.jukebox = jukebox
 
     mi = NSMenuItem.new
     mi.view = @jukebox_view
@@ -64,7 +63,7 @@ class AppDelegate
   end
 
   def build_upcoming_tracks
-    @jukebox.playlist.take(3).each do |track|
+    jukebox.playlist.take(3).each do |track|
       m = NSMenuItem.new
       m.setAttributedTitle(
         track.title.attrd({
@@ -86,7 +85,7 @@ class AppDelegate
       @menu.addItem m
     end
 
-    add_seperator if @jukebox.playlist.any?
+    add_seperator if jukebox.playlist.any?
   end
 
   def add_menu_icon_for(menu, img_url)
