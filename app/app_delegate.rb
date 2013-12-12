@@ -1,13 +1,12 @@
 class AppDelegate
 
-  attr_accessor :reconn_interval, :jukebox
+  attr_accessor :jukebox
 
   def applicationDidFinishLaunching(notification)
     build_jukebox
     build_status
     handle_notifications
 
-    @reconn_interval = 0.0
     connect_to_websocket_server
   end
 
@@ -36,18 +35,7 @@ class AppDelegate
   end
 
   def connect_to_websocket_server
-    url = NSURL.URLWithString(WEBSOCKET_URL)
-    @websocket = SRWebSocket.new
-    @websocket.initWithURL(url)
-    @websocket.delegate = SRWebSocketDelegate
-    @websocket.open
-  end
-
-  def reconnect_to_websocket_server
-    self.reconn_interval = reconn_interval >= 0.1 ? reconn_interval * 2 : 0.1
-    self.reconn_interval = [60.0, reconn_interval].min
-
-    connect_to_websocket_server
+    @websocket_server ||= WebsocketConnector.new(WEBSOCKET_URL).connect
   end
 
   def handle_notifications
