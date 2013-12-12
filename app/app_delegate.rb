@@ -33,6 +33,28 @@ class AppDelegate
   def build_jukebox
     @jukebox ||= KyanJukebox::Notify.new([:track, :playlist])
     @jukebox.json_parser = BW::JSON
+
+    @update_observer = App.notification_center.observe JB_MESSAGE_RECEIVED do |n|
+      update_jukebox(n.userInfo)
+    end
+  end
+
+  def update_jukebox(data)
+    json_txt = data[:msg].dataUsingEncoding(NSUTF8StringEncoding)
+
+    begin
+      @jukebox.update!(json_txt)
+    rescue BubbleWrap::JSON::ParserError
+    end
+
+    @jukebox.notifications.each do |message|
+      notification = NSUserNotification.alloc.init
+      notification.title = message.heading
+      notification.subtitle = message.subtitle
+      notification.informativeText = message.description
+
+      NSUserNotificationCenter.defaultUserNotificationCenter.scheduleNotification(notification)
+    end
   end
 
   def connect_to_websocket_server
