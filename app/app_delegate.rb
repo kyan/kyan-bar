@@ -15,14 +15,13 @@ class AppDelegate
     @status_bar_image = NSImage.imageNamed("k_logo_col_18x18")
     @status_bar_image_alt = NSImage.imageNamed("k_logo_bw_18x18")
 
-    status_bar = NSStatusBar.systemStatusBar
-    bar = status_bar.statusItemWithLength(NSVariableStatusItemLength)
-    bar.retain
-    bar.setImage(@status_bar_image)
-    bar.setAlternateImage(@status_bar_image_alt)
-    bar.setHighlightMode(true)
+    statusBar = NSStatusBar.systemStatusBar
+    @status_item = statusBar.statusItemWithLength(NSVariableStatusItemLength)
+    @status_item.setImage(@status_bar_image)
+    @status_item.setAlternateImage(@status_bar_image_alt)
+    @status_item.setHighlightMode(true)
     @menu = setupMenu
-    bar.setMenu(@menu)
+    @status_item.setMenu(@menu)
   end
 
   def build_preferences(sender)

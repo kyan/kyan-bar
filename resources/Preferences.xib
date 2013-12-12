@@ -13,14 +13,14 @@
         <customObject id="-3" userLabel="Application"/>
         <window title="KyanBar Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" wantsToBeColor="NO" appearanceType="aqua" animationBehavior="default" id="1" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
-            <rect key="contentRect" x="196" y="240" width="411" height="101"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <rect key="contentRect" x="196" y="240" width="411" height="61"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
             <view key="contentView" id="2">
-                <rect key="frame" x="0.0" y="0.0" width="411" height="101"/>
+                <rect key="frame" x="0.0" y="0.0" width="411" height="61"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kuZ-hG-CA5">
-                        <rect key="frame" x="18" y="61" width="225" height="18"/>
+                        <rect key="frame" x="18" y="21" width="225" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="Automatically check for updates" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="LJO-ap-bIT">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -31,7 +31,7 @@
                         </connections>
                     </button>
                     <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0uH-RX-QUa">
-                        <rect key="frame" x="247" y="57" width="147" height="26"/>
+                        <rect key="frame" x="247" y="17" width="147" height="26"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="xWA-OK-Enm">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -50,21 +50,6 @@
                             <binding destination="GMc-Sq-8Yn" name="selectedTag" keyPath="updateCheckInterval" id="HeG-Wd-YLZ"/>
                         </connections>
                     </popUpButton>
-                    <button appearanceType="aqua" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Q6-jN-Yzq">
-                        <rect key="frame" x="14" y="13" width="79" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="push" title="About" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="T4g-nc-m3k">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <binding destination="-3" name="target" keyPath="self" id="W4m-6X-70p">
-                                <dictionary key="options">
-                                    <string key="NSSelectorName">orderFrontStandardAboutPanel:</string>
-                                </dictionary>
-                            </binding>
-                        </connections>
-                    </button>
                 </subviews>
             </view>
             <connections>
