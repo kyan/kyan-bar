@@ -1,10 +1,11 @@
 class NowplayingView < NSView
 
-  attr_accessor :jukebox, :spacer
+  attr_accessor :jukebox, :spacer, :padding
 
   def initWithFrame(frame)
     super(frame).tap do |cell|
-      @spacer = 5
+      @spacer   = 5
+      @padding  = 20
       @image  ||= draw_image_box
       @title  ||= draw_title_box
       @artist ||= draw_artist_box
@@ -35,8 +36,12 @@ class NowplayingView < NSView
     @image.frame.origin.x + @image.frame.size.width + spacer
   end
 
+  def end_x
+    frame.origin.x + frame.size.width - padding - start_x
+  end
+
   def draw_title_box
-    NSTextField.alloc.initWithFrame([[start_x, 31], [160, 15]]).tap do |v|
+    NSTextField.alloc.initWithFrame([[start_x, 31], [end_x, 15]]).tap do |v|
       v.setEditable(false)
       v.setBezeled(false)
       v.setDrawsBackground(false)
@@ -45,7 +50,7 @@ class NowplayingView < NSView
   end
 
   def draw_artist_box
-    NSTextField.alloc.initWithFrame([[start_x, 14], [160, 15]]).tap do |v|
+    NSTextField.alloc.initWithFrame([[start_x, 14], [end_x, 15]]).tap do |v|
       v.setEditable(false)
       v.setBezeled(false)
       v.setDrawsBackground(false)
@@ -54,7 +59,7 @@ class NowplayingView < NSView
   end
 
   def draw_album_box
-    NSTextField.alloc.initWithFrame([[start_x, 5], [160, 10]]).tap do |v|
+    NSTextField.alloc.initWithFrame([[start_x, 5], [end_x, 10]]).tap do |v|
       v.setEditable(false)
       v.setBezeled(false)
       v.setDrawsBackground(false)
@@ -63,7 +68,7 @@ class NowplayingView < NSView
   end
 
   def draw_image_box
-    NSImageView.alloc.initWithFrame([[10, 0], [50, 50]]).tap do |v|
+    NSImageView.alloc.initWithFrame([[padding, 0], [50, 50]]).tap do |v|
       v.setEditable(false)
     end
   end
