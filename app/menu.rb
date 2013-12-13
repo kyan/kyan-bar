@@ -6,10 +6,10 @@ class AppDelegate
     build_now_playing
     add_seperator_for(@menu)
 
-    @track_list = TracklistController.new
-    mi = NSMenuItem.new
-    mi.view = @track_list.view
-    @menu.addItem mi
+    # @track_list = TracklistController.new
+    # mi = NSMenuItem.new
+    # mi.view = @track_list.view
+    # @menu.addItem mi
 
     links.each_with_index do |data, i|
       m = NSMenuItem.new
@@ -63,7 +63,7 @@ class AppDelegate
   end
 
   def build_now_playing
-    @jukebox_menu = NSViewController.alloc.initWithNibName("Jukebox", bundle:nil)
+    @jukebox_menu = NowplayingController.new
     @jukebox_view = @jukebox_menu.view
     @jukebox_view.jukebox = jukebox
 
