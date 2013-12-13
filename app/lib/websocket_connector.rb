@@ -23,7 +23,16 @@ class WebsocketConnector
   end
 
   def self.webSocket(webSocket, didReceiveMessage:msg)
-    App.notification_center.post(JB_MESSAGE_RECEIVED, nil, { msg:msg })
+    jukebox = App.shared.delegate.jukebox
+    jukebox.update!(msg.dataUsingEncoding(NSUTF8StringEncoding))
+    jukebox.notifications.each do |message|
+      notification = NSUserNotification.alloc.init
+      notification.title = message.heading
+      notification.subtitle = message.subtitle
+      notification.informativeText = message.description
+
+      NSUserNotificationCenter.defaultUserNotificationCenter.scheduleNotification(notification)
+    end
   end
 
   def self.webSocketDidOpen(webSocket)
