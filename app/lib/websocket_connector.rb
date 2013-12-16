@@ -8,7 +8,8 @@ class WebsocketConnector
   end
 
   def initialize
-    @reconn_interval = 0.0
+    @connected = false
+    reset_reconn_interval!
   end
 
   def connect
@@ -20,27 +21,28 @@ class WebsocketConnector
   end
 
   def reconnect
+    @connected       = false
     @reconn_interval = @reconn_interval >= 0.1 ? @reconn_interval * 2 : 0.1
     @reconn_interval = [60.0, @reconn_interval].min
 
     connect
   end
 
-  def self.webSocket(webSocket, didReceiveMessage:msg)
-    jukebox = App.shared.delegate.jukebox
-    jukebox.update!(msg.dataUsingEncoding(NSUTF8StringEncoding))
-    jukebox.notifications.each do |message|
-      notification = NSUserNotification.alloc.init
-      notification.title = message.heading
-      notification.subtitle = message.subtitle
-      notification.informativeText = message.description
+  def connected?
+    @connected
+  end
 
-      NSUserNotificationCenter.defaultUserNotificationCenter.scheduleNotification(notification)
-    end
+  def reset_reconn_interval!
+    @reconn_interval = 0.0
+  end
+
+  def self.webSocket(webSocket, didReceiveMessage:msg)
+    App.notification_center.post(JB_MESSAGE_RECEIVED, nil, { msg:msg })
   end
 
   def self.webSocketDidOpen(webSocket)
-    WebsocketConnector.instance.reconn_interval = 0.0
+    @connected = true
+    WebsocketConnector.instance.reset_reconn_interval!
   end
 
   def self.webSocket(webSocket, didFailWithError:error_ptr)

@@ -14,7 +14,7 @@ class JukeboxHandler
     jb = KyanJukebox::Notify.new([:track, :playlist])
     jb.json_parser = BW::JSON
 
-    new(jb)
+    new jb
   end
 
   private
@@ -28,6 +28,7 @@ class JukeboxHandler
   end
 
   def after_update
+    App.notification_center.post(JB_UPDATED)
     do_notifications
   end
 
