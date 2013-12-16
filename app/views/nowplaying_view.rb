@@ -59,7 +59,7 @@ class NowplayingView < NSView
   end
 
   def draw_album_box
-    NSTextField.alloc.initWithFrame([[start_x, 5], [end_x, 10]]).tap do |v|
+    NSTextField.alloc.initWithFrame([[start_x, 4], [end_x, 11]]).tap do |v|
       v.setEditable(false)
       v.setBezeled(false)
       v.setDrawsBackground(false)
@@ -77,7 +77,7 @@ class NowplayingView < NSView
     txt = track.title.attrd({
       'NSFont' => NSFont.fontWithName("Lucida Grande", size:12),
       'NSColor' => NSColor.blackColor
-    })
+    }) unless track.title.nil?
     @title.setAttributedStringValue(txt)
     @title.setToolTip(track.title)
   end
@@ -86,7 +86,7 @@ class NowplayingView < NSView
     txt = track.artist.attrd({
       'NSFont' => NSFont.fontWithName("Lucida Grande", size:10),
       'NSColor' => NSColor.darkGrayColor
-    })
+    }) unless track.artist.nil?
     @artist.setAttributedStringValue(txt)
     @artist.setToolTip(track.artist)
   end
@@ -95,7 +95,7 @@ class NowplayingView < NSView
     txt = track.album.attrd({
       'NSFont' => NSFont.fontWithName("Lucida Grande", size:10),
       'NSColor' => NSColor.lightGrayColor
-    })
+    }) unless track.album.nil?
     @album.setAttributedStringValue(txt)
     @album.setToolTip(track.album)
   end
