@@ -1,16 +1,20 @@
 class WebsocketConnector
 
-  attr_accessor :websocket
+  attr_accessor :websocket, :url, :reconn_interval
 
-  def initialize(url)
+  def self.instance
+    Dispatch.once { @instance ||= new }
+    @instance
+  end
+
+  def initialize
     @reconn_interval = 0.0
-    @websocket_url = url
   end
 
   def connect
-    url = NSURL.URLWithString(@websocket_url)
+    websocket_url = NSURL.URLWithString(url)
     @websocket = SRWebSocket.new
-    @websocket.initWithURL(url)
+    @websocket.initWithURL(websocket_url)
     @websocket.delegate = WebsocketConnector
     @websocket.open
   end
@@ -36,12 +40,14 @@ class WebsocketConnector
   end
 
   def self.webSocketDidOpen(webSocket)
-    @reconn_interval = 0.0
+    WebsocketConnector.instance.reconn_interval = 0.0
   end
 
-  def self.webSocket(webSocket, didFailWithError:error)
-    NSTimer.scheduledTimerWithTimeInterval(@reconn_interval,
-      target:self,
+  def self.webSocket(webSocket, didFailWithError:error_ptr)
+    wsinstance =  WebsocketConnector.instance
+    NSTimer.scheduledTimerWithTimeInterval(
+      wsinstance.reconn_interval,
+      target:wsinstance,
       selector:'reconnect',
       userInfo:nil,
       repeats: false

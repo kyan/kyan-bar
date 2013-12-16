@@ -1,6 +1,8 @@
-WEBSOCKET_URL = 'ws://jukebox.local:8080'
+WEBSOCKET_URL = 'ws://jukebox.local:8081'
 
 TRACK_TITLE=1
 TRACK_ARTIST=2
 TRACK_ARTWORK_URL=3
 TRACK_ALBUM=4
+
+JB_MESSAGE_RECEIVED="JukeMessageReceived"
