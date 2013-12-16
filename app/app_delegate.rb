@@ -37,7 +37,9 @@ class AppDelegate
   end
 
   def connect_to_websocket_server
-    @websocket_server ||= WebsocketConnector.new(WEBSOCKET_URL).connect
+    @websocket_server ||= WebsocketConnector.instance
+    @websocket_server.url = WEBSOCKET_URL
+    @websocket_server.connect
   end
 
   def userNotificationCenter(center, shouldPresentNotification:notification)
