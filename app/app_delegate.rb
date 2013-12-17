@@ -28,6 +28,12 @@ class AppDelegate
     App.shared.activateIgnoringOtherApps(true)
   end
 
+  def build_jukebox_controls(sender)
+    @jukebox_controls ||= JukeboxControlController.alloc.init
+    @jukebox_controls.window.makeKeyAndOrderFront(self)
+    App.shared.activateIgnoringOtherApps(true)
+  end
+
   def build_jukebox
     @jukebox_handler = JukeboxHandler.build
   end

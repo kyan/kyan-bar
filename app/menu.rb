@@ -15,6 +15,8 @@ class AppDelegate
       @menu.addItem m
     end
 
+    add_seperator_for(@menu)
+    build_jukebox_control
     build_submenu
 
     @menu
@@ -54,6 +56,13 @@ class AppDelegate
     mi = NSMenuItem.new
     mi.title = 'Settings'
     mi.setSubmenu(sub_menu)
+    @menu.addItem mi
+  end
+
+  def build_jukebox_control
+    mi = NSMenuItem.new
+    mi.title = 'Launch Jukebox control...'
+    mi.action = 'build_jukebox_controls:'
     @menu.addItem mi
   end
 
