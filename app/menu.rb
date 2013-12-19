@@ -1,10 +1,9 @@
 class AppDelegate
-  def setupMenu
-    @menu = NSMenu.new
-    @menu.initWithTitle App.name
 
-    build_now_playing
-    add_seperator_for(@menu)
+  def build_menu
+    @menu = NSMenu.new
+    @menu.delegate = self
+    @menu.initWithTitle App.name
 
     links.each_with_index do |data, i|
       m = NSMenuItem.new
@@ -18,6 +17,23 @@ class AppDelegate
     build_submenu
 
     @menu
+  end
+
+  def menuNeedsUpdate(menu)
+    np_index = menu.indexOfItemWithTag(MENU_NOWPLAYING)
+
+    if np_index >= 0
+      if !jukebox_available?
+        menu.removeItemAtIndex(np_index)
+        menu.removeItemAtIndex(np_index)
+        menu.removeItemAtIndex(np_index)
+        menu.removeItemAtIndex(np_index)
+      end
+    else
+      if jukebox_available?
+        build_now_playing
+      end
+    end
   end
 
   private
@@ -58,13 +74,22 @@ class AppDelegate
   end
 
   def build_now_playing
-    @jukebox_menu = NowplayingController.new
-    @jukebox_view = @jukebox_menu.view
-    @jukebox_view.jukebox = jukebox
+    @jukebox_menu ||= NowplayingController.new
+    @jukebox_menu.view.refresh(jukebox)
 
-    mi = NSMenuItem.new
-    mi.view = @jukebox_view
-    @menu.addItem mi
+    jbmi = NSMenuItem.new
+    jbmi.tag = MENU_NOWPLAYING
+    jbmi.view = @jukebox_menu.view
+    @menu.insertItem(jbmi, atIndex:0)
+
+    @menu.insertItem(NSMenuItem.separatorItem, atIndex:1)
+
+    jrmi = NSMenuItem.new
+    jrmi.title = 'Launch Remote...'
+    jrmi.action = 'build_jukebox_controls:'
+    @menu.insertItem(jrmi, atIndex:2)
+
+    @menu.insertItem(NSMenuItem.separatorItem, atIndex:3)
   end
 
   def open_link(sender)
