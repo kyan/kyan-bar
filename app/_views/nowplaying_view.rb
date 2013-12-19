@@ -157,14 +157,16 @@ class NowplayingView < NSView
   end
 
   def update_image
-    Dispatch::Queue.concurrent.async do
-      if track.artwork_url.nil?
-        image = NSImage.imageNamed("missing_artwork.png")
-      else
+    if track.artwork_url.nil?
+      image = NSImage.imageNamed("missing_artwork.png")
+      @image.setImage(image)
+    else
+      gcdq = Dispatch::Queue.new('com.kyan.kyanbar')
+      gcdq.async do
         url   = NSURL.URLWithString(track.artwork_url)
         image = NSImage.alloc.initWithContentsOfURL(url)
+        @image.setImage(image)
       end
-      @image.setImage(image)
     end
   end
 end
