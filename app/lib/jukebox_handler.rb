@@ -28,13 +28,13 @@ class JukeboxHandler
   end
 
   def after_update
-    App.notification_center.post(JB_UPDATED)
+    App.notification_center.post(JB_UPDATED, nil, {jukebox:jukebox})
     do_notifications
   end
 
   def do_notifications
     jukebox.notifications.each do |message|
-      notification = NSUserNotification.alloc.init
+      notification = NSUserNotification.new
       notification.title = message.heading
       notification.subtitle = message.subtitle
       notification.informativeText = message.description

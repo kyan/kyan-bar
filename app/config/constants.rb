@@ -1,9 +1,13 @@
-WEBSOCKET_URL = 'ws://jukebox.local:8081'
+WEBSOCKET_HOST = 'jukebox.local'
+WEBSOCKET_URL = "ws://#{WEBSOCKET_HOST}:8081"
+VOTE_URL = "http://#{WEBSOCKET_HOST}/external?vote[aye]=#{vote}&"
 
 TRACK_TITLE=1
 TRACK_ARTIST=2
 TRACK_ARTWORK_URL=3
 TRACK_ALBUM=4
+
+MENU_NOWPLAYING=111
 
 JB_MESSAGE_RECEIVED="JukeboxMessageReceived"
 JB_UPDATED="JukeboxUpdated"

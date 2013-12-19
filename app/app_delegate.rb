@@ -1,11 +1,13 @@
 class AppDelegate
 
+  attr_reader :websocket_server
+
   def applicationDidFinishLaunching(notification)
     NSUserNotificationCenter.defaultUserNotificationCenter.setDelegate(self)
 
     build_jukebox
-    build_status
     connect_to_websocket_server
+    build_status
   end
 
   def build_status
@@ -18,18 +20,20 @@ class AppDelegate
     bar.setImage(status_bar_image)
     bar.setAlternateImage(status_bar_image_alt)
     bar.setHighlightMode(true)
-    @menu = setupMenu
+
+    build_menu
     bar.setMenu(@menu)
   end
 
   def build_preferences(sender)
-    @preferences ||= PreferencesController.alloc.init
+    @preferences ||= PreferencesController.new
     @preferences.window.makeKeyAndOrderFront(self)
     App.shared.activateIgnoringOtherApps(true)
   end
 
   def build_jukebox_controls(sender)
-    @jukebox_controls ||= JukeboxControlController.alloc.init
+    @jukebox_controls ||= JukeboxControlController.new
+    @jukebox_controls.setup(jukebox)
     @jukebox_controls.window.makeKeyAndOrderFront(self)
     App.shared.activateIgnoringOtherApps(true)
   end
@@ -42,10 +46,15 @@ class AppDelegate
     @jukebox_handler.jukebox unless @jukebox_handler.nil?
   end
 
+  def jukebox_available?
+    WebsocketConnector.instance.connected? && !jukebox.nil?
+  end
+
   def connect_to_websocket_server
-    @websocket_server ||= WebsocketConnector.instance
-    @websocket_server.url = WEBSOCKET_URL
-    @websocket_server.connect
+    WebsocketConnector.instance.tap do |ws|
+      ws.url = WEBSOCKET_URL
+      ws.connect
+    end
   end
 
   def userNotificationCenter(center, shouldPresentNotification:notification)

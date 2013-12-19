@@ -1,10 +1,9 @@
 class AppDelegate
-  def setupMenu
-    @menu = NSMenu.new
-    @menu.initWithTitle App.name
 
-    build_now_playing
-    add_seperator_for(@menu)
+  def build_menu
+    @menu = NSMenu.new
+    @menu.delegate = self
+    @menu.initWithTitle App.name
 
     links.each_with_index do |data, i|
       m = NSMenuItem.new
@@ -15,11 +14,23 @@ class AppDelegate
       @menu.addItem m
     end
 
-    add_seperator_for(@menu)
     build_jukebox_control
     build_submenu
 
     @menu
+  end
+
+  def menuNeedsUpdate(menu)
+    np_index = menu.indexOfItemWithTag(MENU_NOWPLAYING)
+
+    if np_index >= 0
+      if !jukebox_available?
+        menu.removeItemAtIndex(np_index)
+        menu.removeItemAtIndex(np_index)
+      end
+    else
+      build_now_playing if jukebox_available?
+    end
   end
 
   private
@@ -67,13 +78,14 @@ class AppDelegate
   end
 
   def build_now_playing
-    @jukebox_menu = NowplayingController.new
-    @jukebox_view = @jukebox_menu.view
-    @jukebox_view.jukebox = jukebox
+    @jukebox_menu ||= NowplayingController.new
+    @jukebox_menu.view.refresh(jukebox)
 
     mi = NSMenuItem.new
-    mi.view = @jukebox_view
-    @menu.addItem mi
+    mi.tag = MENU_NOWPLAYING
+    mi.view = @jukebox_menu.view
+    @menu.insertItem(mi, atIndex:0)
+    @menu.insertItem(NSMenuItem.separatorItem, atIndex:1)
   end
 
   def open_link(sender)

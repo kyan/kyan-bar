@@ -1,6 +1,6 @@
 class WebsocketConnector
 
-  attr_accessor :websocket, :url, :reconn_interval
+  attr_accessor :websocket, :url, :reconn_interval, :connected
 
   def self.instance
     Dispatch.once { @instance ||= new }
@@ -41,19 +41,22 @@ class WebsocketConnector
   end
 
   def self.webSocketDidOpen(webSocket)
-    @connected = true
-    WebsocketConnector.instance.reset_reconn_interval!
+    WebsocketConnector.instance.tap do |ws|
+      ws.connected = true
+      ws.reset_reconn_interval!
+    end
   end
 
   def self.webSocket(webSocket, didFailWithError:error_ptr)
     wsinstance =  WebsocketConnector.instance
+
     NSTimer.scheduledTimerWithTimeInterval(
       wsinstance.reconn_interval,
       target:wsinstance,
       selector:'reconnect',
       userInfo:nil,
       repeats: false
-      )
+    )
   end
 
   def self.webSocket(webSocket, didCloseWithCode:code, reason:reason, wasClean:wasClean)

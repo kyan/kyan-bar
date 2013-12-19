@@ -6,8 +6,10 @@ class VoteButton < NSButton
     init.tap do |button|
       @vote = vote
       button.translatesAutoresizingMaskIntoConstraints = false
+      button.setBezelStyle(NSRegularSquareBezelStyle)
+      button.setButtonType(NSMomentaryPushButton)
       button.setTitle vote ? "+" : "-"
-      button.setAction "registerVote:"
+      button.setAction "register_vote:"
     end
   end
 
