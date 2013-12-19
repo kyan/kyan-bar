@@ -6,9 +6,19 @@ class VoteButton < NSButton
     init.tap do |button|
       @vote = vote
       button.translatesAutoresizingMaskIntoConstraints = false
-      button.setBezelStyle(NSRegularSquareBezelStyle)
+      button.setBezelStyle(NSTexturedSquareBezelStyle)
       button.setButtonType(NSMomentaryPushButton)
-      button.setTitle vote ? "+" : "-"
+
+      paragraph = NSMutableParagraphStyle.new
+      paragraph.setAlignment(NSCenterTextAlignment)
+
+      txt = vote ? "Vote Up" : "Vote Down"
+      txt = txt.attrd({
+        'NSFont' => NSFont.fontWithName("Lucida Grande", size:10),
+        'NSParagraphStyle' => paragraph
+      })
+
+      button.setAttributedTitle(txt)
       button.setAction "register_vote:"
     end
   end

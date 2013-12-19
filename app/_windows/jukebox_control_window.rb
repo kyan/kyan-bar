@@ -46,7 +46,7 @@ class JukeboxControlWindow < NSWindow
       views:views_dictionary
     )
     constraints += NSLayoutConstraint.constraintsWithVisualFormat(
-      "V:|-10-[vote_buttons]-10-|",
+      "V:|-5-[vote_buttons]-5-|",
       options:0,
       metrics:nil,
       views:views_dictionary
