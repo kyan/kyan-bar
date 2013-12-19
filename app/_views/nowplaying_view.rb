@@ -23,7 +23,7 @@ class NowplayingView < NSView
         "v_padding"    => 5,
         "vv_padding"   => 6,
         "title_h"      => 18,
-        "artist_h"     => 16,
+        "artist_h"     => 15,
         "album_h"      => 15
       }
 
@@ -157,15 +157,13 @@ class NowplayingView < NSView
   end
 
   def update_image
-    image_url = if track.artwork_url.nil?
-      "http://www.appledystopia.com/wp-content/uploads/2013/03/missing-itunes-album-art-icon.png"
-    else
-      track.artwork_url
-    end
-
     Dispatch::Queue.concurrent.async do
-      url   = NSURL.URLWithString(image_url)
-      image = NSImage.alloc.initWithContentsOfURL(url)
+      if track.artwork_url.nil?
+        image = NSImage.imageNamed("missing_artwork.png")
+      else
+        url   = NSURL.URLWithString(track.artwork_url)
+        image = NSImage.alloc.initWithContentsOfURL(url)
+      end
       @image.setImage(image)
     end
   end
