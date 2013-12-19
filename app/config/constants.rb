@@ -1,6 +1,6 @@
 WEBSOCKET_HOST = 'jukebox.local'
 WEBSOCKET_URL = "ws://#{WEBSOCKET_HOST}:8081"
-VOTE_URL = "http://#{WEBSOCKET_HOST}/external?vote[aye]=#{vote}&"
+VOTE_URL = "http://#{WEBSOCKET_HOST}/external?"
 
 TRACK_TITLE=1
 TRACK_ARTIST=2

@@ -17,14 +17,14 @@ class NowplayingView < NSView
       }
 
       @metrics_dict = {
-        "image_side"        => 50,
-        "h_spacing"         => 5,
-        "h_padding"         => 10,
-        "v_padding"         => 5,
-        "vv_padding"        => 6,
-        "title_h"           => 18,
-        "artist_h"          => 16,
-        "album_h"           => 15
+        "image_side"   => 50,
+        "h_spacing"    => 5,
+        "h_padding"    => 10,
+        "v_padding"    => 5,
+        "vv_padding"   => 6,
+        "title_h"      => 18,
+        "artist_h"     => 16,
+        "album_h"      => 15
       }
 
       views_dict.each do |key, view|

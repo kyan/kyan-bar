@@ -59,7 +59,11 @@
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                         <connections>
-                            <binding destination="62v-zO-hda" name="value" keyPath="values.jukeboxUsername" id="uho-pe-CpH"/>
+                            <binding destination="62v-zO-hda" name="value" keyPath="values.jukeboxUsername" id="M4J-j2-HZ3">
+                                <dictionary key="options">
+                                    <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                </dictionary>
+                            </binding>
                         </connections>
                     </textField>
                     <textField appearanceType="aqua" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XP5-qN-yfl">
@@ -101,9 +105,9 @@
                             </allowedInputSourceLocales>
                         </secureTextFieldCell>
                         <connections>
-                            <binding destination="62v-zO-hda" name="value" keyPath="values" id="QAX-qR-jU9">
+                            <binding destination="62v-zO-hda" name="value" keyPath="values.jukeboxPassword" id="LSv-Cp-RPL">
                                 <dictionary key="options">
-                                    <string key="NSValueTransformerName">jukeboxPassword</string>
+                                    <bool key="NSContinuouslyUpdatesValue" value="YES"/>
                                 </dictionary>
                             </binding>
                         </connections>

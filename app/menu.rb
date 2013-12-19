@@ -14,7 +14,6 @@ class AppDelegate
       @menu.addItem m
     end
 
-    build_jukebox_control
     build_submenu
 
     @menu
@@ -27,9 +26,13 @@ class AppDelegate
       if !jukebox_available?
         menu.removeItemAtIndex(np_index)
         menu.removeItemAtIndex(np_index)
+        menu.removeItemAtIndex(np_index)
+        menu.removeItemAtIndex(np_index)
       end
     else
-      build_now_playing if jukebox_available?
+      if jukebox_available?
+        build_now_playing
+      end
     end
   end
 
@@ -70,22 +73,23 @@ class AppDelegate
     @menu.addItem mi
   end
 
-  def build_jukebox_control
-    mi = NSMenuItem.new
-    mi.title = 'Launch Jukebox control...'
-    mi.action = 'build_jukebox_controls:'
-    @menu.addItem mi
-  end
-
   def build_now_playing
     @jukebox_menu ||= NowplayingController.new
     @jukebox_menu.view.refresh(jukebox)
 
-    mi = NSMenuItem.new
-    mi.tag = MENU_NOWPLAYING
-    mi.view = @jukebox_menu.view
-    @menu.insertItem(mi, atIndex:0)
+    jbmi = NSMenuItem.new
+    jbmi.tag = MENU_NOWPLAYING
+    jbmi.view = @jukebox_menu.view
+    @menu.insertItem(jbmi, atIndex:0)
+
     @menu.insertItem(NSMenuItem.separatorItem, atIndex:1)
+
+    jrmi = NSMenuItem.new
+    jrmi.title = 'Launch Remote...'
+    jrmi.action = 'build_jukebox_controls:'
+    @menu.insertItem(jrmi, atIndex:2)
+
+    @menu.insertItem(NSMenuItem.separatorItem, atIndex:3)
   end
 
   def open_link(sender)
