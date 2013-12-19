@@ -43,6 +43,8 @@ class AppDelegate
     mi = NSMenuItem.new
     mi.title = 'Preferences...'
     mi.action = 'build_preferences:'
+    mi.setKeyEquivalent(",")
+    mi.setKeyEquivalentModifierMask(NSCommandKeyMask)
     sub_menu.addItem mi
 
     mi = NSMenuItem.new
@@ -63,6 +65,8 @@ class AppDelegate
     mi = NSMenuItem.new
     mi.title = 'Quit'
     mi.action = 'terminate:'
+    mi.setKeyEquivalent("q")
+    mi.setKeyEquivalentModifierMask(NSCommandKeyMask)
     sub_menu.addItem mi
 
     add_seperator_for(@menu)
@@ -87,6 +91,8 @@ class AppDelegate
     jrmi = NSMenuItem.new
     jrmi.title = 'Launch Remote...'
     jrmi.action = 'build_jukebox_controls:'
+    jrmi.setKeyEquivalent("0")
+    jrmi.setKeyEquivalentModifierMask(NSCommandKeyMask)
     @menu.insertItem(jrmi, atIndex:2)
 
     @menu.insertItem(NSMenuItem.separatorItem, atIndex:3)

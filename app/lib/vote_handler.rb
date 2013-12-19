@@ -14,10 +14,14 @@ class VoteHandler
   def register
     if valid?
       BW::HTTP.get(vote_url) do |response|
-        response.ok?
+        if response.body.to_s.include?('login details incorrect')
+          alert_creds_wrong
+        else
+          response.ok?
+        end
       end
     else
-      oops
+      alert_no_creds
       false
     end
   end
@@ -40,10 +44,24 @@ class VoteHandler
     Persistence.get("jukeboxPassword")
   end
 
-  def oops
+  def alert_creds_wrong
+    oops(
+      'Doh?',
+      'Your jukebox username or password appear to be wrong!'
+    )
+  end
+
+  def alert_no_creds
+    oops(
+      'Want to vote huh?',
+      'You need to set your username and password in preferences'
+    )
+  end
+
+  def oops(title, message)
     alert = NSAlert.new
-    alert.messageText = 'Want to vote huh?'
-    alert.informativeText = 'You need to set your username and password in preferences'
+    alert.messageText = title
+    alert.informativeText = message
     alert.alertStyle = NSInformationalAlertStyle
     alert.addButtonWithTitle("Ok")
     response = alert.runModal
