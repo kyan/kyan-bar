@@ -4,6 +4,8 @@ class NowplayingView < NSView
 
   def initWithFrame(frame)
     super(frame).tap do |cell|
+      cell.translatesAutoresizingMaskIntoConstraints = false
+
       @image  ||= draw_image_box
       @title  ||= draw_title_box
       @artist ||= draw_artist_box
@@ -88,8 +90,6 @@ class NowplayingView < NSView
 
   def draw_title_box
     NSTextField.new.tap do |v|
-      v.cell.setWraps(false)
-      v.cell.setLineBreakMode(NSLineBreakByTruncatingTail)
       v.setEditable(false)
       v.setBezeled(false)
       v.setDrawsBackground(false)
@@ -100,8 +100,6 @@ class NowplayingView < NSView
 
   def draw_artist_box
     NSTextField.new.tap do |v|
-      v.cell.setWraps(false)
-      v.cell.setLineBreakMode(NSLineBreakByTruncatingTail)
       v.setEditable(false)
       v.setBezeled(false)
       v.setDrawsBackground(false)
@@ -112,8 +110,6 @@ class NowplayingView < NSView
 
   def draw_album_box
     NSTextField.new.tap do |v|
-      v.cell.setWraps(false)
-      v.cell.setLineBreakMode(NSLineBreakByTruncatingTail)
       v.setEditable(false)
       v.setBezeled(false)
       v.setDrawsBackground(false)
@@ -130,27 +126,39 @@ class NowplayingView < NSView
   end
 
   def update_title
+    paragraph = NSMutableParagraphStyle.new
+    paragraph.setLineBreakMode(NSLineBreakByTruncatingTail)
+
     txt = track.title.attrd({
       'NSFont' => NSFont.fontWithName("Lucida Grande", size:12),
-      'NSColor' => NSColor.blackColor
+      'NSColor' => NSColor.blackColor,
+      'NSParagraphStyle' => paragraph
     }) unless track.title.nil?
     @title.setAttributedStringValue(txt)
     @title.setToolTip(track.title)
   end
 
   def update_artist
+    paragraph = NSMutableParagraphStyle.new
+    paragraph.setLineBreakMode(NSLineBreakByTruncatingTail)
+
     txt = track.artist.attrd({
       'NSFont' => NSFont.fontWithName("Lucida Grande", size:10),
-      'NSColor' => NSColor.darkGrayColor
+      'NSColor' => NSColor.darkGrayColor,
+      'NSParagraphStyle' => paragraph
     }) unless track.artist.nil?
     @artist.setAttributedStringValue(txt)
     @artist.setToolTip(track.artist)
   end
 
   def update_album
+    paragraph = NSMutableParagraphStyle.new
+    paragraph.setLineBreakMode(NSLineBreakByTruncatingTail)
+
     txt = track.album.attrd({
       'NSFont' => NSFont.fontWithName("Lucida Grande", size:10),
-      'NSColor' => NSColor.lightGrayColor
+      'NSColor' => NSColor.lightGrayColor,
+      'NSParagraphStyle' => paragraph
     }) unless track.album.nil?
     @album.setAttributedStringValue(txt)
     @album.setToolTip(track.album)
