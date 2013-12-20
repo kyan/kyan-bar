@@ -32,8 +32,7 @@ class JukeboxControlWindow < NSWindow
     metrics_dict = {
       "padding"       => 10,
       "max_width"     => 450,
-      "min_width"     => 120,
-      "default_width" => 200
+      "default_width" => 150
     }
 
     views_dictionary.each do |key, view|
@@ -54,7 +53,7 @@ class JukeboxControlWindow < NSWindow
       views:views_dictionary
     )
     constraints += NSLayoutConstraint.constraintsWithVisualFormat(
-      "H:|[now_playing(>=min_width,<=max_width,==default_width@750)]-5-[vote_buttons]-padding-|",
+      "H:|[now_playing(==default_width@750,<=max_width)]-5-[vote_buttons]-padding-|",
       options:0,
       metrics:metrics_dict,
       views:views_dictionary
