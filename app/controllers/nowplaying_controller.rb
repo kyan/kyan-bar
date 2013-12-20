@@ -12,7 +12,6 @@ class NowplayingController < NSViewController
 
   def build_view
     @main_view = NowplayingView.alloc.initWithFrame([[0, 0], [50, 50]])
-    @main_view.translatesAutoresizingMaskIntoConstraints = false
     self.setView(@main_view)
   end
 
