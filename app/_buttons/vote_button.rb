@@ -8,18 +8,15 @@ class VoteButton < NSButton
       button.translatesAutoresizingMaskIntoConstraints = false
       button.setBezelStyle(NSTexturedSquareBezelStyle)
       button.setButtonType(NSMomentaryPushButton)
-
-      paragraph = NSMutableParagraphStyle.new
-      paragraph.setAlignment(NSCenterTextAlignment)
-
-      txt = vote ? "Vote Up" : "Vote Down"
-      txt = txt.attrd({
-        'NSFont' => NSFont.fontWithName("Lucida Grande", size:10),
-        'NSParagraphStyle' => paragraph
-      })
-
-      button.setAttributedTitle(txt)
       button.setAction "register_vote:"
+
+      if vote
+        button.cell.setImage(NSImage.imageNamed(NSImageNameAddTemplate))
+        button.setToolTip(" Vote Up ")
+      else
+        button.cell.setImage(NSImage.imageNamed(NSImageNameRemoveTemplate))
+        button.setToolTip(" Vote Down ")
+      end
     end
   end
 

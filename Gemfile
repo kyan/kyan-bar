@@ -7,5 +7,5 @@ gem "bubble-wrap", "~> 1.4.0"
 gem 'sugarcube', "~> 1.3.7", :require => [
   'sugarcube-attributedstring',
 ]
-#gem "kyan_jukebox", :path => "/Users/duncan/_dev/kyan/gems/kyan_websocket_api"
-gem "kyan_jukebox", :git => 'git@github.com:kyan/kyan_websocket_api.git'
+#gem "kyan_jukebox_websocket_lib", :path => "/Users/duncan/_dev/kyan/gems/kyan_jukebox_websocket_lib"
+gem "kyan_jukebox", :git => 'git@github.com:kyan/kyan_jukebox_websocket_lib.git'
