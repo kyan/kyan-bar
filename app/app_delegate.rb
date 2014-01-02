@@ -47,7 +47,8 @@ class AppDelegate
   end
 
   def jukebox_available?
-    WebsocketConnector.instance.connected? && !jukebox.nil?
+    true
+    #WebsocketConnector.instance.connected? && !jukebox.nil?
   end
 
   def connect_to_websocket_server
