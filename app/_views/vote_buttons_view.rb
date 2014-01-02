@@ -10,7 +10,7 @@ class VoteButtonsView < NSView
       }
 
       metrics_dict = {
-        "butt_w" => 80,
+        "butt_w" => 50,
         "butt_h" => 22,
         "butt_space" => 5,
       }

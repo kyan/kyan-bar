@@ -10,6 +10,7 @@ class NowplayingView < NSView
       @title  ||= draw_title_box
       @artist ||= draw_artist_box
       @album  ||= draw_album_box
+      @flash  ||= draw_flash_box
 
       views_dict = {
         "image"  => @image,
@@ -32,6 +33,7 @@ class NowplayingView < NSView
       views_dict.each do |key, view|
         cell.addSubview(view)
       end
+      cell.addSubview(@flash)
 
       constraints = []
       constraints += NSLayoutConstraint.constraintsWithVisualFormat(
@@ -71,6 +73,7 @@ class NowplayingView < NSView
   def refresh(jukebox)
     @jukebox = jukebox
     setNeedsDisplay(true)
+    invalidateIntrinsicContentSize
   end
 
   def track
@@ -122,6 +125,13 @@ class NowplayingView < NSView
     NSImageView.new.tap do |v|
       v.setTranslatesAutoresizingMaskIntoConstraints(false)
       v.setEditable(false)
+    end
+  end
+
+  def draw_flash_box
+    NSView.alloc.initWithFrame([[0,0],[30,30]]).tap do |v|
+      v.setTranslatesAutoresizingMaskIntoConstraints(false)
+      v.backgroundColor = NSColor.greenColor
     end
   end
 
