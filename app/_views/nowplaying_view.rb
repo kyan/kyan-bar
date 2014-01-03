@@ -72,24 +72,26 @@ class NowplayingView < NSView
 
   def refresh(jukebox)
     @jukebox = jukebox
-    setNeedsDisplay(true)
-    invalidateIntrinsicContentSize
+    update_data!
   end
 
   def track
     @jukebox.track unless @jukebox.nil?
   end
 
-  def drawRect(dirtyRect)
+  private
+
+  def update_data!
     if @jukebox
       update_image
       update_title
       update_artist
       update_album
     end
-  end
 
-  private
+    setNeedsDisplay(true)
+    #invalidateIntrinsicContentSize
+  end
 
   def draw_title_box
     NSTextField.new.tap do |v|
@@ -175,15 +177,17 @@ class NowplayingView < NSView
   end
 
   def update_image
-    if track.artwork_url.nil?
-      @artwork_image = NSImage.imageNamed("missing_artwork.png")
-      @image.setImage(@artwork_image)
-    else
+    artwork_image = NSImage.imageNamed("missing_artwork.png")
+    @image.setImage(artwork_image)
+
+    if !track.artwork_url.nil?
       gcdq = Dispatch::Queue.new('com.kyan.kyanbar')
       gcdq.async do
-        url   = NSURL.URLWithString(track.artwork_url)
-        @artwork_image = NSImage.alloc.initWithContentsOfURL(url)
-        @image.setImage(@artwork_image)
+        url = NSURL.URLWithString(track.artwork_url)
+        if url
+          artwork_image = NSImage.alloc.initWithContentsOfURL(url)
+          @image.setImage(artwork_image) unless artwork_image.nil?
+        end
       end
     end
   end
