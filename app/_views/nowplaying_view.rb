@@ -6,17 +6,18 @@ class NowplayingView < NSView
     super(frame).tap do |cell|
       cell.translatesAutoresizingMaskIntoConstraints = false
 
-      @image  ||= draw_image_box
-      @title  ||= draw_title_box
-      @artist ||= draw_artist_box
-      @album  ||= draw_album_box
-      @flash  ||= draw_flash_box
+      @image    ||= draw_image_box
+      @title    ||= draw_title_box
+      @artist   ||= draw_artist_box
+      @album    ||= draw_album_box
+      @addedby  ||= draw_addedby_box
 
       views_dict = {
-        "image"  => @image,
-        "title"  => @title,
-        "artist" => @artist,
-        "album"  => @album
+        "image"   => @image,
+        "title"   => @title,
+        "artist"  => @artist,
+        "album"   => @album,
+        "addedby" => @addedby
       }
 
       @metrics_dict = {
@@ -24,10 +25,11 @@ class NowplayingView < NSView
         "h_spacing"    => 5,
         "h_padding"    => 10,
         "v_padding"    => 5,
-        "vv_padding"   => 6,
+        "vv_padding"   => 3,
         "title_h"      => 18,
         "artist_h"     => 15,
-        "album_h"      => 15
+        "album_h"      => 15,
+        "addedby_h"    => 10
       }
 
       views_dict.each do |key, view|
@@ -61,7 +63,13 @@ class NowplayingView < NSView
         views:views_dict
       )
       constraints += NSLayoutConstraint.constraintsWithVisualFormat(
-        "V:|-vv_padding-[title(title_h)]-(-1)-[artist(artist_h)]-(-2)-[album(album_h)]",
+        "H:|-h_padding-[image(==image_side)]-h_spacing-[addedby]-h_padding-|",
+        options:0,
+        metrics:metrics_dict,
+        views:views_dict
+      )
+      constraints += NSLayoutConstraint.constraintsWithVisualFormat(
+        "V:|-vv_padding-[title(title_h)]-(-1)-[artist(artist_h)]-(-2)-[album(album_h)]-(-3)-[addedby(addedby_h)]",
         options:0,
         metrics:metrics_dict,
         views:views_dict
@@ -87,6 +95,7 @@ class NowplayingView < NSView
       update_title
       update_artist
       update_album
+      update_addedby
     end
 
     invalidateIntrinsicContentSize
@@ -130,10 +139,13 @@ class NowplayingView < NSView
     end
   end
 
-  def draw_flash_box
-    NSView.alloc.initWithFrame([[0,0],[30,30]]).tap do |v|
+  def draw_addedby_box
+    NSTextField.new.tap do |v|
+      v.setEditable(false)
+      v.setBezeled(false)
+      v.setDrawsBackground(false)
+      v.setSelectable(false)
       v.setTranslatesAutoresizingMaskIntoConstraints(false)
-      v.backgroundColor = NSColor.greenColor
     end
   end
 
@@ -174,6 +186,19 @@ class NowplayingView < NSView
     }) unless track.album.nil?
     @album.setAttributedStringValue(txt)
     @album.setToolTip(track.album)
+  end
+
+  def update_addedby
+    paragraph = NSMutableParagraphStyle.new
+    paragraph.setLineBreakMode(NSLineBreakByTruncatingTail)
+
+    txt = "Added by #{track.added_by}".attrd({
+      'NSFont' => NSFont.fontWithName("Lucida Grande", size:8),
+      'NSColor' => NSColor.darkGrayColor,
+      'NSParagraphStyle' => paragraph
+    }) unless track.added_by.nil?
+    @addedby.setAttributedStringValue(txt)
+    @addedby.setToolTip(track.album)
   end
 
   def update_image
