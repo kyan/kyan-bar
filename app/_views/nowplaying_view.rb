@@ -89,8 +89,8 @@ class NowplayingView < NSView
       update_album
     end
 
+    invalidateIntrinsicContentSize
     setNeedsDisplay(true)
-    #invalidateIntrinsicContentSize
   end
 
   def draw_title_box
@@ -169,7 +169,7 @@ class NowplayingView < NSView
 
     txt = track.album.attrd({
       'NSFont' => NSFont.fontWithName("Lucida Grande", size:10),
-      'NSColor' => NSColor.lightGrayColor,
+      'NSColor' => NSColor.grayColor,
       'NSParagraphStyle' => paragraph
     }) unless track.album.nil?
     @album.setAttributedStringValue(txt)
