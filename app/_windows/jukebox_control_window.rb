@@ -4,12 +4,20 @@ class JukeboxControlWindow < NSWindow
 
   def self.build
     alloc.initWithContentRect([[50, 50], [100, 60]],
-      styleMask: NSTitledWindowMask|NSClosableWindowMask|NSMiniaturizableWindowMask|NSResizableWindowMask,
+      styleMask: NSBorderlessWindowMask|NSTexturedBackgroundWindowMask|NSResizableWindowMask,
       backing: NSBackingStoreBuffered,
       defer: true
     ).tap do |win|
       win.build_views
     end
+  end
+
+  def canBecomeKeyWindow
+    true
+  end
+
+  def canBecomeMainWindow
+    true
   end
 
   def register_vote(button)
