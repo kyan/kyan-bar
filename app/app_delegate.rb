@@ -36,6 +36,13 @@ class AppDelegate
     @jukebox_controls.setup(jukebox)
     @jukebox_controls.window.makeKeyAndOrderFront(self)
     App.shared.activateIgnoringOtherApps(true)
+
+    update_jukebox_controls_button_state(NSOnState)
+  end
+
+  def hide_jukebox_controls
+    update_jukebox_controls_button_state(NSOffState)
+    @jukebox_controls.close unless @jukebox_controls.nil?
   end
 
   def build_jukebox
@@ -47,8 +54,7 @@ class AppDelegate
   end
 
   def jukebox_available?
-    true
-    #WebsocketConnector.instance.connected? && !jukebox.nil?
+    WebsocketConnector.instance.connected? && !jukebox.nil?
   end
 
   def connect_to_websocket_server
@@ -60,5 +66,10 @@ class AppDelegate
 
   def userNotificationCenter(center, shouldPresentNotification:notification)
     true
+  end
+
+  def update_jukebox_controls_button_state(state)
+    butt = @menu.itemWithTag(MENU_CONSOLE_BUTT)
+    butt.setState(state) unless butt.nil?
   end
 end
