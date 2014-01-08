@@ -46,7 +46,6 @@ class VoteView < NSView
       'NSColor' => fg_col
     })
     @label.setAttributedStringValue(txt)
-    @label.setToolTip(rating.description) unless rating.nil?
     @bg_color = bg_col
   end
 

@@ -12,10 +12,8 @@ class VoteButton < NSButton
 
       if vote
         button.cell.setImage(NSImage.imageNamed(NSImageNameAddTemplate))
-        button.setToolTip(" Vote Up ")
       else
         button.cell.setImage(NSImage.imageNamed(NSImageNameRemoveTemplate))
-        button.setToolTip(" Vote Down ")
       end
     end
   end

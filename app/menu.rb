@@ -136,7 +136,8 @@ class AppDelegate
       ["Pivotal"        , "https://www.pivotaltracker.com/google_domain_openid/redirect_for_auth?domain=kyanmedia.com"],
       ["Support"        , "https://kyan.sirportly.com"],
       ["Holiday"        , "https://appogee-leave.appspot.com/login?domain=kyanmedia.com"],
-      ["Campfire"       , "https://kyanmedia.campfirenow.com"]
+      ["Campfire"       , "https://kyanmedia.campfirenow.com"],
+      ["Jukebox"       ,  "http://jukebox.local"]
     ]
   end
 

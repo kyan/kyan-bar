@@ -228,12 +228,23 @@ class NowplayingView < NSView
   end
 
   def update_votes
-    puts "Changed: #{@jukebox.whats_changed}"
-
-    score = if valid_jb_data?(:rating)
-      rating.rating unless rating.nil?
-    elsif valid_jb_data?(:track)
+    score = if valid_jb_data?(:track)
       track.rating unless track.nil?
+    elsif valid_jb_data?(:rating)
+      rating.rating unless rating.nil?
+    end
+
+    if superview
+      uvote_button = superview.viewWithTag(U_VOTE_BUTTON)
+      dvote_button = superview.viewWithTag(D_VOTE_BUTTON)
+
+      if !uvote_button.nil?
+        uvote_button.setToolTip(rating.p_ratings)
+      end
+
+      if !dvote_button.nil?
+        dvote_button.setToolTip(rating.n_ratings)
+      end
     end
 
     @image.handle_vote(score, rating)
