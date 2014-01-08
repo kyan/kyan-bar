@@ -1,8 +1,8 @@
 GIT
   remote: git@github.com:kyan/kyan_jukebox_websocket_lib.git
-  revision: 93fe1c35e8065ee8710c59648f287b3fdc1963ed
+  revision: f702e1268351d140d8c7ee7ba6b587ade0cfeaa3
   specs:
-    kyan_jukebox (0.1.6)
+    kyan_jukebox (0.1.9)
 
 GEM
   remote: https://rubygems.org/

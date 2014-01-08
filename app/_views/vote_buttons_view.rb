@@ -1,5 +1,7 @@
 class VoteButtonsView < NSView
 
+  attr_reader :up_vote_button, :down_vote_button
+
   def init
     super.tap do |v|
       v.translatesAutoresizingMaskIntoConstraints = false
@@ -51,10 +53,14 @@ class VoteButtonsView < NSView
 
   def up_vote_button
     @up_vote_button ||= VoteButton.alloc.initWithVote(true)
+    @up_vote_button.tag = U_VOTE_BUTTON
+    @up_vote_button
   end
 
   def down_vote_button
     @down_vote_button ||= VoteButton.alloc.initWithVote(false)
+    @down_vote_button.tag = D_VOTE_BUTTON
+    @down_vote_button
   end
 
 end

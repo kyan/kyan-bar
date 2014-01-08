@@ -4,6 +4,7 @@ class AppDelegate
     @menu = NSMenu.new
     @menu.delegate = self
     @menu.initWithTitle App.name
+    @menu.setMinimumWidth(DEFAULT_MENU_WIDTH)
 
     links.each_with_index do |data, i|
       m = NSMenuItem.new
@@ -34,6 +35,8 @@ class AppDelegate
         build_now_playing
       end
     end
+
+    update_console_status(menu)
   end
 
   private
@@ -88,14 +91,34 @@ class AppDelegate
 
     @menu.insertItem(NSMenuItem.separatorItem, atIndex:1)
 
-    jrmi = NSMenuItem.new
-    jrmi.title = 'Launch Remote...'
-    jrmi.action = 'build_jukebox_controls:'
-    jrmi.setKeyEquivalent("0")
-    jrmi.setKeyEquivalentModifierMask(NSCommandKeyMask)
-    @menu.insertItem(jrmi, atIndex:2)
+    update_console_status(@menu)
 
     @menu.insertItem(NSMenuItem.separatorItem, atIndex:3)
+  end
+
+  def update_console_status(menu)
+    butt = menu.itemWithTag(MENU_CONSOLE_BUTT)
+
+    if butt
+      if butt.state == NSOffState
+        butt.title = 'Show Jukebox HUD'
+        butt.action = 'build_jukebox_controls:'
+        butt.setState(NSOffState)
+      else
+        butt.title = 'Hide Jukebox HUD'
+        butt.action = 'hide_jukebox_controls'
+        butt.setState(NSOnState)
+      end
+    else
+      butt = NSMenuItem.new
+      butt.title = 'Show Jukebox HUD'
+      butt.action = 'build_jukebox_controls:'
+      butt.tag = MENU_CONSOLE_BUTT
+      butt.setKeyEquivalent("0")
+      butt.setKeyEquivalentModifierMask(NSCommandKeyMask)
+      butt.setState(NSOffState)
+      menu.insertItem(butt, atIndex:2)
+    end
   end
 
   def open_link(sender)
@@ -113,7 +136,8 @@ class AppDelegate
       ["Pivotal"        , "https://www.pivotaltracker.com/google_domain_openid/redirect_for_auth?domain=kyanmedia.com"],
       ["Support"        , "https://kyan.sirportly.com"],
       ["Holiday"        , "https://appogee-leave.appspot.com/login?domain=kyanmedia.com"],
-      ["Campfire"       , "https://kyanmedia.campfirenow.com"]
+      ["Campfire"       , "https://kyanmedia.campfirenow.com"],
+      ["Jukebox"       ,  "http://jukebox.local"]
     ]
   end
 

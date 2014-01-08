@@ -87,15 +87,28 @@ class NowplayingView < NSView
     @jukebox.track unless @jukebox.nil?
   end
 
+  def rating
+    @jukebox.rating unless @jukebox.nil?
+  end
+
   private
 
+  def valid_jb_data?(key)
+    @jukebox.whats_changed.include?(key)
+  end
+
+  def should_update?
+    valid_jb_data?(:track) || valid_jb_data?(:rating)
+  end
+
   def update_data!
-    if @jukebox
+    if @jukebox && should_update?
       update_image
       update_title
       update_artist
       update_album
       update_addedby
+      update_votes
     end
 
     invalidateIntrinsicContentSize
@@ -133,10 +146,7 @@ class NowplayingView < NSView
   end
 
   def draw_image_box
-    NSImageView.new.tap do |v|
-      v.setTranslatesAutoresizingMaskIntoConstraints(false)
-      v.setEditable(false)
-    end
+    AlbumArtView.new
   end
 
   def draw_addedby_box
@@ -180,7 +190,7 @@ class NowplayingView < NSView
     paragraph.setLineBreakMode(NSLineBreakByTruncatingTail)
 
     txt = track.album.attrd({
-      'NSFont' => NSFont.fontWithName("Lucida Grande", size:10),
+      'NSFont' => NSFont.fontWithName("Lucida Grande", size:9),
       'NSColor' => NSColor.grayColor,
       'NSParagraphStyle' => paragraph
     }) unless track.album.nil?
@@ -215,5 +225,28 @@ class NowplayingView < NSView
         end
       end
     end
+  end
+
+  def update_votes
+    score = if valid_jb_data?(:track)
+      track.rating unless track.nil?
+    elsif valid_jb_data?(:rating)
+      rating.rating unless rating.nil?
+    end
+
+    if superview
+      uvote_button = superview.viewWithTag(U_VOTE_BUTTON)
+      dvote_button = superview.viewWithTag(D_VOTE_BUTTON)
+
+      if !uvote_button.nil?
+        uvote_button.setToolTip(rating.p_ratings)
+      end
+
+      if !dvote_button.nil?
+        dvote_button.setToolTip(rating.n_ratings)
+      end
+    end
+
+    @image.handle_vote(score, rating)
   end
 end
