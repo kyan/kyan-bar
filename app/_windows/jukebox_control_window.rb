@@ -22,7 +22,7 @@ class JukeboxControlWindow < NSWindow
 
   def register_vote(button)
     if VoteHandler.register(button.vote)
-      puts "#{button.vote} vote registered"
+      puts "vote registered"
     else
       puts "vote registerinf failed!"
     end

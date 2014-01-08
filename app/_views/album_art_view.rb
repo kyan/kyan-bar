@@ -26,7 +26,7 @@ class AlbumArtView < NSImageView
     NSAnimationContext.currentContext.setCompletionHandler(
       lambda do
         timer = NSTimer.scheduledTimerWithTimeInterval(
-          4.0,
+          5.0,
           target:self,
           selector:'slideout_vote_view',
           userInfo:nil,
@@ -55,8 +55,8 @@ class AlbumArtView < NSImageView
     NSAnimationContext.endGrouping
   end
 
-  def handle_vote(rating)
-    @vote_view.do_vote(rating)
+  def handle_vote(score, rating)
+    @vote_view.do_vote(score, rating)
     slidein_vote_view
   end
 

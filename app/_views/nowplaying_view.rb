@@ -190,7 +190,7 @@ class NowplayingView < NSView
     paragraph.setLineBreakMode(NSLineBreakByTruncatingTail)
 
     txt = track.album.attrd({
-      'NSFont' => NSFont.fontWithName("Lucida Grande", size:10),
+      'NSFont' => NSFont.fontWithName("Lucida Grande", size:9),
       'NSColor' => NSColor.grayColor,
       'NSParagraphStyle' => paragraph
     }) unless track.album.nil?
@@ -230,12 +230,12 @@ class NowplayingView < NSView
   def update_votes
     puts "Changed: #{@jukebox.whats_changed}"
 
-    score = if valid_jb_data?(:track)
-      track.rating unless track.nil?
-    elsif valid_jb_data?(:rating)
+    score = if valid_jb_data?(:rating)
       rating.rating unless rating.nil?
+    elsif valid_jb_data?(:track)
+      track.rating unless track.nil?
     end
 
-    @image.handle_vote(score)
+    @image.handle_vote(score, rating)
   end
 end
