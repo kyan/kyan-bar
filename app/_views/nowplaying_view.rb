@@ -87,15 +87,28 @@ class NowplayingView < NSView
     @jukebox.track unless @jukebox.nil?
   end
 
+  def rating
+    @jukebox.rating unless @jukebox.nil?
+  end
+
   private
 
+  def valid_jb_data?(key)
+    @jukebox.whats_changed.include?(key)
+  end
+
+  def should_update?
+    valid_jb_data?(:track) || valid_jb_data?(:rating)
+  end
+
   def update_data!
-    if @jukebox
+    if @jukebox && should_update?
       update_image
       update_title
       update_artist
       update_album
       update_addedby
+      update_votes
     end
 
     invalidateIntrinsicContentSize
@@ -133,10 +146,7 @@ class NowplayingView < NSView
   end
 
   def draw_image_box
-    NSImageView.new.tap do |v|
-      v.setTranslatesAutoresizingMaskIntoConstraints(false)
-      v.setEditable(false)
-    end
+    AlbumArtView.new
   end
 
   def draw_addedby_box
@@ -215,5 +225,18 @@ class NowplayingView < NSView
         end
       end
     end
+  end
+
+  def update_votes
+    puts "Changed: #{@jukebox.whats_changed}"
+
+    score = if valid_jb_data?(:track)
+      track.rating unless track.nil?
+    elsif valid_jb_data?(:rating)
+      rating.rating unless rating.nil?
+    end
+
+    score = 0 if score.nil?
+    @image.handle_vote(score)
   end
 end
