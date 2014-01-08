@@ -22,16 +22,23 @@ class VoteView < NSView
     bg_col = NSColor.colorWithCalibratedRed(0.227, green:0.251, blue:0.337, alpha:0.8)
     fg_col = NSColor.whiteColor
 
-    # green
-    if rating > 0
-      bg_col = NSColor.colorWithCalibratedRed(0, green:0.93, blue:0, alpha:0.8)
-      fg_col = NSColor.blackColor
-    end
+    if rating.nil?
+      rating = "#"
+      # lightgrey
+      bg_col = NSColor.colorWithCalibratedRed(0.7, green:0.7, blue:0.7, alpha:0.8)
+      fg_col = NSColor.whiteColor
+    else
+      # green
+      if rating > 0
+        bg_col = NSColor.colorWithCalibratedRed(0, green:0.93, blue:0, alpha:0.8)
+        fg_col = NSColor.blackColor
+      end
 
-    # red
-    if rating < 0
-      bg_col = NSColor.colorWithCalibratedRed(0.9, green:0.4, blue:0.3, alpha:0.8)
-      fg_col = NSColor.blackColor
+      # red
+      if rating < 0
+        bg_col = NSColor.colorWithCalibratedRed(0.9, green:0.4, blue:0.3, alpha:0.8)
+        fg_col = NSColor.blackColor
+      end
     end
 
     txt = rating.to_s.attrd({

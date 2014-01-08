@@ -236,7 +236,6 @@ class NowplayingView < NSView
       rating.rating unless rating.nil?
     end
 
-    score = 0 if score.nil?
     @image.handle_vote(score)
   end
 end
