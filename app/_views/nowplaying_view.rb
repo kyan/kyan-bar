@@ -169,6 +169,7 @@ class NowplayingView < NSView
       'NSParagraphStyle' => paragraph
     }) unless track.title.nil?
     @title.setAttributedStringValue(txt)
+    @title.invalidateIntrinsicContentSize
     @title.setToolTip(track.title)
   end
 
@@ -182,6 +183,16 @@ class NowplayingView < NSView
       'NSParagraphStyle' => paragraph
     }) unless track.artist.nil?
     @artist.setAttributedStringValue(txt)
+    @artist.invalidateIntrinsicContentSize
+    # @artistsetContentHuggingPriority(
+    #   NSLayoutPriorityFittingSizeCompression-1.0,
+    #   forOrientation:NSLayoutConstraintOrientationVertical
+    # )
+
+    # Think You Can Wait (from the Film Win Win)
+    # The National
+    # Think You Can Wait (from the Film Win Win) / The National
+
     @artist.setToolTip(track.artist)
   end
 
@@ -195,6 +206,7 @@ class NowplayingView < NSView
       'NSParagraphStyle' => paragraph
     }) unless track.album.nil?
     @album.setAttributedStringValue(txt)
+    @album.invalidateIntrinsicContentSize
     @album.setToolTip(track.album)
   end
 
@@ -208,6 +220,7 @@ class NowplayingView < NSView
       'NSParagraphStyle' => paragraph
     }) unless track.added_by.nil?
     @addedby.setAttributedStringValue(txt)
+    @addedby.invalidateIntrinsicContentSize
     @addedby.setToolTip(track.album)
   end
 
@@ -228,12 +241,17 @@ class NowplayingView < NSView
   end
 
   def update_votes
-    score = if valid_jb_data?(:track)
-      track.rating unless track.nil?
-    elsif valid_jb_data?(:rating)
+    score = if valid_jb_data?(:rating)
       rating.rating unless rating.nil?
+    elsif valid_jb_data?(:track)
+      track.rating unless track.nil?
     end
+    show_vote_progress
 
+    @image.handle_vote(score, rating)
+  end
+
+  def show_vote_progress
     if superview
       uvote_button = superview.viewWithTag(U_VOTE_BUTTON)
       dvote_button = superview.viewWithTag(D_VOTE_BUTTON)
@@ -246,7 +264,5 @@ class NowplayingView < NSView
         dvote_button.setToolTip(rating.n_ratings)
       end
     end
-
-    @image.handle_vote(score, rating)
   end
 end

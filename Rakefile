@@ -20,6 +20,7 @@ Motion::Project::App.setup do |app|
 
   app.pods do
     pod 'SocketRocket'
+    pod 'MASShortcut'
   end
 
   app.sparkle do

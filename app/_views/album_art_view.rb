@@ -57,6 +57,9 @@ class AlbumArtView < NSImageView
 
   def handle_vote(score, rating)
     @vote_view.do_vote(score, rating)
+
+    make_turd if !score.nil? && score < -6
+
     slidein_vote_view
   end
 
@@ -84,6 +87,11 @@ class AlbumArtView < NSImageView
     )
 
     addTrackingArea(@trackingArea)
+  end
+
+  def make_turd
+    turd = NSImage.imageNamed("turd.png")
+    setImage(turd)
   end
 
 end
