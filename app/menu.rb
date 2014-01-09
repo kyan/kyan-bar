@@ -33,9 +33,10 @@ class AppDelegate
     else
       if jukebox_available?
         build_now_playing
-        build_console_status(menu)
       end
     end
+
+    build_console_status(menu)
   end
 
   private
