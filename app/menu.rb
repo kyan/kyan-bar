@@ -88,7 +88,7 @@ class AppDelegate
     jbmi.view = @jukebox_menu.view
     @menu.insertItem(jbmi, atIndex:0)
     @menu.insertItem(NSMenuItem.separatorItem, atIndex:1)
-    update_console_status(@menu)
+    build_console_status(@menu)
     @menu.insertItem(NSMenuItem.separatorItem, atIndex:3)
   end
 
