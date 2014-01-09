@@ -33,10 +33,9 @@ class AppDelegate
     else
       if jukebox_available?
         build_now_playing
+        build_console_status(menu)
       end
     end
-
-    update_console_status(menu)
   end
 
   private
@@ -88,15 +87,12 @@ class AppDelegate
     jbmi.tag = MENU_NOWPLAYING
     jbmi.view = @jukebox_menu.view
     @menu.insertItem(jbmi, atIndex:0)
-
     @menu.insertItem(NSMenuItem.separatorItem, atIndex:1)
-
-    update_console_status(@menu)
-
+    build_console_status(@menu)
     @menu.insertItem(NSMenuItem.separatorItem, atIndex:3)
   end
 
-  def update_console_status(menu)
+  def build_console_status(menu)
     butt = menu.itemWithTag(MENU_CONSOLE_BUTT)
 
     if butt
