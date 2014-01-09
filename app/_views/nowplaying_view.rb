@@ -189,6 +189,10 @@ class NowplayingView < NSView
     #   forOrientation:NSLayoutConstraintOrientationVertical
     # )
 
+    # Think You Can Wait (from the Film Win Win)
+    # The National
+    # Think You Can Wait (from the Film Win Win) / The National
+
     @artist.setToolTip(track.artist)
   end
 
