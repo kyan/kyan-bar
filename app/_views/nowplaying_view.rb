@@ -214,7 +214,7 @@ class NowplayingView < NSView
     paragraph = NSMutableParagraphStyle.new
     paragraph.setLineBreakMode(NSLineBreakByTruncatingTail)
 
-    txt = "Added by #{track.added_by}".attrd({
+    txt = "#{CHOSEN_BY_TXT} #{track.added_by}".attrd({
       'NSFont' => NSFont.fontWithName("Lucida Grande", size:8),
       'NSColor' => NSColor.darkGrayColor,
       'NSParagraphStyle' => paragraph

@@ -21,3 +21,5 @@ MENU_CONSOLE_BUTT=222
 JB_MESSAGE_RECEIVED="JukeboxMessageReceived"
 JB_UPDATED="JukeboxUpdated"
 JB_DO_VOTE="JukeboxDoVote"
+
+CHOSEN_BY_TXT="Chosen by"
