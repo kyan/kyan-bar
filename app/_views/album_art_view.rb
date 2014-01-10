@@ -10,21 +10,24 @@ class AlbumArtView < NSImageView
       v.addSubview(@vote_view)
 
       @vote_slider_in_progress = false
+      @vote_slider_visible = false
 
-      slidein_vote_view
+      slidein_vote_view if can_slide_in_vote?
     end
   end
 
   def slidein_vote_view
-    return if @vote_slider_in_progress
+    return if vote_slider_in_progress?
 
     new_frame = @vote_view.frame
     new_frame.origin.x += VOTE_VIEW_W
 
     @vote_slider_in_progress = true
+
     NSAnimationContext.beginGrouping
     NSAnimationContext.currentContext.setCompletionHandler(
       lambda do
+        @vote_slider_visible = true
         timer = NSTimer.scheduledTimerWithTimeInterval(
           5.0,
           target:self,
@@ -71,7 +74,7 @@ class AlbumArtView < NSImageView
   end
 
   def mouseEntered(event)
-    slidein_vote_view
+    slidein_vote_view unless always_show_votes?
   end
 
   def updateTrackingAreas
@@ -92,6 +95,21 @@ class AlbumArtView < NSImageView
   def make_turd
     turd = NSImage.imageNamed("turd.png")
     setImage(turd)
+  end
+
+  def always_show_votes?
+    Persistence.get("alwaysShowVotes")
+  end
+
+  def vote_slider_visible?
+    @vote_slider_visible
+  end
+
+  def vote_slider_in_progress?
+    @vote_slider_in_progress
+  end
+
+  def can_slide_in_vote?
   end
 
 end
