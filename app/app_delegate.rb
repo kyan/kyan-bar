@@ -42,7 +42,6 @@ class AppDelegate
 
   def hide_jukebox_controls
     update_jukebox_controls_button_state(NSOffState)
-    puts "@jukebox_controls: #{@jukebox_controls.inspect}"
     @jukebox_controls.close unless @jukebox_controls.nil?
   end
 
