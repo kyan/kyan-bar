@@ -156,6 +156,7 @@
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
+                            <action selector="toggle_always_show_votes:" target="-2" id="6O9-i2-6Zi"/>
                             <binding destination="62v-zO-hda" name="value" keyPath="values.alwaysShowVotes" id="DcC-fR-5ij">
                                 <dictionary key="options">
                                     <bool key="NSValidatesImmediately" value="YES"/>
