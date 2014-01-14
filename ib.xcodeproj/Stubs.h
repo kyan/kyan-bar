@@ -103,6 +103,7 @@
 
 -(IBAction) init;
 -(IBAction) awakeFromNib;
+-(IBAction) toggle_always_show_votes:(id) button;
 
 @end
 

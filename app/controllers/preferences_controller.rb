@@ -29,4 +29,8 @@ class PreferencesController < NSWindowController
     )
   end
 
+  def toggle_always_show_votes(button)
+    App.notification_center.post(JB_TOGGLE_VOTE_SLIDER, nil, {state:button.state})
+  end
+
 end
