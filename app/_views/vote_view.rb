@@ -11,6 +11,7 @@ class VoteView < NSView
         txt.setBezeled(false)
         txt.setDrawsBackground(false)
         txt.setAlignment(NSCenterTextAlignment)
+        txt.cell.setBackgroundStyle(NSBackgroundStyleRaised)
       end
 
       v.addSubview(@label)

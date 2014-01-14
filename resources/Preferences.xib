@@ -15,14 +15,14 @@
         <customObject id="-3" userLabel="Application"/>
         <window title="KyanBar Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" wantsToBeColor="NO" appearanceType="aqua" animationBehavior="default" id="1" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
-            <rect key="contentRect" x="196" y="240" width="411" height="256"/>
+            <rect key="contentRect" x="196" y="240" width="411" height="288"/>
             <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
             <view key="contentView" id="2">
-                <rect key="frame" x="0.0" y="0.0" width="411" height="256"/>
+                <rect key="frame" x="0.0" y="0.0" width="411" height="288"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kuZ-hG-CA5">
-                        <rect key="frame" x="18" y="216" width="225" height="18"/>
+                        <rect key="frame" x="18" y="248" width="225" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="Automatically check for updates" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="LJO-ap-bIT">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -33,7 +33,7 @@
                         </connections>
                     </button>
                     <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0uH-RX-QUa">
-                        <rect key="frame" x="247" y="212" width="147" height="26"/>
+                        <rect key="frame" x="247" y="244" width="147" height="26"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="xWA-OK-Enm">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -53,7 +53,7 @@
                         </connections>
                     </popUpButton>
                     <textField appearanceType="aqua" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sub-b7-u3Z">
-                        <rect key="frame" x="95" y="132" width="296" height="22"/>
+                        <rect key="frame" x="95" y="134" width="296" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="please enter your username" drawsBackground="YES" usesSingleLineMode="YES" id="dIB-uO-xig">
                             <font key="font" metaFont="cellTitle"/>
@@ -69,7 +69,7 @@
                         </connections>
                     </textField>
                     <textField appearanceType="aqua" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XP5-qN-yfl">
-                        <rect key="frame" x="18" y="135" width="71" height="17"/>
+                        <rect key="frame" x="18" y="137" width="71" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Username:" id="DVI-ra-6GF">
                             <font key="font" metaFont="system"/>
@@ -78,7 +78,7 @@
                         </textFieldCell>
                     </textField>
                     <textField appearanceType="aqua" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fcd-zR-2JW">
-                        <rect key="frame" x="19" y="47" width="70" height="17"/>
+                        <rect key="frame" x="19" y="49" width="70" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Vote up:" id="cru-cy-lOB">
                             <font key="font" metaFont="system"/>
@@ -87,7 +87,7 @@
                         </textFieldCell>
                     </textField>
                     <textField appearanceType="aqua" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hmg-Bs-OzK">
-                        <rect key="frame" x="18" y="104" width="71" height="17"/>
+                        <rect key="frame" x="18" y="106" width="71" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Password:" id="GPB-VN-ixZ">
                             <font key="font" metaFont="system"/>
@@ -96,7 +96,7 @@
                         </textFieldCell>
                     </textField>
                     <textField appearanceType="aqua" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zil-wr-w1V">
-                        <rect key="frame" x="20" y="161" width="373" height="17"/>
+                        <rect key="frame" x="20" y="163" width="373" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Jukebox Credentials" id="ktu-b0-Q4o">
                             <font key="font" size="11" name="LucidaGrande"/>
@@ -105,7 +105,7 @@
                         </textFieldCell>
                     </textField>
                     <textField appearanceType="aqua" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bSe-tt-Qx1">
-                        <rect key="frame" x="20" y="72" width="373" height="17"/>
+                        <rect key="frame" x="20" y="74" width="373" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Customise Keys" id="DrE-2l-whV">
                             <font key="font" size="11" name="LucidaGrande"/>
@@ -114,7 +114,7 @@
                         </textFieldCell>
                     </textField>
                     <secureTextField appearanceType="aqua" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hdl-x6-f9B">
-                        <rect key="frame" x="95" y="101" width="296" height="22"/>
+                        <rect key="frame" x="95" y="103" width="296" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="please enter your password" drawsBackground="YES" usesSingleLineMode="YES" id="8Oy-Um-Mo3">
                             <font key="font" metaFont="cellTitle"/>
@@ -133,7 +133,7 @@
                         </connections>
                     </secureTextField>
                     <button appearanceType="aqua" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jae-Oz-Ju1">
-                        <rect key="frame" x="18" y="189" width="374" height="18"/>
+                        <rect key="frame" x="18" y="221" width="374" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="Jukebox remote window always on top" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="GD4-Yt-sPK">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -148,12 +148,29 @@
                             </binding>
                         </connections>
                     </button>
+                    <button appearanceType="aqua" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m3z-Rs-bNL">
+                        <rect key="frame" x="18" y="195" width="374" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Always show votes" bezelStyle="regularSquare" imagePosition="left" inset="2" id="UUC-wI-aAk">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="toggle_always_show_votes:" target="-2" id="6O9-i2-6Zi"/>
+                            <binding destination="62v-zO-hda" name="value" keyPath="values.alwaysShowVotes" id="DcC-fR-5ij">
+                                <dictionary key="options">
+                                    <bool key="NSValidatesImmediately" value="YES"/>
+                                    <bool key="NSConditionallySetsEnabled" value="NO"/>
+                                </dictionary>
+                            </binding>
+                        </connections>
+                    </button>
                     <customView appearanceType="aqua" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rc0-q2-3Fy" customClass="MASShortcutView">
-                        <rect key="frame" x="95" y="44" width="295" height="19"/>
+                        <rect key="frame" x="95" y="46" width="295" height="19"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
                     <textField appearanceType="aqua" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nah-bw-OmD">
-                        <rect key="frame" x="20" y="22" width="75" height="17"/>
+                        <rect key="frame" x="20" y="24" width="75" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Vote down:" id="3tJ-i7-gax">
                             <font key="font" metaFont="system"/>
@@ -162,7 +179,7 @@
                         </textFieldCell>
                     </textField>
                     <customView appearanceType="aqua" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pf1-n4-DnP" customClass="MASShortcutView">
-                        <rect key="frame" x="96" y="19" width="294" height="19"/>
+                        <rect key="frame" x="96" y="21" width="294" height="19"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
                 </subviews>

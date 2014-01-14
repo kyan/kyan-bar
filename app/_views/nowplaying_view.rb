@@ -122,6 +122,11 @@ class NowplayingView < NSView
       v.setDrawsBackground(false)
       v.setSelectable(false)
       v.setTranslatesAutoresizingMaskIntoConstraints(false)
+      v.setContentCompressionResistancePriority(
+        NSLayoutPriorityDefaultLow,
+        forOrientation:NSLayoutConstraintOrientationHorizontal
+      )
+      v.cell.setBackgroundStyle(NSBackgroundStyleRaised)
     end
   end
 
@@ -132,6 +137,11 @@ class NowplayingView < NSView
       v.setDrawsBackground(false)
       v.setSelectable(false)
       v.setTranslatesAutoresizingMaskIntoConstraints(false)
+      v.setContentCompressionResistancePriority(
+        NSLayoutPriorityDefaultLow,
+        forOrientation:NSLayoutConstraintOrientationHorizontal
+      )
+      v.cell.setBackgroundStyle(NSBackgroundStyleRaised)
     end
   end
 
@@ -142,6 +152,11 @@ class NowplayingView < NSView
       v.setDrawsBackground(false)
       v.setSelectable(false)
       v.setTranslatesAutoresizingMaskIntoConstraints(false)
+      v.setContentCompressionResistancePriority(
+        NSLayoutPriorityDefaultLow,
+        forOrientation:NSLayoutConstraintOrientationHorizontal
+      )
+      v.cell.setBackgroundStyle(NSBackgroundStyleRaised)
     end
   end
 
@@ -156,6 +171,11 @@ class NowplayingView < NSView
       v.setDrawsBackground(false)
       v.setSelectable(false)
       v.setTranslatesAutoresizingMaskIntoConstraints(false)
+      v.setContentCompressionResistancePriority(
+        NSLayoutPriorityDefaultLow,
+        forOrientation:NSLayoutConstraintOrientationHorizontal
+      )
+      v.cell.setBackgroundStyle(NSBackgroundStyleRaised)
     end
   end
 
@@ -169,7 +189,6 @@ class NowplayingView < NSView
       'NSParagraphStyle' => paragraph
     }) unless track.title.nil?
     @title.setAttributedStringValue(txt)
-    @title.invalidateIntrinsicContentSize
     @title.setToolTip(track.title)
   end
 
@@ -184,15 +203,6 @@ class NowplayingView < NSView
     }) unless track.artist.nil?
     @artist.setAttributedStringValue(txt)
     @artist.invalidateIntrinsicContentSize
-    # @artistsetContentHuggingPriority(
-    #   NSLayoutPriorityFittingSizeCompression-1.0,
-    #   forOrientation:NSLayoutConstraintOrientationVertical
-    # )
-
-    # Think You Can Wait (from the Film Win Win)
-    # The National
-    # Think You Can Wait (from the Film Win Win) / The National
-
     @artist.setToolTip(track.artist)
   end
 
