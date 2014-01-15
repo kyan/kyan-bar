@@ -8,6 +8,7 @@ class JukeboxControlWindow < NSWindow
       backing: NSBackingStoreBuffered,
       defer: true
     ).tap do |win|
+      win.setFrameAutosaveName("MAINWINDOWPositionHeightWidth")
       win.build_views
     end
   end
