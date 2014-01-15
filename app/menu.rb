@@ -101,10 +101,12 @@ class AppDelegate
         butt.title = 'Show Jukebox HUD'
         butt.action = 'build_jukebox_controls:'
         butt.setState(NSOffState)
+        Persistence.set(SHOW_JB_DEFAULT, false)
       else
         butt.title = 'Hide Jukebox HUD'
         butt.action = 'hide_jukebox_controls'
         butt.setState(NSOnState)
+        Persistence.set(SHOW_JB_DEFAULT, true)
       end
     else
       butt = NSMenuItem.new
@@ -113,7 +115,8 @@ class AppDelegate
       butt.tag = MENU_CONSOLE_BUTT
       butt.setKeyEquivalent("0")
       butt.setKeyEquivalentModifierMask(NSCommandKeyMask)
-      butt.setState(NSOffState)
+      state = Persistence.get(SHOW_JB_DEFAULT) ? NSOnState : NSOffState
+      butt.setState(state)
       menu.insertItem(butt, atIndex:2)
     end
   end
