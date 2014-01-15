@@ -23,4 +23,6 @@ JB_UPDATED="JukeboxUpdated"
 JB_DO_VOTE="JukeboxDoVote"
 JB_TOGGLE_VOTE_SLIDER="ToggleVoteSlider"
 
+SHOW_JB_DEFAULT="jb_console_visible"
+
 CHOSEN_BY_TXT="Chosen by"

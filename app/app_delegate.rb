@@ -7,7 +7,10 @@ class AppDelegate
 
     build_jukebox
     connect_to_websocket_server
+    register_defaults
     build_status
+
+    build_jukebox_controls(nil) if Persistence.get(SHOW_JB_DEFAULT)
   end
 
   def build_status
@@ -38,6 +41,12 @@ class AppDelegate
     App.shared.activateIgnoringOtherApps(true)
 
     update_jukebox_controls_button_state(NSOnState)
+  end
+
+  def register_defaults
+    NSUserDefaults.standardUserDefaults.registerDefaults(
+      { SHOW_JB_DEFAULT => false }
+    )
   end
 
   def hide_jukebox_controls
