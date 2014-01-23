@@ -86,7 +86,7 @@ class VoteMetricsView < NSView
       }) +
       " " +
       "#{rating.positive_ratings.join(', ')}".attrd({
-        'NSFont' => NSFont.fontWithName("Lucida Grande", size:12),
+        'NSFont' => NSFont.fontWithName("Lucida Grande", size:10),
         'NSColor' => NSColor.darkGrayColor
       })
     end
@@ -102,7 +102,7 @@ class VoteMetricsView < NSView
       }) +
       " " +
       " #{rating.negative_ratings.join(', ')}".attrd({
-        'NSFont' => NSFont.fontWithName("Lucida Grande", size:12),
+        'NSFont' => NSFont.fontWithName("Lucida Grande", size:10),
         'NSColor' => NSColor.darkGrayColor
       })
     end
@@ -110,7 +110,7 @@ class VoteMetricsView < NSView
 
   def no_vote_txt
     "No votes".attrd({
-      'NSFont' => NSFont.fontWithName("Lucida Grande", size:12),
+      'NSFont' => NSFont.fontWithName("Lucida Grande", size:10),
       'NSColor' => NSColor.grayColor
     })
   end
