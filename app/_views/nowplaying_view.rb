@@ -256,22 +256,17 @@ class NowplayingView < NSView
     elsif valid_jb_data?(:track)
       track.rating unless track.nil?
     end
-    show_vote_progress
+    update_vote_txt
 
     @image.handle_vote(score, rating)
   end
 
-  def show_vote_progress
+  def update_vote_txt
     if superview
-      uvote_button = superview.viewWithTag(U_VOTE_BUTTON)
-      dvote_button = superview.viewWithTag(D_VOTE_BUTTON)
+      vote_txt_view = superview.viewWithTag(VOTE_TXT_VIEW)
 
-      if !uvote_button.nil?
-        uvote_button.setToolTip(rating.p_ratings)
-      end
-
-      if !dvote_button.nil?
-        dvote_button.setToolTip(rating.n_ratings)
+      if !vote_txt_view.nil?
+        vote_txt_view.refresh!(rating)
       end
     end
   end

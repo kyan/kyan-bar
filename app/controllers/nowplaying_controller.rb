@@ -5,7 +5,7 @@ class NowplayingController < NSViewController
       c.build_view
 
       @update_observer = App.notification_center.observe JB_UPDATED do |n|
-        @main_view.refresh(n.userInfo[:jukebox])
+        view.refresh(n.userInfo[:jukebox])
       end
     end
   end

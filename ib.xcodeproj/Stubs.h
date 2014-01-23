@@ -16,6 +16,7 @@
 
 @interface AlbumArtView: NSImageView
 -(IBAction) init;
+-(IBAction) handle_vote_toggle_update;
 -(IBAction) slidein_vote_view;
 -(IBAction) slideout_vote_view;
 -(IBAction) drawRect:(id) dirtyRect;
@@ -72,6 +73,7 @@
 -(IBAction) build_status;
 -(IBAction) build_preferences:(id) sender;
 -(IBAction) build_jukebox_controls:(id) sender;
+-(IBAction) register_defaults;
 -(IBAction) hide_jukebox_controls;
 -(IBAction) build_jukebox;
 -(IBAction) jukebox;

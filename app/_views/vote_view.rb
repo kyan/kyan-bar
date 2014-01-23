@@ -11,7 +11,6 @@ class VoteView < NSView
         txt.setBezeled(false)
         txt.setDrawsBackground(false)
         txt.setAlignment(NSCenterTextAlignment)
-        txt.cell.setBackgroundStyle(NSBackgroundStyleRaised)
       end
 
       v.addSubview(@label)
@@ -21,25 +20,10 @@ class VoteView < NSView
   def do_vote(score, rating)
     # grey
     bg_col = NSColor.colorWithCalibratedRed(0.227, green:0.251, blue:0.337, alpha:0.8)
-    fg_col = NSColor.whiteColor
+    fg_col = NSColor.colorWithCalibratedRed(0.93, green:0.93, blue:0.93, alpha:0.8)
 
     if score.nil?
       score = "#"
-      # lightgrey
-      bg_col = NSColor.colorWithCalibratedRed(0.7, green:0.7, blue:0.7, alpha:0.8)
-      fg_col = NSColor.whiteColor
-    else
-      # green
-      if score > 0
-        bg_col = NSColor.colorWithCalibratedRed(0, green:0.93, blue:0, alpha:0.8)
-        fg_col = NSColor.blackColor
-      end
-
-      # red
-      if score < 0
-        bg_col = NSColor.colorWithCalibratedRed(0.9, green:0.4, blue:0.3, alpha:0.8)
-        fg_col = NSColor.blackColor
-      end
     end
 
     txt = score.to_s.attrd({
