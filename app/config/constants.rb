@@ -33,3 +33,6 @@ JB_TOGGLE_VOTE_SLIDER="ToggleVoteSlider"
 SHOW_JB_DEFAULT="jb_console_visible"
 
 CHOSEN_BY_TXT="Chosen by"
+
+U_VOTE_SHORTCUT_VAR = "GlobalShortcutVoteU"
+D_VOTE_SHORTCUT_VAR = "GlobalShortcutVoteD"

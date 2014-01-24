@@ -10,23 +10,8 @@ class PreferencesController < NSWindowController
   end
 
   def awakeFromNib
-    u_vote_shortcut_var = "GlobalShortcutVoteU"
-    d_vote_shortcut_var = "GlobalShortcutVoteD"
-
-    self.u_vote_shortcut.associatedUserDefaultsKey = u_vote_shortcut_var
-    self.d_vote_shortcut.associatedUserDefaultsKey = d_vote_shortcut_var
-
-    MASShortcut.registerGlobalShortcutWithUserDefaultsKey(
-      u_vote_shortcut_var, handler: lambda do
-        VoteHandler.register(true)
-      end
-    )
-
-    MASShortcut.registerGlobalShortcutWithUserDefaultsKey(
-      d_vote_shortcut_var, handler: lambda do
-        VoteHandler.register(false)
-      end
-    )
+    self.u_vote_shortcut.associatedUserDefaultsKey = U_VOTE_SHORTCUT_VAR
+    self.d_vote_shortcut.associatedUserDefaultsKey = D_VOTE_SHORTCUT_VAR
   end
 
   def toggle_always_show_votes(button)

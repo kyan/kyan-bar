@@ -59,6 +59,18 @@ class AppDelegate
     NSUserDefaults.standardUserDefaults.registerDefaults(
       { SHOW_JB_DEFAULT => false }
     )
+
+    MASShortcut.registerGlobalShortcutWithUserDefaultsKey(
+      U_VOTE_SHORTCUT_VAR, handler: lambda do
+        VoteHandler.register(true)
+      end
+    )
+
+    MASShortcut.registerGlobalShortcutWithUserDefaultsKey(
+      D_VOTE_SHORTCUT_VAR, handler: lambda do
+        VoteHandler.register(false)
+      end
+    )
   end
 
   def build_jukebox
