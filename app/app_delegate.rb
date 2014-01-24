@@ -5,12 +5,15 @@ class AppDelegate
   def applicationDidFinishLaunching(notification)
     NSUserNotificationCenter.defaultUserNotificationCenter.setDelegate(self)
 
-    build_jukebox
-    connect_to_websocket_server
     register_defaults
+    build_jukebox
     build_status
 
-    build_jukebox_controls(nil) if Persistence.get(SHOW_JB_DEFAULT)
+    if Persistence.get(SHOW_JB_DEFAULT) == 1
+      build_jukebox_controls(nil)
+    end
+
+    connect_to_websocket_server
   end
 
   def build_status
@@ -24,7 +27,7 @@ class AppDelegate
     bar.setAlternateImage(status_bar_image_alt)
     bar.setHighlightMode(true)
 
-    build_menu
+    setup_build_menu
     bar.setMenu(@menu)
   end
 
@@ -43,15 +46,19 @@ class AppDelegate
     update_jukebox_controls_button_state(NSOnState)
   end
 
+  def hide_jukebox_controls
+    update_jukebox_controls_button_state(NSOffState)
+    @jukebox_controls.close unless @jukebox_controls.nil?
+  end
+
+  def force_reconnect_to_websocket_server
+    WebsocketConnector.instance.force_reconnect!
+  end
+
   def register_defaults
     NSUserDefaults.standardUserDefaults.registerDefaults(
       { SHOW_JB_DEFAULT => false }
     )
-  end
-
-  def hide_jukebox_controls
-    update_jukebox_controls_button_state(NSOffState)
-    @jukebox_controls.close unless @jukebox_controls.nil?
   end
 
   def build_jukebox
@@ -78,7 +85,6 @@ class AppDelegate
   end
 
   def update_jukebox_controls_button_state(state)
-    butt = @menu.itemWithTag(MENU_CONSOLE_BUTT)
-    butt.setState(state) unless butt.nil?
+    Persistence.set(SHOW_JB_DEFAULT, state)
   end
 end

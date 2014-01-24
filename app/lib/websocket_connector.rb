@@ -28,6 +28,11 @@ class WebsocketConnector
     connect
   end
 
+  def force_reconnect!
+    reset_reconn_interval!
+    reconnect
+  end
+
   def connected?
     @connected
   end

@@ -1,10 +1,38 @@
 class AppDelegate
 
-  def build_menu
+  def setup_build_menu
     @menu = NSMenu.new
     @menu.delegate = self
     @menu.initWithTitle App.name
     @menu.setMinimumWidth(DEFAULT_MENU_WIDTH)
+    @jukebox_menu ||= NowplayingController.new
+
+    build_menu(@menu)
+
+    @menu
+  end
+
+  def menuNeedsUpdate(menu)
+    build_menu(menu)
+  end
+
+  private
+
+  def build_menu(menu)
+    menu = setup_build_menu if menu.nil?
+    menu.removeAllItems
+
+    flags = (NSEvent.modifierFlags & NSDeviceIndependentModifierFlagsMask)
+    if flags == NSAlternateKeyMask
+      menu.addItem(build_secret_refresh)
+      add_seperator_for(menu)
+    end
+
+    if jukebox_available?
+      build_now_playing(menu)
+      build_console_status(menu)
+      add_seperator_for(menu)
+    end
 
     links.each_with_index do |data, i|
       m = NSMenuItem.new
@@ -16,36 +44,14 @@ class AppDelegate
     end
 
     build_submenu
-
-    @menu
   end
-
-  def menuNeedsUpdate(menu)
-    np_index = menu.indexOfItemWithTag(MENU_NOWPLAYING)
-
-    if np_index >= 0
-      if !jukebox_available?
-        menu.removeItemAtIndex(np_index)
-        menu.removeItemAtIndex(np_index)
-        menu.removeItemAtIndex(np_index)
-        menu.removeItemAtIndex(np_index)
-      end
-    else
-      if jukebox_available?
-        build_now_playing
-      end
-    end
-
-    build_console_status(menu)
-  end
-
-  private
 
   def build_submenu
     sub_menu = NSMenu.new
     mi = NSMenuItem.new
     mi.title = 'Preferences...'
     mi.action = 'build_preferences:'
+    mi.tag = MENU_PREFERENCES
     mi.setKeyEquivalent(",")
     mi.setKeyEquivalentModifierMask(NSCommandKeyMask)
     sub_menu.addItem mi
@@ -53,6 +59,7 @@ class AppDelegate
     mi = NSMenuItem.new
     mi.title = 'Check for updates...'
     mi.action = 'checkForUpdates:'
+    mi.tag = MENU_CHECK_FOR_UPDATES
     mi.target = SUUpdater.new
     sub_menu.addItem mi
 
@@ -61,6 +68,7 @@ class AppDelegate
     mi = NSMenuItem.new
     mi.title = 'About KyanBar'
     mi.action = 'orderFrontStandardAboutPanel:'
+    mi.tag = MENU_ABOUT
     sub_menu.addItem mi
 
     add_seperator_for(sub_menu)
@@ -68,6 +76,7 @@ class AppDelegate
     mi = NSMenuItem.new
     mi.title = 'Quit'
     mi.action = 'terminate:'
+    mi.tag = MENU_QUIT
     mi.setKeyEquivalent("q")
     mi.setKeyEquivalentModifierMask(NSCommandKeyMask)
     sub_menu.addItem mi
@@ -76,49 +85,47 @@ class AppDelegate
 
     mi = NSMenuItem.new
     mi.title = 'Settings'
+    mi.tag = MENU_SETTINGS
     mi.setSubmenu(sub_menu)
     @menu.addItem mi
   end
 
-  def build_now_playing
-    @jukebox_menu ||= NowplayingController.new
-    @jukebox_menu.view.refresh(jukebox)
-
+  def build_now_playing(menu)
     jbmi = NSMenuItem.new
     jbmi.tag = MENU_NOWPLAYING
     jbmi.view = @jukebox_menu.view
-    @menu.insertItem(jbmi, atIndex:0)
-    @menu.insertItem(NSMenuItem.separatorItem, atIndex:1)
-    build_console_status(@menu)
-    @menu.insertItem(NSMenuItem.separatorItem, atIndex:3)
+    menu.addItem(jbmi)
+    add_seperator_for(menu)
+  end
+
+  def build_secret_refresh
+    NSMenuItem.new.tap do |mi|
+      mi.title = 'Force Refresh!'
+      mi.action = 'force_reconnect_to_websocket_server'
+      mi.tag = MENU_FORCE_REFRESH
+      mi.setKeyEquivalent("r")
+      mi.setKeyEquivalentModifierMask(NSCommandKeyMask)
+    end
   end
 
   def build_console_status(menu)
-    butt = menu.itemWithTag(MENU_CONSOLE_BUTT)
+    butt = NSMenuItem.new
+    butt.tag = MENU_CONSOLE_BUTT
 
-    if butt
-      if butt.state == NSOffState
-        butt.title = 'Show Jukebox HUD'
-        butt.action = 'build_jukebox_controls:'
-        butt.setState(NSOffState)
-        Persistence.set(SHOW_JB_DEFAULT, false)
-      else
-        butt.title = 'Hide Jukebox HUD'
-        butt.action = 'hide_jukebox_controls'
-        butt.setState(NSOnState)
-        Persistence.set(SHOW_JB_DEFAULT, true)
-      end
+    state = Persistence.get(SHOW_JB_DEFAULT)
+    state = NSOffState if state.nil?
+
+    if state == NSOnState
+      butt.title = 'Hide Jukebox HUD'
+      butt.action = 'hide_jukebox_controls'
+      butt.setState(NSOnState)
     else
-      butt = NSMenuItem.new
       butt.title = 'Show Jukebox HUD'
       butt.action = 'build_jukebox_controls:'
-      butt.tag = MENU_CONSOLE_BUTT
-      butt.setKeyEquivalent("0")
-      butt.setKeyEquivalentModifierMask(NSCommandKeyMask)
-      state = Persistence.get(SHOW_JB_DEFAULT) ? NSOnState : NSOffState
-      butt.setState(state)
-      menu.insertItem(butt, atIndex:2)
+      butt.setState(NSOffState)
     end
+
+    menu.addItem(butt)
   end
 
   def open_link(sender)

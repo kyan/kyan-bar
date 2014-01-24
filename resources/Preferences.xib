@@ -135,7 +135,7 @@
                     <button appearanceType="aqua" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jae-Oz-Ju1">
                         <rect key="frame" x="18" y="221" width="374" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="check" title="Jukebox remote window always on top" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="GD4-Yt-sPK">
+                        <buttonCell key="cell" type="check" title="Jukebox HUD always on top" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="GD4-Yt-sPK">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
