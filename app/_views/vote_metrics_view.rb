@@ -73,19 +73,18 @@ class VoteMetricsView < NSView
   end
 
   def draw_vote_txt
-    draw_uvotes + '  ' + draw_dvotes
+    draw_uvotes + '  '.attrd + draw_dvotes
   end
 
   def draw_uvotes
     if rating.positive_ratings.empty?
-      ''
+      ''.attrd
     else
       "▲".attrd({
         'NSFont' => NSFont.fontWithName("Lucida Grande", size:12),
         'NSColor' => NSColor.greenColor
       }) +
-      " " +
-      "#{rating.positive_ratings.join(', ')}".attrd({
+      " #{rating.positive_ratings.join(', ')}".attrd({
         'NSFont' => NSFont.fontWithName("Lucida Grande", size:10),
         'NSColor' => NSColor.darkGrayColor
       })
@@ -94,13 +93,12 @@ class VoteMetricsView < NSView
 
   def draw_dvotes
     if rating.negative_ratings.empty?
-      ''
+      ''.attrd
     else
       "▼".attrd({
         'NSFont' => NSFont.fontWithName("Lucida Grande", size:12),
         'NSColor' => NSColor.redColor
       }) +
-      " " +
       " #{rating.negative_ratings.join(', ')}".attrd({
         'NSFont' => NSFont.fontWithName("Lucida Grande", size:10),
         'NSColor' => NSColor.darkGrayColor
