@@ -5,8 +5,8 @@ class AppDelegate
   def applicationDidFinishLaunching(notification)
     NSUserNotificationCenter.defaultUserNotificationCenter.setDelegate(self)
 
-    build_jukebox
     register_defaults
+    build_jukebox
     build_status
 
     if Persistence.get(SHOW_JB_DEFAULT) == 1

@@ -111,21 +111,18 @@ class AppDelegate
   def build_console_status(menu)
     butt = NSMenuItem.new
     butt.tag = MENU_CONSOLE_BUTT
-    butt.setKeyEquivalent("0")
-    butt.setKeyEquivalentModifierMask(NSCommandKeyMask)
 
     state = Persistence.get(SHOW_JB_DEFAULT)
     state = NSOffState if state.nil?
 
-    case state
-    when NSOffState
-      butt.title = 'Show Jukebox HUD'
-      butt.action = 'build_jukebox_controls:'
-      butt.setState(NSOffState)
-    when NSOnState
+    if state == NSOnState
       butt.title = 'Hide Jukebox HUD'
       butt.action = 'hide_jukebox_controls'
       butt.setState(NSOnState)
+    else
+      butt.title = 'Show Jukebox HUD'
+      butt.action = 'build_jukebox_controls:'
+      butt.setState(NSOffState)
     end
 
     menu.addItem(butt)
