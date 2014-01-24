@@ -77,7 +77,7 @@ class VoteMetricsView < NSView
   end
 
   def draw_uvotes
-    if rating.positive_ratings.empty?
+    if blank?(rating.positive_ratings)
       ''.attrd
     else
       "▲".attrd({
@@ -92,7 +92,7 @@ class VoteMetricsView < NSView
   end
 
   def draw_dvotes
-    if rating.negative_ratings.empty?
+    if blank?(rating.negative_ratings)
       ''.attrd
     else
       "▼".attrd({
@@ -115,6 +115,10 @@ class VoteMetricsView < NSView
 
   def no_votes?
     return true if rating.nil?
-    rating.positive_ratings.empty? && rating.negative_ratings.empty?
+    blank?(rating.positive_ratings) && blank?(rating.negative_ratings)
+  end
+
+  def blank?(str)
+    str.respond_to?(:empty?) ? str.empty? : !str
   end
 end
