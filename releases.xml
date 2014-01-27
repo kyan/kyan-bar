@@ -14,23 +14,23 @@
       en
     </language>
     <pubDate>
-      Fri, 24 Jan 2014 13:23:30 +0000
+      Mon, 27 Jan 2014 08:32:27 +0000
     </pubDate>
     <atom:link href='https://raw.github.com/kyan/kyan_bar/master/releases.xml' rel='self' type='application/rss+xml'/>
     <item>
       <title>
-        KyanBar 1.2.2
+        KyanBar 1.2.3
       </title>
       <pubDate>
-        Fri, 24 Jan 2014 13:23:30 +0000
+        Mon, 27 Jan 2014 08:32:27 +0000
       </pubDate>
       <guid isPermaLink='false'>
-        KyanBar-1.2.2
+        KyanBar-1.2.3
       </guid>
       <sparkle:releaseNotesLink>
         https://raw.github.com/kyan/kyan_bar/master/release_notes.html
       </sparkle:releaseNotesLink>
-      <enclosure url='https://github.com/kyan/kyan_bar/releases/download/1.2.2/KyanBar.zip' length='4028395' type='application/octet-stream' sparkle:version='1.2.2' sparkle:dsaSignature='MCwCFBUO4hj19TmTyXrKAd4kCGTe1RmmAhRh7C6k7hANANYSn1wvA3C1wwbpow=='/>
+      <enclosure url='https://github.com/kyan/kyan_bar/releases/download/1.2.3/KyanBar.zip' length='4031787' type='application/octet-stream' sparkle:version='1.2.3' sparkle:dsaSignature='MC0CFHPfH6aK2o4BXYHkU/v3tzbFDrBRAhUAoI6lV+SdCqPgK0ivqrRRxq8tXzI='/>
     </item>
   </channel>
 </rss>
