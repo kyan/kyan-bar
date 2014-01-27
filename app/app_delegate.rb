@@ -17,18 +17,15 @@ class AppDelegate
   end
 
   def build_status
-    status_bar_image     = NSImage.imageNamed("k_logo_col_18x18")
-    status_bar_image_alt = NSImage.imageNamed("k_logo_bw_18x18")
-
     statusBar = NSStatusBar.systemStatusBar
-    bar = statusBar.statusItemWithLength(NSVariableStatusItemLength)
-    bar.retain
-    bar.setImage(status_bar_image)
-    bar.setAlternateImage(status_bar_image_alt)
-    bar.setHighlightMode(true)
+    @bar = statusBar.statusItemWithLength(NSVariableStatusItemLength)
+    @bar.retain
+    @bar.setHighlightMode(true)
 
     setup_build_menu
-    bar.setMenu(@menu)
+    @bar.setMenu(@menu)
+
+    update_status_bar_icon(false)
   end
 
   def build_preferences(sender)
@@ -44,6 +41,11 @@ class AppDelegate
     App.shared.activateIgnoringOtherApps(true)
 
     update_jukebox_controls_button_state(NSOnState)
+  end
+
+  def update_status_bar_icon(active=true)
+    img = NSImage.imageNamed((active ? SB_ICON_ACTIVE : SB_ICON_INACTIVE))
+    @bar.setImage(img)
   end
 
   def hide_jukebox_controls

@@ -53,7 +53,14 @@ class VoteMetricsView < NSView
     paragraph = NSMutableParagraphStyle.new
     paragraph.setLineBreakMode(NSLineBreakByTruncatingTail)
 
-    txt = no_votes? ? no_vote_txt : draw_vote_txt
+    txt = if no_votes?
+      App.shared.delegate.update_status_bar_icon(true)
+      no_vote_txt
+    else
+      App.shared.delegate.update_status_bar_icon(false)
+      draw_vote_txt
+    end
+
     @vote_txt_holder.setAttributedStringValue(txt)
     @vote_txt_holder.setToolTip(rating.description) unless rating.nil?
   end

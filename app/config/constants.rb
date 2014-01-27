@@ -36,3 +36,6 @@ CHOSEN_BY_TXT="Chosen by"
 
 U_VOTE_SHORTCUT_VAR = "GlobalShortcutVoteU"
 D_VOTE_SHORTCUT_VAR = "GlobalShortcutVoteD"
+
+SB_ICON_ACTIVE = "k_logo_col_18x18"
+SB_ICON_INACTIVE = "k_logo_bw_18x18"
