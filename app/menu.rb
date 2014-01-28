@@ -121,7 +121,7 @@ class AppDelegate
       butt.setState(NSOnState)
     else
       butt.title = 'Show Jukebox HUD'
-      butt.action = 'build_jukebox_controls:'
+      butt.action = 'build_jukebox_controls'
       butt.setState(NSOffState)
     end
 

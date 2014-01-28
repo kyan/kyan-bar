@@ -42,7 +42,7 @@
 -(IBAction) update_addedby;
 -(IBAction) update_image;
 -(IBAction) update_votes;
--(IBAction) show_vote_progress;
+-(IBAction) update_vote_txt;
 
 @end
 
@@ -50,6 +50,18 @@
 -(IBAction) init;
 -(IBAction) up_vote_button;
 -(IBAction) down_vote_button;
+
+@end
+
+@interface VoteMetricsView: NSView
+-(IBAction) init;
+-(IBAction) tag;
+-(IBAction) update_vote_txt;
+-(IBAction) draw_vote_txt_holder;
+-(IBAction) draw_vote_txt;
+-(IBAction) draw_uvotes;
+-(IBAction) draw_dvotes;
+-(IBAction) no_vote_txt;
 
 @end
 
@@ -72,9 +84,11 @@
 -(IBAction) applicationDidFinishLaunching:(id) notification;
 -(IBAction) build_status;
 -(IBAction) build_preferences:(id) sender;
--(IBAction) build_jukebox_controls:(id) sender;
--(IBAction) register_defaults;
+-(IBAction) update_status_bar_icon:(id) active;
+-(IBAction) build_jukebox_controls;
 -(IBAction) hide_jukebox_controls;
+-(IBAction) force_reconnect_to_websocket_server;
+-(IBAction) register_defaults;
 -(IBAction) build_jukebox;
 -(IBAction) jukebox;
 -(IBAction) connect_to_websocket_server;

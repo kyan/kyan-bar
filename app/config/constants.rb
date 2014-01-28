@@ -29,6 +29,7 @@ JB_MESSAGE_RECEIVED="JukeboxMessageReceived"
 JB_UPDATED="JukeboxUpdated"
 JB_DO_VOTE="JukeboxDoVote"
 JB_TOGGLE_VOTE_SLIDER="ToggleVoteSlider"
+JB_IS_CONNECTED="JukeboxIsConnected"
 
 SHOW_JB_DEFAULT="jb_console_visible"
 

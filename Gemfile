@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rake'
 gem "motion-cocoapods", "~> 1.4.0"
-gem "motion-sparkle", "~> 0.0.3"
+gem "motion-sparkle", "~> 0.0.3", :git => 'git@github.com:whomwah/motion-sparkle.git'
 gem "bubble-wrap", "~> 1.4.0"
 gem 'sugarcube', "~> 1.3.7", :require => [
   'sugarcube-attributedstring',
