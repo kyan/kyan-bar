@@ -15,6 +15,9 @@
 @implementation VoteButtonsView
 @end
 
+@implementation VoteMetricsView
+@end
+
 @implementation VoteView
 @end
 
