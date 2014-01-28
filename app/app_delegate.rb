@@ -9,8 +9,10 @@ class AppDelegate
     build_jukebox
     build_status
 
-    if Persistence.get(SHOW_JB_DEFAULT) == 1
-      build_jukebox_controls(nil)
+    show_jukebox_controls
+
+    @connection_observer = App.notification_center.observe JB_IS_CONNECTED do |n|
+      handle_websocket_connection(n)
     end
 
     connect_to_websocket_server
@@ -34,7 +36,12 @@ class AppDelegate
     App.shared.activateIgnoringOtherApps(true)
   end
 
-  def build_jukebox_controls(sender)
+  def update_status_bar_icon(active=true)
+    img = NSImage.imageNamed((active ? SB_ICON_ACTIVE : SB_ICON_INACTIVE))
+    @bar.setImage(img)
+  end
+
+  def build_jukebox_controls
     @jukebox_controls ||= JukeboxControlController.new
     @jukebox_controls.setup(jukebox)
     @jukebox_controls.window.makeKeyAndOrderFront(self)
@@ -43,14 +50,15 @@ class AppDelegate
     update_jukebox_controls_button_state(NSOnState)
   end
 
-  def update_status_bar_icon(active=true)
-    img = NSImage.imageNamed((active ? SB_ICON_ACTIVE : SB_ICON_INACTIVE))
-    @bar.setImage(img)
-  end
-
   def hide_jukebox_controls
     update_jukebox_controls_button_state(NSOffState)
     @jukebox_controls.close unless @jukebox_controls.nil?
+  end
+
+  def show_jukebox_controls
+    if Persistence.get(SHOW_JB_DEFAULT) == 1
+      build_jukebox_controls
+    end
   end
 
   def force_reconnect_to_websocket_server
@@ -100,5 +108,16 @@ class AppDelegate
 
   def update_jukebox_controls_button_state(state)
     Persistence.set(SHOW_JB_DEFAULT, state)
+  end
+
+  def handle_websocket_connection(n)
+    state = n.userInfo[:state]
+    puts "Connection: #{state}"
+
+    if state == true
+      show_jukebox_controls
+    else
+      hide_jukebox_controls
+    end
   end
 end

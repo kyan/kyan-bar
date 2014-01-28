@@ -21,6 +21,8 @@ class WebsocketConnector
   end
 
   def reconnect
+    App.notification_center.post(JB_IS_CONNECTED, nil, { state: false })
+
     @connected       = false
     @reconn_interval = @reconn_interval >= 0.1 ? @reconn_interval * 2 : 0.1
     @reconn_interval = [60.0, @reconn_interval].min
@@ -49,6 +51,8 @@ class WebsocketConnector
     WebsocketConnector.instance.tap do |ws|
       ws.connected = true
       ws.reset_reconn_interval!
+
+      App.notification_center.post(JB_IS_CONNECTED, nil, { state: true })
     end
   end
 
