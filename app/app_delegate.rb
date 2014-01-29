@@ -50,9 +50,13 @@ class AppDelegate
     update_jukebox_controls_button_state(NSOnState)
   end
 
+  def remove_jukebox_controls
+    @jukebox_controls.close unless @jukebox_controls.nil?
+  end
+
   def hide_jukebox_controls
     update_jukebox_controls_button_state(NSOffState)
-    @jukebox_controls.close unless @jukebox_controls.nil?
+    remove_jukebox_controls
   end
 
   def show_jukebox_controls
@@ -112,12 +116,12 @@ class AppDelegate
 
   def handle_websocket_connection(n)
     state = n.userInfo[:state]
-    puts "Connection: #{state}"
 
     if state == true
       show_jukebox_controls
     else
-      hide_jukebox_controls
+      remove_jukebox_controls
+      update_status_bar_icon(false)
     end
   end
 end
