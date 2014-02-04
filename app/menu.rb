@@ -6,6 +6,7 @@ class AppDelegate
     @menu.initWithTitle App.name
     @menu.setMinimumWidth(DEFAULT_MENU_WIDTH)
     @jukebox_menu ||= NowplayingController.new
+    @upcoming_tracks ||= UpcomingController.new
 
     build_menu(@menu)
 
@@ -35,6 +36,7 @@ class AppDelegate
 
     if jukebox_available?
       build_now_playing(menu)
+      build_upcoming_tracks(menu)
       build_console_status(menu)
       add_seperator_for(menu)
     end
@@ -99,6 +101,14 @@ class AppDelegate
     jbmi = NSMenuItem.new
     jbmi.tag = MENU_NOWPLAYING
     jbmi.view = @jukebox_menu.view
+    menu.addItem(jbmi)
+    add_seperator_for(menu)
+  end
+
+  def build_upcoming_tracks(menu)
+    jbmi = NSMenuItem.new
+    jbmi.tag = MENU_NOWPLAYING
+    jbmi.view = @upcoming_tracks.view
     menu.addItem(jbmi)
     add_seperator_for(menu)
   end
