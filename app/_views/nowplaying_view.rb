@@ -13,11 +13,11 @@ class NowplayingView < NSView
       @addedby  ||= draw_addedby_box
 
       views_dict = {
-        "image"   => @image,
-        "title"   => @title,
-        "artist"  => @artist,
-        "album"   => @album,
-        "addedby" => @addedby
+        "image"     => @image,
+        "title"     => @title,
+        "artist"    => @artist,
+        "album"     => @album,
+        "addedby"   => @addedby
       }
 
       @metrics_dict = {
@@ -91,6 +91,10 @@ class NowplayingView < NSView
     @jukebox.rating unless @jukebox.nil?
   end
 
+  def time
+    @jukebox.time
+  end
+
   private
 
   def valid_jb_data?(key)
@@ -109,6 +113,7 @@ class NowplayingView < NSView
       update_album
       update_addedby
       update_votes
+      update_progress
     end
 
     invalidateIntrinsicContentSize
@@ -267,6 +272,16 @@ class NowplayingView < NSView
 
       if !vote_txt_view.nil?
         vote_txt_view.refresh!(rating)
+      end
+    end
+  end
+
+  def update_progress
+    if superview
+      progress_view = superview.viewWithTag(PROGRESS_VIEW)
+
+      if !progress_view.nil?
+        progress_view.refresh!(track, time)
       end
     end
   end

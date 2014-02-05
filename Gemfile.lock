@@ -1,8 +1,8 @@
 GIT
   remote: git@github.com:kyan/kyan_jukebox_websocket_lib.git
-  revision: 1332a73ec3bca573bc79c445348c5d438b000325
+  revision: 60178464e15c2465357326aa40906c1e71377de5
   specs:
-    kyan_jukebox (0.1.11)
+    kyan_jukebox (0.2.0)
 
 GIT
   remote: git@github.com:whomwah/motion-sparkle.git
