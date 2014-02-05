@@ -9,7 +9,7 @@ class VoteMetricsView < NSView
       @vote_txt_holder ||= draw_vote_txt_holder
 
       views_dictionary = {
-        "up_vote_button" => @vote_txt_holder
+        "vote_txt_holder" => @vote_txt_holder
       }
 
       metrics_dict = {
@@ -22,13 +22,13 @@ class VoteMetricsView < NSView
 
       constraints = []
       constraints += NSLayoutConstraint.constraintsWithVisualFormat(
-        "H:|[up_vote_button]|",
+        "H:|[vote_txt_holder]|",
         options:0,
         metrics:metrics_dict,
         views:views_dictionary
       )
       constraints += NSLayoutConstraint.constraintsWithVisualFormat(
-        "V:|[up_vote_button]-(<=padding)-|",
+        "V:|[vote_txt_holder]-(<=padding)-|",
         options:NSLayoutFormatAlignAllRight,
         metrics:metrics_dict,
         views:views_dictionary
@@ -88,11 +88,11 @@ class VoteMetricsView < NSView
       ''.attrd
     else
       "▲".attrd({
-        'NSFont' => NSFont.fontWithName("Lucida Grande", size:12),
+        'NSFont' => NSFont.fontWithName("Lucida Grande", size:10),
         'NSColor' => NSColor.greenColor
       }) +
       " #{rating.positive_ratings.join(', ')}".attrd({
-        'NSFont' => NSFont.fontWithName("Lucida Grande", size:10),
+        'NSFont' => NSFont.fontWithName("Lucida Grande", size:9),
         'NSColor' => NSColor.darkGrayColor
       })
     end
@@ -103,11 +103,11 @@ class VoteMetricsView < NSView
       ''.attrd
     else
       "▼".attrd({
-        'NSFont' => NSFont.fontWithName("Lucida Grande", size:12),
+        'NSFont' => NSFont.fontWithName("Lucida Grande", size:10),
         'NSColor' => NSColor.redColor
       }) +
       " #{rating.negative_ratings.join(', ')}".attrd({
-        'NSFont' => NSFont.fontWithName("Lucida Grande", size:10),
+        'NSFont' => NSFont.fontWithName("Lucida Grande", size:9),
         'NSColor' => NSColor.darkGrayColor
       })
     end
@@ -115,7 +115,7 @@ class VoteMetricsView < NSView
 
   def no_vote_txt
     "No votes".attrd({
-      'NSFont' => NSFont.fontWithName("Lucida Grande", size:10),
+      'NSFont' => NSFont.fontWithName("Lucida Grande", size:9),
       'NSColor' => NSColor.grayColor
     })
   end

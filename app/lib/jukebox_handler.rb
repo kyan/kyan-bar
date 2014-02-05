@@ -11,7 +11,7 @@ class JukeboxHandler
   end
 
   def self.build
-    jb = KyanJukebox::Notify.new([:track, :playlist, :rating])
+    jb = KyanJukebox::Notify.new([:track, :playlist, :rating, :time])
     jb.json_parser = BW::JSON
 
     new jb
