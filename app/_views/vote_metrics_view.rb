@@ -13,7 +13,7 @@ class VoteMetricsView < NSView
       }
 
       metrics_dict = {
-        "padding" => 10
+        "padding" => 5
       }
 
       views_dictionary.each do |key, view|
@@ -76,6 +76,7 @@ class VoteMetricsView < NSView
         NSLayoutPriorityDefaultLow,
         forOrientation:NSLayoutConstraintOrientationHorizontal
       )
+      v.setFont(NSFont.systemFontOfSize(10))
     end
   end
 
@@ -88,11 +89,9 @@ class VoteMetricsView < NSView
       ''.attrd
     else
       "▲".attrd({
-        'NSFont' => NSFont.fontWithName("Lucida Grande", size:10),
         'NSColor' => NSColor.greenColor
       }) +
       " #{rating.positive_ratings.join(', ')}".attrd({
-        'NSFont' => NSFont.fontWithName("Lucida Grande", size:9),
         'NSColor' => NSColor.darkGrayColor
       })
     end
@@ -103,11 +102,9 @@ class VoteMetricsView < NSView
       ''.attrd
     else
       "▼".attrd({
-        'NSFont' => NSFont.fontWithName("Lucida Grande", size:10),
         'NSColor' => NSColor.redColor
       }) +
       " #{rating.negative_ratings.join(', ')}".attrd({
-        'NSFont' => NSFont.fontWithName("Lucida Grande", size:9),
         'NSColor' => NSColor.darkGrayColor
       })
     end
@@ -115,7 +112,6 @@ class VoteMetricsView < NSView
 
   def no_vote_txt
     "No votes".attrd({
-      'NSFont' => NSFont.fontWithName("Lucida Grande", size:9),
       'NSColor' => NSColor.grayColor
     })
   end

@@ -81,6 +81,13 @@ class AlbumArtView < NSImageView
 
     @vote_view.removeFromSuperview
     addSubview(@vote_view, positioned:NSWindowAbove, relativeTo:nil)
+
+    NSColor.grayColor.set
+
+    path = NSBezierPath.bezierPath
+    path.appendBezierPathWithRect([[0,0],[50,50]])
+    path.setLineWidth(1.0)
+    path.stroke
   end
 
   def mouseEntered(event)

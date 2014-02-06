@@ -12,6 +12,7 @@ class VoteButtonsView < NSView
       }
 
       metrics_dict = {
+        "padding" => GLOBAL_H_PADDING,
         "butt_w" => 50,
         "butt_h" => 22,
         "butt_space" => 5,
@@ -23,25 +24,25 @@ class VoteButtonsView < NSView
 
       constraints = []
       constraints += NSLayoutConstraint.constraintsWithVisualFormat(
-        "H:|[up_vote_button(==butt_w)]|",
+        "H:|[up_vote_button(==butt_w)]-padding-|",
         options:0,
         metrics:metrics_dict,
         views:views_dictionary
       )
       constraints += NSLayoutConstraint.constraintsWithVisualFormat(
-        "H:|[down_vote_button(==butt_w)]|",
+        "H:|[down_vote_button(==butt_w)]-padding-|",
         options:0,
         metrics:metrics_dict,
         views:views_dictionary
       )
       constraints += NSLayoutConstraint.constraintsWithVisualFormat(
-        "V:|-butt_space-[up_vote_button(==butt_h)]",
+        "V:|[up_vote_button(==butt_h)]",
         options:NSLayoutFormatAlignAllRight,
         metrics:metrics_dict,
         views:views_dictionary
       )
       constraints += NSLayoutConstraint.constraintsWithVisualFormat(
-        "V:[down_vote_button(==butt_h)]-butt_space-|",
+        "V:[down_vote_button(==butt_h)]|",
         options:NSLayoutFormatAlignAllRight,
         metrics:metrics_dict,
         views:views_dictionary

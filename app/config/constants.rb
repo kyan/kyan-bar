@@ -41,3 +41,5 @@ D_VOTE_SHORTCUT_VAR = "GlobalShortcutVoteD"
 
 SB_ICON_ACTIVE = "k_logo_col_18x18"
 SB_ICON_INACTIVE = "k_logo_bw_18x18"
+
+GLOBAL_H_PADDING = 10

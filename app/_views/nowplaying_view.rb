@@ -21,11 +21,9 @@ class NowplayingView < NSView
       }
 
       @metrics_dict = {
+        "padding"      => GLOBAL_H_PADDING,
         "image_side"   => 50,
         "h_spacing"    => 5,
-        "h_padding"    => 10,
-        "v_padding"    => 5,
-        "vv_padding"   => 3,
         "title_h"      => 18,
         "artist_h"     => 15,
         "album_h"      => 15,
@@ -39,37 +37,37 @@ class NowplayingView < NSView
 
       constraints = []
       constraints += NSLayoutConstraint.constraintsWithVisualFormat(
-        "V:|-v_padding-[image(==image_side)]-v_padding-|",
+        "V:|[image(==image_side)]|",
         options:NSLayoutFormatAlignAllLeft,
         metrics:metrics_dict,
         views:views_dict
       )
       constraints += NSLayoutConstraint.constraintsWithVisualFormat(
-        "H:|-h_padding-[image(==image_side)]-h_spacing-[title]-h_padding-|",
+        "H:|-padding-[image(==image_side)]-h_spacing-[title]-padding-|",
         options:0,
         metrics:metrics_dict,
         views:views_dict
       )
       constraints += NSLayoutConstraint.constraintsWithVisualFormat(
-        "H:|-h_padding-[image(==image_side)]-h_spacing-[artist]-h_padding-|",
+        "H:|-padding-[image(==image_side)]-h_spacing-[artist]-padding-|",
         options:0,
         metrics:metrics_dict,
         views:views_dict
       )
       constraints += NSLayoutConstraint.constraintsWithVisualFormat(
-        "H:|-h_padding-[image(==image_side)]-h_spacing-[album]-h_padding-|",
+        "H:|-padding-[image(==image_side)]-h_spacing-[album]-padding-|",
         options:0,
         metrics:metrics_dict,
         views:views_dict
       )
       constraints += NSLayoutConstraint.constraintsWithVisualFormat(
-        "H:|-h_padding-[image(==image_side)]-h_spacing-[addedby]-h_padding-|",
+        "H:|-padding-[image(==image_side)]-h_spacing-[addedby]-padding-|",
         options:0,
         metrics:metrics_dict,
         views:views_dict
       )
       constraints += NSLayoutConstraint.constraintsWithVisualFormat(
-        "V:|-vv_padding-[title(title_h)]-(-1)-[artist(artist_h)]-(-2)-[album(album_h)]-(-3)-[addedby(addedby_h)]",
+        "V:|-(-2)-[title(title_h)]-(-2)-[artist(artist_h)]-(-3)-[album(album_h)]-(-3)-[addedby(addedby_h)]",
         options:0,
         metrics:metrics_dict,
         views:views_dict

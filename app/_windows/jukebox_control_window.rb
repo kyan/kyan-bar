@@ -39,13 +39,13 @@ class JukeboxControlWindow < NSWindow
     }
 
     metrics_dict = {
-      "padding"       => 10,
-      "padding_b"     => 8,
-      "default_width" => 200,
-      "max_width"     => 350,
-      "buttons_h_min" => 30,
-      "buttons_h_max" => 80,
-      "progress_h"    => 1
+      "padding"         => GLOBAL_H_PADDING,
+      "padding_t"       => 9,
+      "padding_small"   => 4,
+      "padding_vsmall"  => 4,
+      "default_width"   => 200,
+      "max_width"       => 350,
+      "progress_h"      => 1
     }
 
     views_dictionary.each do |key, view|
@@ -54,19 +54,19 @@ class JukeboxControlWindow < NSWindow
 
     constraints = []
     constraints += NSLayoutConstraint.constraintsWithVisualFormat(
-      "V:|-5-[now_playing]-1-[progress(progress_h)]-6-[vote_metrics]|",
+      "V:|-padding_t-[now_playing]-padding_small-[progress(progress_h)]-padding_vsmall-[vote_metrics]|",
       options:0,
       metrics:metrics_dict,
       views:views_dictionary
     )
     constraints += NSLayoutConstraint.constraintsWithVisualFormat(
-      "V:|-5-[vote_buttons]-1-[progress(progress_h)]-6-[vote_metrics]|",
+      "V:|-padding_t-[vote_buttons]-padding_small-[progress(progress_h)]-padding_vsmall-[vote_metrics]|",
       options:0,
       metrics:metrics_dict,
       views:views_dictionary
     )
     constraints += NSLayoutConstraint.constraintsWithVisualFormat(
-      "H:|[now_playing(>=default_width,<=max_width)]-5-[vote_buttons]-padding-|",
+      "H:|[now_playing(>=default_width,<=max_width)]-[vote_buttons]|",
       options:0,
       metrics:metrics_dict,
       views:views_dictionary
@@ -78,7 +78,7 @@ class JukeboxControlWindow < NSWindow
       views:views_dictionary
     )
     constraints += NSLayoutConstraint.constraintsWithVisualFormat(
-      "H:|-padding-[vote_metrics]|",
+      "H:|-padding-[vote_metrics]-padding-|",
       options:0,
       metrics:metrics_dict,
       views:views_dictionary
