@@ -21,11 +21,10 @@ which will create a real app in the `build` dir, you can put in your Application
 
 # Build new version
 
+Update release number in Rakefile.
+
 <pre>
-rake clean
-rake build:release
-rake sparkle:clean
-rake sparkle:package
+rake do_release
 </pre>
 
 You will need to copy the contents of sparkle/releases into the root files

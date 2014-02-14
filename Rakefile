@@ -35,3 +35,11 @@ Motion::Project::App.setup do |app|
     release :notes_filename, 'release_notes.html'
   end
 end
+
+desc "Runs clean, build:release, sparkle:clean and sparkle:package at once"
+task :do_release do
+  Rake::Task["clean"].invoke
+  Rake::Task["build:release"].invoke
+  Rake::Task["sparkle:clean"].invoke
+  Rake::Task["sparkle:package"].invoke
+end
