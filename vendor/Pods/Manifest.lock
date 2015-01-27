@@ -1,13 +1,33 @@
 PODS:
-  - MASShortcut (1.2.3)
-  - SocketRocket (0.3.1-beta2)
+  - AFNetworking (2.5.0):
+    - AFNetworking/NSURLConnection (= 2.5.0)
+    - AFNetworking/NSURLSession (= 2.5.0)
+    - AFNetworking/Reachability (= 2.5.0)
+    - AFNetworking/Security (= 2.5.0)
+    - AFNetworking/Serialization (= 2.5.0)
+    - AFNetworking/UIKit (= 2.5.0)
+  - AFNetworking/NSURLConnection (2.5.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.0)
+  - AFNetworking/Security (2.5.0)
+  - AFNetworking/Serialization (2.5.0)
+  - MASShortcut (2.1.1)
+  - SocketRocket (0.2.0)
 
 DEPENDENCIES:
+  - AFNetworking (~> 2.0)
   - MASShortcut
   - SocketRocket
 
 SPEC CHECKSUMS:
-  MASShortcut: 6abaedac53a0542f4856f35be4f1f970b652a51e
-  SocketRocket: 7ac946bcce46287a791dfff3c1f8daa692821dae
+  AFNetworking: 0f54cb5d16ce38c1b76948faffb8d5fb705021c7
+  MASShortcut: eaf6fc60ae9742d21312b2463c4ac25bcdb27f24
+  SocketRocket: 6c9cfd1592bea82262b4283dcda3a7de166af3b6
 
-COCOAPODS: 0.29.0
+COCOAPODS: 0.35.0

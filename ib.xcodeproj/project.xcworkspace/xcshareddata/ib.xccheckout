@@ -10,29 +10,29 @@
 	<string>ib</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>5B198CB3-9134-499D-AD5F-51A4CFA44971</key>
-		<string>ssh://github.com/kyan/kyan_bar.git</string>
+		<key>216C31E7C24BBD512146743D52E6A3E35A142F5D</key>
+		<string>github.com:kyan/kyan_bar.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ib.xcodeproj/project.xcworkspace</string>
+	<string>ib.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>5B198CB3-9134-499D-AD5F-51A4CFA44971</key>
+		<key>216C31E7C24BBD512146743D52E6A3E35A142F5D</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/kyan/kyan_bar.git</string>
+	<string>github.com:kyan/kyan_bar.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>5B198CB3-9134-499D-AD5F-51A4CFA44971</string>
+	<string>216C31E7C24BBD512146743D52E6A3E35A142F5D</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>5B198CB3-9134-499D-AD5F-51A4CFA44971</string>
+			<string>216C31E7C24BBD512146743D52E6A3E35A142F5D</string>
 			<key>IDESourceControlWCCName</key>
 			<string>KyanBar</string>
 		</dict>
