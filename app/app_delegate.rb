@@ -74,14 +74,14 @@ class AppDelegate
       { SHOW_JB_DEFAULT => false }
     )
 
-    MASShortcut.registerGlobalShortcutWithUserDefaultsKey(
-      U_VOTE_SHORTCUT_VAR, handler: lambda do
+    MASShortcutBinder.sharedBinder.bindShortcutWithDefaultsKey(U_VOTE_SHORTCUT_VAR,
+      toAction: lambda do
         VoteHandler.register(true)
       end
     )
 
-    MASShortcut.registerGlobalShortcutWithUserDefaultsKey(
-      D_VOTE_SHORTCUT_VAR, handler: lambda do
+    MASShortcutBinder.sharedBinder.bindShortcutWithDefaultsKey(D_VOTE_SHORTCUT_VAR,
+      toAction: lambda do
         VoteHandler.register(false)
       end
     )
