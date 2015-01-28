@@ -23,6 +23,11 @@ class AppDelegate
     menu.removeAllItems
 
     flags = (NSEvent.modifierFlags & NSDeviceIndependentModifierFlagsMask)
+
+    # If you hold the ALT key and display the
+    # menu it will show an extra item that lets
+    # you refersh your connection to the jukebox
+    #
     if flags == NSAlternateKeyMask
       menu.addItem(build_secret_refresh)
       add_seperator_for(menu)

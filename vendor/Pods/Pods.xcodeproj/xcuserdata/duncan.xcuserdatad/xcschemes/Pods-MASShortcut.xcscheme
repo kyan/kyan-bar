@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0500"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1165A5060BA94500B9EAD786"
+               BlueprintIdentifier = "0089DD40658511F2C68D5441"
                BuildableName = "libPods-MASShortcut.a"
                BlueprintName = "Pods-MASShortcut"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -22,6 +22,7 @@ class NowplayingView < NSView
 
       @metrics_dict = {
         "padding"      => GLOBAL_H_PADDING,
+        "vpadding"     => 5,
         "image_side"   => 50,
         "h_spacing"    => 5,
         "title_h"      => 18,
@@ -37,7 +38,7 @@ class NowplayingView < NSView
 
       constraints = []
       constraints += NSLayoutConstraint.constraintsWithVisualFormat(
-        "V:|[image(==image_side)]|",
+        "V:|-vpadding-[image(==image_side)]|",
         options:NSLayoutFormatAlignAllLeft,
         metrics:metrics_dict,
         views:views_dict
@@ -67,7 +68,7 @@ class NowplayingView < NSView
         views:views_dict
       )
       constraints += NSLayoutConstraint.constraintsWithVisualFormat(
-        "V:|-(-2)-[title(title_h)]-(-2)-[artist(artist_h)]-(-3)-[album(album_h)]-(-3)-[addedby(addedby_h)]",
+        "V:|-vpadding-[title(title_h)]-(-2)-[artist(artist_h)]-(-3)-[album(album_h)]-(-3)-[addedby(addedby_h)]",
         options:0,
         metrics:metrics_dict,
         views:views_dict

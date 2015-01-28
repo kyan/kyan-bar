@@ -13,11 +13,11 @@ class VoteHandler
 
   def register
     if valid?
-      BW::HTTP.get(vote_url) do |response|
+      AFMotion::HTTP.get(vote_url) do |response|
         if response.body.to_s.include?('login details incorrect')
           alert_creds_wrong
         else
-          response.ok?
+          response.success?
         end
       end
     else
