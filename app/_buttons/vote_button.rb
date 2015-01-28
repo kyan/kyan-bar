@@ -9,6 +9,7 @@ class VoteButton < NSButton
       button.setBezelStyle(NSTexturedSquareBezelStyle)
       button.setButtonType(NSMomentaryPushButton)
       button.setAction "register_vote:"
+      button.setFocusRingType(NSFocusRingTypeNone)
 
       if vote
         button.cell.setImage(NSImage.imageNamed(NSImageNameAddTemplate))
