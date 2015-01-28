@@ -18,3 +18,4 @@ sparkle/release
 sparkle/release/*
 sparkle/config/dsa_priv.pem
 *.dat*
+vendor
