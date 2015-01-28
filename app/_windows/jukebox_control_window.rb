@@ -39,13 +39,14 @@ class JukeboxControlWindow < NSWindow
     }
 
     metrics_dict = {
-      "padding"         => GLOBAL_H_PADDING,
-      "padding_t"       => 9,
-      "padding_small"   => 4,
-      "padding_vsmall"  => 4,
-      "default_width"   => 200,
-      "max_width"       => 350,
-      "progress_h"      => 1
+      "padding"             => GLOBAL_H_PADDING,
+      "padding_t"           => 4,
+      "padding_t_vote_btn"  => 10,
+      "padding_small"       => 4,
+      "padding_vsmall"      => 4,
+      "default_width"       => 200,
+      "max_width"           => 350,
+      "progress_h"          => 1
     }
 
     views_dictionary.each do |key, view|
@@ -60,7 +61,7 @@ class JukeboxControlWindow < NSWindow
       views:views_dictionary
     )
     constraints += NSLayoutConstraint.constraintsWithVisualFormat(
-      "V:|-padding_t-[vote_buttons]-padding_small-[progress(progress_h)]-padding_vsmall-[vote_metrics]|",
+      "V:|-padding_t_vote_btn-[vote_buttons]-padding_small-[progress(progress_h)]-padding_vsmall-[vote_metrics]|",
       options:0,
       metrics:metrics_dict,
       views:views_dictionary
