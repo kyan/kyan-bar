@@ -6,7 +6,6 @@ require 'bundler'
 Bundler.require
 
 require 'bubble-wrap/core'
-require 'bubble-wrap/http'
 
 Motion::Project::App.setup do |app|
   # Use `rake config' to see complete project settings.
@@ -14,6 +13,7 @@ Motion::Project::App.setup do |app|
   app.icon = "icon.icns"
   app.identifier = 'com.kyan.kyanbar'
   app.deployment_target = '10.8'
+  app.codesign_for_release = false
 
   app.info_plist['NSUIElement'] = 1
   app.info_plist['NSHumanReadableCopyright'] = 'Copyright © 2013, Kyan Ltd'
@@ -21,12 +21,13 @@ Motion::Project::App.setup do |app|
   app.pods do
     pod 'SocketRocket'
     pod 'MASShortcut'
+    pod "AFNetworking", "~> 2.0"
   end
 
   app.sparkle do
     release :base_url, 'https://raw.github.com/kyan/kyan_bar/master'
-    release :package_url, 'https://github.com/kyan/kyan_bar/releases/download'
-    release :version, '1.3.1'
+    release :package_base_url, 'https://github.com/kyan/kyan_bar/releases/download'
+    release :version, '1.3.3'
 
     # Optional settings
     release :feed_filename, 'releases.xml'
