@@ -21,7 +21,7 @@ Motion::Project::App.setup do |app|
   app.pods do
     pod 'SocketRocket'
     pod 'MASShortcut'
-    pod "AFNetworking", "~> 2.0"
+    pod "AFNetworking"
   end
 
   app.sparkle do
