@@ -10,7 +10,43 @@ class JukeboxControlWindow < NSWindow
     ).tap do |win|
       win.setFrameAutosaveName("MAINWINDOWPositionHeightWidth")
       win.build_views
+
+      win.registerForDraggedTypes([NSPasteboardTypeString])
     end
+  end
+
+  def draggingEntered(sender)
+    source_drag_mask = sender.draggingSourceOperationMask
+    pboard = sender.draggingPasteboard
+
+    if pboard.types.include?(NSPasteboardTypeString)
+      if source_drag_mask & NSDragOperationGeneric
+        return NSDragOperationGeneric
+      end
+    end
+
+    NSDragOperationNone
+  end
+
+  def draggingUpdated(sender)
+    NSDragOperationCopy
+  end
+
+  def performDragOperation(sender)
+    source_drag_mask = sender.draggingSourceOperationMask
+    pboard = sender.draggingPasteboard
+
+    if pboard.types.include?(NSPasteboardTypeString)
+      str = pboard.stringForType(NSPasteboardTypeString)
+
+      # only handle tracks at the moment
+      # e.g http://open.spotify.com/track/75clRtmtXSkZsPm6SjjQ5j
+      if str.match(/http:\/\/open\.spotify\.com\/track\/[a-zA-Z0-9]*/)
+        PlaylistHandler.add!(str)
+      end
+    end
+
+    true
   end
 
   def canBecomeKeyWindow

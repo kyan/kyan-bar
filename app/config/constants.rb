@@ -1,6 +1,7 @@
 WEBSOCKET_HOST = 'jukebox.local'
 WEBSOCKET_URL = "ws://#{WEBSOCKET_HOST}:8081"
-VOTE_URL = "http://#{WEBSOCKET_HOST}/external?"
+JUKEBOX_URL = "http://#{WEBSOCKET_HOST}"
+VOTE_URL = "#{JUKEBOX_URL}/external?"
 
 DEFAULT_MENU_WIDTH=250.0
 
