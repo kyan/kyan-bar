@@ -1,9 +1,9 @@
 class PlaylistHandler
 
-  attr_reader :data_as_json
+  attr_reader :track
 
   def initialize(track)
-    @data_as_json = BW::JSON.generate({'filenames' => [track]})
+    @track = track
   end
 
   def self.add!(track)
@@ -12,17 +12,15 @@ class PlaylistHandler
   end
 
   def add
+    # '{"user_id":99,"bulk_add_to_playlist":"{\"filenames\":[\"spotify:track:6AwunqOdRD8wDgqzORe9Le\"]}"}'
     if valid?
-      AFMotion::HTTP.get(dest_url) do |response|
-        if response.body.to_s.include?('login details incorrect')
-          alert_creds_wrong
-        else
-          if response.success?
-            parse_json(response.body)
-            do_notification
-          end
-        end
-      end
+      payload = BW::JSON.generate({
+        user_id: Persistence.uid,
+        bulk_add_to_playlist: {
+          filenames: [track.gsub(/^.*\/track\//,'spotify:track:')]
+        }
+      })
+      WebsocketConnector.instance.websocket.send(payload)
     else
       alert_no_creds
       false
@@ -31,35 +29,15 @@ class PlaylistHandler
 
   private
 
-  def dest_url
-    json_encode = data_as_json.to_url_encoded
-    encoded_str = "user=#{username}&password=#{password}&argument=#{json_encode}"
-    "#{JUKEBOX_URL}/run/bulk_add_to_playlist?#{encoded_str}"
-  end
-
   def valid?
-    username && password
-  end
-
-  def username
-    Persistence.get("jukeboxUsername")
-  end
-
-  def password
-    Persistence.get("jukeboxPassword")
-  end
-
-  def alert_creds_wrong
-    oops(
-      'Doh?',
-      'Your jukebox username or password appear to be wrong!'
-    )
+    uid = Persistence.uid
+    uid && uid.to_i != 0
   end
 
   def alert_no_creds
     oops(
       'Want to vote huh?',
-      'You need to set your username and password in preferences'
+      'You need to set your User ID in preferences'
     )
   end
 
@@ -70,15 +48,6 @@ class PlaylistHandler
     alert.alertStyle = NSInformationalAlertStyle
     alert.addButtonWithTitle("Ok")
     response = alert.runModal
-  end
-
-  def parse_json(str)
-    e = Pointer.new(:object)
-    json = NSJSONSerialization.JSONObjectWithData( String(str).to_data,
-      options:0,
-      error: e
-    )
-    @track = json.first
   end
 
   def do_notification

@@ -11,4 +11,16 @@ class Persistence
   def self.shared_defaults
     NSUserDefaultsController.sharedUserDefaultsController
   end
+
+  def self.uid
+    Persistence.get("jukeboxUserID")
+  end
+
+  def self.username
+    Persistence.get("jukeboxUsername")
+  end
+
+  def self.password
+    Persistence.get("jukeboxPassword")
+  end
 end

@@ -76,13 +76,13 @@ class AppDelegate
 
     MASShortcutBinder.sharedBinder.bindShortcutWithDefaultsKey(U_VOTE_SHORTCUT_VAR,
       toAction: lambda do
-        VoteHandler.register(true)
+        VoteHandler.register(true, jukebox.track) unless jukebox.nil?
       end
     )
 
     MASShortcutBinder.sharedBinder.bindShortcutWithDefaultsKey(D_VOTE_SHORTCUT_VAR,
       toAction: lambda do
-        VoteHandler.register(false)
+        VoteHandler.register(false, jukebox.track) unless jukebox.nil?
       end
     )
   end
