@@ -58,7 +58,8 @@ class JukeboxControlWindow < NSWindow
   end
 
   def register_vote(button)
-    VoteHandler.register(button.vote)
+    jb = App.shared.delegate.jukebox
+    VoteHandler.register(button.vote, jb.track) unless jb.nil?
   end
 
   def build_views

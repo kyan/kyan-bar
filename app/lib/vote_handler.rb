@@ -1,25 +1,27 @@
 class VoteHandler
 
-  attr_reader :vote
+  attr_reader :vote, :track
 
-  def initialize(vote)
+  def initialize(vote, track)
     @vote = vote
+    @track = track
   end
 
-  def self.register(vote)
-    vote_handler = new(vote)
+  def self.register(vote, track)
+    vote_handler = new(vote, track)
     vote_handler.register
   end
 
   def register
     if valid?
-      AFMotion::HTTP.get(vote_url) do |response|
-        if response.body.to_s.include?('login details incorrect')
-          alert_creds_wrong
-        else
-          response.success?
-        end
-      end
+      payload = BW::JSON.generate({
+        user_id: Persistence.uid,
+        vote: {
+          state: (vote ? 1 : 0),
+          filename: track.file
+        }
+      })
+      WebsocketConnector.instance.websocket.send(payload)
     else
       alert_no_creds
       false
@@ -28,33 +30,15 @@ class VoteHandler
 
   private
 
-  def vote_url
-    "#{VOTE_URL}vote[aye]=#{vote}&login[user]=#{username}&login[password]=#{password}"
-  end
-
   def valid?
-    username && password
-  end
-
-  def username
-    Persistence.get("jukeboxUsername")
-  end
-
-  def password
-    Persistence.get("jukeboxPassword")
-  end
-
-  def alert_creds_wrong
-    oops(
-      'Doh?',
-      'Your jukebox username or password appear to be wrong!'
-    )
+    uid = Persistence.uid
+    uid && uid.to_i != 0
   end
 
   def alert_no_creds
     oops(
       'Want to vote huh?',
-      'You need to set your username and password in preferences'
+      'You need to set your User ID in preferences'
     )
   end
 
