@@ -86,6 +86,9 @@
 @end
 
 @interface JukeboxControlWindow: NSWindow
+-(IBAction) draggingEntered:(id) sender;
+-(IBAction) draggingUpdated:(id) sender;
+-(IBAction) performDragOperation:(id) sender;
 -(IBAction) canBecomeKeyWindow;
 -(IBAction) canBecomeMainWindow;
 -(IBAction) register_vote:(id) button;
@@ -146,16 +149,27 @@
 
 @end
 
+@interface Notifier: NSObject
+-(IBAction) initialize:(id) notifications;
+
+@end
+
 @interface Persistence: NSObject
 @end
 
-@interface VoteHandler: NSObject
--(IBAction) initialize:(id) vote;
--(IBAction) register;
--(IBAction) vote_url;
--(IBAction) username;
--(IBAction) password;
+@interface PlaylistHandler: NSObject
+-(IBAction) initialize:(id) track;
+-(IBAction) add;
+-(IBAction) dest_url;
 -(IBAction) alert_creds_wrong;
+-(IBAction) alert_no_creds;
+-(IBAction) parse_json:(id) str;
+-(IBAction) do_notification;
+
+@end
+
+@interface VoteHandler: NSObject
+-(IBAction) register;
 -(IBAction) alert_no_creds;
 
 @end

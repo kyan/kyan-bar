@@ -42,7 +42,13 @@
 @implementation JukeboxHandler
 @end
 
+@implementation Notifier
+@end
+
 @implementation Persistence
+@end
+
+@implementation PlaylistHandler
 @end
 
 @implementation VoteHandler
