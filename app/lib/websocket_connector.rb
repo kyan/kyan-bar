@@ -30,6 +30,18 @@ class WebsocketConnector
     connect
   end
 
+  def self.reconnect_with_timer
+    wsinstance =  WebsocketConnector.instance
+
+    NSTimer.scheduledTimerWithTimeInterval(
+      wsinstance.reconn_interval,
+      target:wsinstance,
+      selector:'reconnect',
+      userInfo:nil,
+      repeats: false
+    )
+  end
+
   def force_reconnect!
     reset_reconn_interval!
     reconnect
@@ -57,19 +69,11 @@ class WebsocketConnector
   end
 
   def self.webSocket(webSocket, didFailWithError:error_ptr)
-    wsinstance =  WebsocketConnector.instance
-
-    NSTimer.scheduledTimerWithTimeInterval(
-      wsinstance.reconn_interval,
-      target:wsinstance,
-      selector:'reconnect',
-      userInfo:nil,
-      repeats: false
-    )
+    reconnect_with_timer
   end
 
   def self.webSocket(webSocket, didCloseWithCode:code, reason:reason, wasClean:wasClean)
-    # Bang!
+    reconnect_with_timer
   end
 
 end
