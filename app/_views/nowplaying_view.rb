@@ -239,9 +239,7 @@ class NowplayingView < NSView
   end
 
   def update_image
-    artwork_image = NSImage.imageNamed("missing_artwork.png")
-    @image.setImage(artwork_image)
-
+    set_missing_artwork
     if !track.artwork_url.nil?
       gcdq = Dispatch::Queue.new('com.kyan.kyanbar')
       gcdq.async do
@@ -252,6 +250,12 @@ class NowplayingView < NSView
         end
       end
     end
+  end
+
+  def set_missing_artwork
+    @image.setImage(
+      NSImage.imageNamed("missing_artwork.png")
+    )
   end
 
   def update_votes
