@@ -27,7 +27,7 @@ class VoteView < NSView
     end
 
     txt = score.to_s.attrd({
-      'NSFont' => NSFont.fontWithName("Helvetica Bold", size:10),
+      'NSFont' => NSFont.systemFontOfSize(10.0),
       'NSColor' => fg_col
     })
     @label.setAttributedStringValue(txt)
