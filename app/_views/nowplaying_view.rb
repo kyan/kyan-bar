@@ -188,7 +188,7 @@ class NowplayingView < NSView
     paragraph.setLineBreakMode(NSLineBreakByTruncatingTail)
 
     txt = track.title.attrd({
-      'NSFont' => NSFont.fontWithName("Lucida Grande", size:12),
+      'NSFont' => NSFont.systemFontOfSize(12.0),
       'NSColor' => NSColor.blackColor,
       'NSParagraphStyle' => paragraph
     }) unless track.title.nil?
@@ -201,8 +201,8 @@ class NowplayingView < NSView
     paragraph.setLineBreakMode(NSLineBreakByTruncatingTail)
 
     txt = track.artist.attrd({
-      'NSFont' => NSFont.fontWithName("Lucida Grande", size:10),
-      'NSColor' => NSColor.darkGrayColor,
+      'NSFont' => NSFont.systemFontOfSize(10.0),
+      'NSColor' => NSColor.blackColor,
       'NSParagraphStyle' => paragraph
     }) unless track.artist.nil?
     @artist.setAttributedStringValue(txt)
@@ -215,8 +215,8 @@ class NowplayingView < NSView
     paragraph.setLineBreakMode(NSLineBreakByTruncatingTail)
 
     txt = track.album.attrd({
-      'NSFont' => NSFont.fontWithName("Lucida Grande", size:9),
-      'NSColor' => NSColor.grayColor,
+      'NSFont' => NSFont.systemFontOfSize(9.0),
+      'NSColor' => NSColor.blackColor,
       'NSParagraphStyle' => paragraph
     }) unless track.album.nil?
     @album.setAttributedStringValue(txt)
@@ -229,8 +229,8 @@ class NowplayingView < NSView
     paragraph.setLineBreakMode(NSLineBreakByTruncatingTail)
 
     txt = "#{CHOSEN_BY_TXT} #{track.added_by}".attrd({
-      'NSFont' => NSFont.fontWithName("Lucida Grande", size:8),
-      'NSColor' => NSColor.darkGrayColor,
+      'NSFont' => NSFont.systemFontOfSize(8.0),
+      'NSColor' => NSColor.blackColor,
       'NSParagraphStyle' => paragraph
     }) unless track.added_by.nil?
     @addedby.setAttributedStringValue(txt)

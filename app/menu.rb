@@ -147,8 +147,8 @@ class AppDelegate
       ["Timesheet"      , "https://gapps.harvestapp.com/gapp_company?domain=kyanmedia.com"],
       ["Pivotal"        , "https://www.pivotaltracker.com/google_domain_openid/redirect_for_auth?domain=kyanmedia.com"],
       ["Support"        , "https://kyan.sirportly.com"],
-      ["Holiday"        , "https://appogee-leave.appspot.com/login?domain=kyanmedia.com"],
-      ["Campfire"       , "https://kyanmedia.campfirenow.com"],
+      ["Holiday"        , "https://app.timetastic.co.uk"],
+      ["Chat"           , "https://kyan.hipchat.com/chat"],
       ["Jukebox"       ,  "http://jukebox.local"]
     ]
   end
