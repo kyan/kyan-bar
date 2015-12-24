@@ -16,7 +16,7 @@ Motion::Project::App.setup do |app|
   app.codesign_for_release = false
 
   app.info_plist['NSUIElement'] = 1
-  app.info_plist['NSHumanReadableCopyright'] = 'Copyright © 2013, Kyan Ltd'
+  app.info_plist['NSHumanReadableCopyright'] = 'Copyright © 2016, Kyan Ltd'
 
   app.pods do
     pod 'SocketRocket'
@@ -27,7 +27,7 @@ Motion::Project::App.setup do |app|
   app.sparkle do
     release :base_url, 'https://raw.github.com/kyan/kyan_bar/master'
     release :package_base_url, 'https://github.com/kyan/kyan_bar/releases/download'
-    release :version, '1.5.1'
+    release :version, '1.6'
 
     # Optional settings
     release :feed_filename, 'releases.xml'
