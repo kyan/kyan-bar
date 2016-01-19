@@ -28,7 +28,7 @@ Motion::Project::App.setup do |app|
   app.sparkle do
     release :base_url, 'https://raw.github.com/kyan/kyan_bar/master'
     release :package_base_url, 'https://github.com/kyan/kyan_bar/releases/download'
-    release :version, '1.6.1'
+    release :version, '1.7.0'
 
     # Optional settings
     release :feed_filename, 'releases.xml'
