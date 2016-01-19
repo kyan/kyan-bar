@@ -23,17 +23,6 @@ class AppDelegate
     menu = setup_build_menu if menu.nil?
     menu.removeAllItems
 
-    flags = (NSEvent.modifierFlags & NSDeviceIndependentModifierFlagsMask)
-
-    # If you hold the ALT key and display the
-    # menu it will show an extra item that lets
-    # you refersh your connection to the jukebox
-    #
-    if flags == NSAlternateKeyMask
-      menu.addItem(build_secret_refresh)
-      add_seperator_for(menu)
-    end
-
     if jukebox_available?
       build_now_playing(menu)
       build_upcoming_tracks(menu)
@@ -45,7 +34,9 @@ class AppDelegate
       m = NSMenuItem.new
       m.title = data.first
       m.tag = i
-      m.setImage( NSImage.imageNamed(data.first.downcase) )
+      icon_img = NSImage.imageNamed(data.first.downcase)
+      icon_img.template = true
+      m.image = icon_img
       m.action = 'open_link:'
       @menu.addItem m
     end
@@ -76,6 +67,13 @@ class AppDelegate
     mi.title = 'About KyanBar'
     mi.action = 'orderFrontStandardAboutPanel:'
     mi.tag = MENU_ABOUT
+    sub_menu.addItem mi
+
+    mi = NSMenuItem.new
+    mi.title = 'Force reconnect to Jukebox!'
+    mi.action = 'force_reconnect_to_websocket_server'
+    mi.tag = MENU_FORCE_REFRESH
+    mi.toolTip = RECONNECT_TXT
     sub_menu.addItem mi
 
     add_seperator_for(sub_menu)
@@ -113,16 +111,6 @@ class AppDelegate
     add_seperator_for(menu)
   end
 
-  def build_secret_refresh
-    NSMenuItem.new.tap do |mi|
-      mi.title = 'Force Refresh!'
-      mi.action = 'force_reconnect_to_websocket_server'
-      mi.tag = MENU_FORCE_REFRESH
-      mi.setKeyEquivalent("r")
-      mi.setKeyEquivalentModifierMask(NSCommandKeyMask)
-    end
-  end
-
   def build_console_status(menu)
     butt = NSMenuItem.new
     butt.tag = MENU_CONSOLE_BUTT
@@ -154,7 +142,7 @@ class AppDelegate
 
   def links
     [
-      ["Timesheet"      , "https://gapps.harvestapp.com/gapp_company?domain=kyanmedia.com"],
+      ["Timesheet"      , "https://id.getharvest.com/accounts"],
       ["Pivotal"        , "https://www.pivotaltracker.com/google_domain_openid/redirect_for_auth?domain=kyanmedia.com"],
       ["Support"        , "https://kyan.sirportly.com"],
       ["Holiday"        , "https://app.timetastic.co.uk"],
