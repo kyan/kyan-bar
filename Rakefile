@@ -17,6 +17,7 @@ Motion::Project::App.setup do |app|
 
   app.info_plist['NSUIElement'] = 1
   app.info_plist['NSHumanReadableCopyright'] = 'Copyright © 2016, Kyan Ltd'
+  app.info_plist['NSAppTransportSecurity'] = { 'NSAllowsArbitraryLoads' => true }
 
   app.pods do
     pod 'SocketRocket'
