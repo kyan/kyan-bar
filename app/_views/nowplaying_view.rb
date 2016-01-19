@@ -121,6 +121,7 @@ class NowplayingView < NSView
 
   def draw_title_box
     NSTextField.new.tap do |v|
+      v.setFont(NSFont.systemFontOfSize(12.0))
       v.setEditable(false)
       v.setBezeled(false)
       v.setDrawsBackground(false)
@@ -130,12 +131,12 @@ class NowplayingView < NSView
         NSLayoutPriorityDefaultLow,
         forOrientation:NSLayoutConstraintOrientationHorizontal
       )
-      v.cell.setBackgroundStyle(NSBackgroundStyleRaised)
     end
   end
 
   def draw_artist_box
     NSTextField.new.tap do |v|
+      v.setFont(NSFont.systemFontOfSize(10.0))
       v.setEditable(false)
       v.setBezeled(false)
       v.setDrawsBackground(false)
@@ -145,12 +146,12 @@ class NowplayingView < NSView
         NSLayoutPriorityDefaultLow,
         forOrientation:NSLayoutConstraintOrientationHorizontal
       )
-      v.cell.setBackgroundStyle(NSBackgroundStyleRaised)
     end
   end
 
   def draw_album_box
     NSTextField.new.tap do |v|
+      v.setFont(NSFont.systemFontOfSize(9.0))
       v.setEditable(false)
       v.setBezeled(false)
       v.setDrawsBackground(false)
@@ -160,7 +161,6 @@ class NowplayingView < NSView
         NSLayoutPriorityDefaultLow,
         forOrientation:NSLayoutConstraintOrientationHorizontal
       )
-      v.cell.setBackgroundStyle(NSBackgroundStyleRaised)
     end
   end
 
@@ -170,6 +170,7 @@ class NowplayingView < NSView
 
   def draw_addedby_box
     NSTextField.new.tap do |v|
+      v.setFont(NSFont.systemFontOfSize(8.0))
       v.setEditable(false)
       v.setBezeled(false)
       v.setDrawsBackground(false)
@@ -179,7 +180,6 @@ class NowplayingView < NSView
         NSLayoutPriorityDefaultLow,
         forOrientation:NSLayoutConstraintOrientationHorizontal
       )
-      v.cell.setBackgroundStyle(NSBackgroundStyleRaised)
     end
   end
 
@@ -188,8 +188,6 @@ class NowplayingView < NSView
     paragraph.setLineBreakMode(NSLineBreakByTruncatingTail)
 
     txt = track.title.attrd({
-      'NSFont' => NSFont.systemFontOfSize(12.0),
-      'NSColor' => NSColor.blackColor,
       'NSParagraphStyle' => paragraph
     }) unless track.title.nil?
     @title.setAttributedStringValue(txt)
@@ -201,8 +199,6 @@ class NowplayingView < NSView
     paragraph.setLineBreakMode(NSLineBreakByTruncatingTail)
 
     txt = track.artist.attrd({
-      'NSFont' => NSFont.systemFontOfSize(10.0),
-      'NSColor' => NSColor.blackColor,
       'NSParagraphStyle' => paragraph
     }) unless track.artist.nil?
     @artist.setAttributedStringValue(txt)
@@ -215,8 +211,6 @@ class NowplayingView < NSView
     paragraph.setLineBreakMode(NSLineBreakByTruncatingTail)
 
     txt = track.album.attrd({
-      'NSFont' => NSFont.systemFontOfSize(9.0),
-      'NSColor' => NSColor.blackColor,
       'NSParagraphStyle' => paragraph
     }) unless track.album.nil?
     @album.setAttributedStringValue(txt)
@@ -229,8 +223,6 @@ class NowplayingView < NSView
     paragraph.setLineBreakMode(NSLineBreakByTruncatingTail)
 
     txt = "#{CHOSEN_BY_TXT} #{track.added_by}".attrd({
-      'NSFont' => NSFont.systemFontOfSize(8.0),
-      'NSColor' => NSColor.blackColor,
       'NSParagraphStyle' => paragraph
     }) unless track.added_by.nil?
     @addedby.setAttributedStringValue(txt)

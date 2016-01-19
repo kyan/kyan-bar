@@ -1,8 +1,8 @@
 GIT
   remote: git@github.com:kyan/kyan_jukebox_websocket_lib.git
-  revision: 60178464e15c2465357326aa40906c1e71377de5
+  revision: 8bfe8b70b4ed6fefb491591d9e62279c262ade7d
   specs:
-    kyan_jukebox (0.2.0)
+    kyan_jukebox (0.2.3)
 
 GEM
   remote: https://rubygems.org/
@@ -85,4 +85,4 @@ DEPENDENCIES
   sugarcube
 
 BUNDLED WITH
-   1.10.6
+   1.11.2

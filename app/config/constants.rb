@@ -3,6 +3,8 @@ WEBSOCKET_URL = "ws://#{WEBSOCKET_HOST}:8081"
 JUKEBOX_URL = "http://#{WEBSOCKET_HOST}"
 VOTE_URL = "#{JUKEBOX_URL}/external?"
 
+RECONNECT_TXT = 'If you have any issues with the now playing information not showing, this should fix it.'
+
 DEFAULT_MENU_WIDTH=250.0
 
 MENU_NOWPLAYING=111
