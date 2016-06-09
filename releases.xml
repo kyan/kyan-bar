@@ -30,7 +30,7 @@
       <sparkle:releaseNotesLink>
         https://raw.github.com/kyan/kyan_bar/master/release_notes.html
       </sparkle:releaseNotesLink>
-      <enclosure url='https://github.com/kyan/kyan_bar/releases/download/KyanBar.zip' length='3315317' type='application/octet-stream' sparkle:version='1.7.1' sparkle:dsaSignature='MCwCFDSXRJoSGuoxYQZaJGDawMMK4mX6AhQbHzb/NvLP3qVC+ORGL89N4TdcNw=='/>
+      <enclosure url='https://github.com/kyan/kyan_bar/releases/download/1.7.1/KyanBar.zip' length='3315317' type='application/octet-stream' sparkle:version='1.7.1' sparkle:dsaSignature='MCwCFDSXRJoSGuoxYQZaJGDawMMK4mX6AhQbHzb/NvLP3qVC+ORGL89N4TdcNw=='/>
     </item>
   </channel>
 </rss>
