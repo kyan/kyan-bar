@@ -11,7 +11,9 @@ The app is written using RubyMotion and was created to understand this method of
 
 You can run in dev mode using
 
-`rake`
+`$ bundle`
+
+`$ rake`
 
 or build a real app using:
 

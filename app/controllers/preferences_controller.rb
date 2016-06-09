@@ -12,6 +12,7 @@ class PreferencesController < NSWindowController
   def awakeFromNib
     self.u_vote_shortcut.associatedUserDefaultsKey = U_VOTE_SHORTCUT_VAR
     self.d_vote_shortcut.associatedUserDefaultsKey = D_VOTE_SHORTCUT_VAR
+    super
   end
 
   def toggle_always_show_votes(button)
