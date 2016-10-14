@@ -1,8 +1,8 @@
 class PreferencesController < NSWindowController
   extend IB
 
-  outlet :u_vote_shortcut
-  outlet :d_vote_shortcut
+  outlet :u_vote_shortcut, MASShortcutView
+  outlet :d_vote_shortcut, MASShortcutView
 
   def init
     initWithWindowNibName('Preferences').tap do |pc|

@@ -12,7 +12,7 @@ Motion::Project::App.setup do |app|
   app.name = 'KyanBar'
   app.icon = "icon.icns"
   app.identifier = 'com.kyan.kyanbar'
-  app.deployment_target = '10.8'
+  app.deployment_target = '10.9'
   app.codesign_for_release = false
 
   app.info_plist['NSUIElement'] = 1

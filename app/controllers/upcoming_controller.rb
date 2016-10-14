@@ -23,8 +23,6 @@ class UpcomingController < NSViewController
 
   def build_view
     @table_view = UpcomingTableView.alloc.init
-    @table_view.setBoundsOrigin([-10,0]);
-    @table_view.setBoundsSize([@table_view.bounds.size.width+20, @table_view.bounds.size.height]);
     @table_view.delegate = self
     @table_view.dataSource = self
     self.setView(@table_view)
