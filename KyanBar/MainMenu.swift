@@ -11,13 +11,15 @@ import Foundation
 class MainMenu: NSObject {
   let menu = NSMenu()
   let menuItems: [String: String] = [
-    "Holiday":   "https://app.timetastic.co.uk"
+    "Handbook": "https://handbook.kyan.com/",
+    "Holiday": "https://app.timetastic.co.uk/wallchart",
+    "Lattice": "https://kyan.latticehq.com/",
+    "Office Jukebox": "http://jukebox.kyan.com"
   ]
 
   func build() -> NSMenu {
-    
     let aboutMenuItem = NSMenuItem(
-      title: "About Kyan",
+      title: "About KyanBar",
       action: #selector(about),
       keyEquivalent: ""
     )
@@ -37,6 +39,16 @@ class MainMenu: NSObject {
 
       menu.addItem(menuItem)
     }
+    
+    menu.addItem(NSMenuItem.separator())
+    
+    let quitMenuItem = NSMenuItem(
+      title: "Quit KyanBar",
+      action: #selector(quit),
+      keyEquivalent: "q"
+    )
+    quitMenuItem.target = self
+    menu.addItem(quitMenuItem)
 
     return menu
   }
@@ -49,5 +61,9 @@ class MainMenu: NSObject {
   
   @objc func about(sender: NSMenuItem) {
     NSApp.orderFrontStandardAboutPanel()
+  }
+  
+  @objc func quit(sender: NSMenuItem) {
+    NSApp.terminate(self)
   }
 }
