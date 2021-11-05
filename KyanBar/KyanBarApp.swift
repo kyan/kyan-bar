@@ -29,7 +29,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   func applicationDidFinishLaunching(_ aNotification: Notification) {
     AppDelegate.instance = self
     
-    statusBarItem.button?.image = NSImage(named: NSImage.Name("git"))
+    statusBarItem.button?.image = NSImage(named: NSImage.Name("kyan-logo"))
     statusBarItem.button?.imagePosition = .imageLeading
     statusBarItem.menu = menu.build()
   }

@@ -6,7 +6,7 @@
 //
 
 import Cocoa
-import Foundation
+import SwiftUI
 
 class MainMenu: NSObject {
   let menu = NSMenu()
@@ -26,6 +26,16 @@ class MainMenu: NSObject {
     aboutMenuItem.target = self
     
     menu.addItem(aboutMenuItem)
+    menu.addItem(NSMenuItem.separator())
+    
+    let nowPlayingView = NowPlayingView()
+    let contentView = NSHostingController(rootView: nowPlayingView)
+    contentView.view.frame.size = CGSize(width: 150, height: 100)
+    
+    let customMenuItem = NSMenuItem()
+    customMenuItem.view = contentView.view
+    menu.addItem(customMenuItem)
+    
     menu.addItem(NSMenuItem.separator())
     
     for (title, link) in menuItems {

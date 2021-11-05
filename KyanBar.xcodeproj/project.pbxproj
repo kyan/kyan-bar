@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AEFB5212273444BF0068CCFA /* KyanBarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFB5211273444BF0068CCFA /* KyanBarApp.swift */; };
-		AEFB5214273444BF0068CCFA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFB5213273444BF0068CCFA /* ContentView.swift */; };
+		AEFB5214273444BF0068CCFA /* NowPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFB5213273444BF0068CCFA /* NowPlaying.swift */; };
 		AEFB5216273444C10068CCFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEFB5215273444C10068CCFA /* Assets.xcassets */; };
 		AEFB5219273444C10068CCFA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEFB5218273444C10068CCFA /* Preview Assets.xcassets */; };
 		AEFB5224273444C10068CCFA /* KyanBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFB5223273444C10068CCFA /* KyanBarTests.swift */; };
@@ -35,9 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AEC42DDA2735495000C99D53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AEFB520E273444BF0068CCFA /* KyanBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KyanBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEFB5211273444BF0068CCFA /* KyanBarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KyanBarApp.swift; sourceTree = "<group>"; };
-		AEFB5213273444BF0068CCFA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AEFB5213273444BF0068CCFA /* NowPlaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlaying.swift; sourceTree = "<group>"; };
 		AEFB5215273444C10068CCFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEFB5218273444C10068CCFA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AEFB521A273444C10068CCFA /* KyanBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KyanBar.entitlements; sourceTree = "<group>"; };
@@ -97,9 +98,10 @@
 		AEFB5210273444BF0068CCFA /* KyanBar */ = {
 			isa = PBXGroup;
 			children = (
+				AEC42DDA2735495000C99D53 /* Info.plist */,
 				AEFB5211273444BF0068CCFA /* KyanBarApp.swift */,
 				AEFB523C2734450C0068CCFA /* MainMenu.swift */,
-				AEFB5213273444BF0068CCFA /* ContentView.swift */,
+				AEFB5213273444BF0068CCFA /* NowPlaying.swift */,
 				AEFB5215273444C10068CCFA /* Assets.xcassets */,
 				AEFB521A273444C10068CCFA /* KyanBar.entitlements */,
 				AEFB5217273444C10068CCFA /* Preview Content */,
@@ -262,7 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEFB5214273444BF0068CCFA /* ContentView.swift in Sources */,
+				AEFB5214273444BF0068CCFA /* NowPlaying.swift in Sources */,
 				AEFB523D2734450C0068CCFA /* MainMenu.swift in Sources */,
 				AEFB5212273444BF0068CCFA /* KyanBarApp.swift in Sources */,
 			);
@@ -428,6 +430,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"KyanBar/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KyanBar/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -453,6 +456,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"KyanBar/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KyanBar/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
