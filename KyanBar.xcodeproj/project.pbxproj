@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		AEFB5212273444BF0068CCFA /* KyanBarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFB5211273444BF0068CCFA /* KyanBarApp.swift */; };
-		AEFB5214273444BF0068CCFA /* NowPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFB5213273444BF0068CCFA /* NowPlaying.swift */; };
+		AEFB5214273444BF0068CCFA /* NowPlayingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFB5213273444BF0068CCFA /* NowPlayingView.swift */; };
 		AEFB5216273444C10068CCFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEFB5215273444C10068CCFA /* Assets.xcassets */; };
 		AEFB5219273444C10068CCFA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEFB5218273444C10068CCFA /* Preview Assets.xcassets */; };
 		AEFB5224273444C10068CCFA /* KyanBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFB5223273444C10068CCFA /* KyanBarTests.swift */; };
 		AEFB522E273444C20068CCFA /* KyanBarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFB522D273444C20068CCFA /* KyanBarUITests.swift */; };
 		AEFB5230273444C20068CCFA /* KyanBarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFB522F273444C20068CCFA /* KyanBarUITestsLaunchTests.swift */; };
 		AEFB523D2734450C0068CCFA /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFB523C2734450C0068CCFA /* MainMenu.swift */; };
+		AEFC3DB2273C2CC500D04A4B /* NowPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFC3DB1273C2CC500D04A4B /* NowPlaying.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,7 @@
 		AEC42DDA2735495000C99D53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AEFB520E273444BF0068CCFA /* KyanBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KyanBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEFB5211273444BF0068CCFA /* KyanBarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KyanBarApp.swift; sourceTree = "<group>"; };
-		AEFB5213273444BF0068CCFA /* NowPlaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlaying.swift; sourceTree = "<group>"; };
+		AEFB5213273444BF0068CCFA /* NowPlayingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingView.swift; sourceTree = "<group>"; };
 		AEFB5215273444C10068CCFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEFB5218273444C10068CCFA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AEFB521A273444C10068CCFA /* KyanBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KyanBar.entitlements; sourceTree = "<group>"; };
@@ -48,6 +49,7 @@
 		AEFB522D273444C20068CCFA /* KyanBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KyanBarUITests.swift; sourceTree = "<group>"; };
 		AEFB522F273444C20068CCFA /* KyanBarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KyanBarUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AEFB523C2734450C0068CCFA /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		AEFC3DB1273C2CC500D04A4B /* NowPlaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlaying.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +103,10 @@
 				AEC42DDA2735495000C99D53 /* Info.plist */,
 				AEFB5211273444BF0068CCFA /* KyanBarApp.swift */,
 				AEFB523C2734450C0068CCFA /* MainMenu.swift */,
-				AEFB5213273444BF0068CCFA /* NowPlaying.swift */,
 				AEFB5215273444C10068CCFA /* Assets.xcassets */,
 				AEFB521A273444C10068CCFA /* KyanBar.entitlements */,
+				AEFC3DB0273C2C8900D04A4B /* models */,
+				AEFC3DB3273D176B00D04A4B /* views */,
 				AEFB5217273444C10068CCFA /* Preview Content */,
 			);
 			path = KyanBar;
@@ -132,6 +135,22 @@
 				AEFB522F273444C20068CCFA /* KyanBarUITestsLaunchTests.swift */,
 			);
 			path = KyanBarUITests;
+			sourceTree = "<group>";
+		};
+		AEFC3DB0273C2C8900D04A4B /* models */ = {
+			isa = PBXGroup;
+			children = (
+				AEFC3DB1273C2CC500D04A4B /* NowPlaying.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		AEFC3DB3273D176B00D04A4B /* views */ = {
+			isa = PBXGroup;
+			children = (
+				AEFB5213273444BF0068CCFA /* NowPlayingView.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,7 +283,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEFB5214273444BF0068CCFA /* NowPlaying.swift in Sources */,
+				AEFB5214273444BF0068CCFA /* NowPlayingView.swift in Sources */,
+				AEFC3DB2273C2CC500D04A4B /* NowPlaying.swift in Sources */,
 				AEFB523D2734450C0068CCFA /* MainMenu.swift in Sources */,
 				AEFB5212273444BF0068CCFA /* KyanBarApp.swift in Sources */,
 			);

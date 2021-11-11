@@ -14,7 +14,7 @@ class MainMenu: NSObject {
     "Handbook": "https://handbook.kyan.com/",
     "Holiday": "https://app.timetastic.co.uk/wallchart",
     "Lattice": "https://kyan.latticehq.com/",
-    "Office Jukebox": "http://jukebox.kyan.com"
+    "Jukebox": "http://jukebox.kyan.com"
   ]
 
   func build() -> NSMenu {
@@ -30,7 +30,7 @@ class MainMenu: NSObject {
     
     let nowPlayingView = NowPlayingView()
     let contentView = NSHostingController(rootView: nowPlayingView)
-    contentView.view.frame.size = CGSize(width: 150, height: 100)
+    contentView.view.frame.size = CGSize(width: 200, height: 50)
     
     let customMenuItem = NSMenuItem()
     customMenuItem.view = contentView.view
