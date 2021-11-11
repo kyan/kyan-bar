@@ -13,14 +13,13 @@ struct NowPlayingView: View {
   var body: some View {
     VStack(alignment: .leading) {
       Text("Jukebox now playing:")
-        .font(.system(.caption, design: .rounded))
+        .font(.system(.caption))
         .fontWeight(.light)
       HStack(alignment: .top) {
         AsyncImage(url: URL(string: nowPlaying.image)) { image in
           image.resizable()
         } placeholder: {
           ProgressView()
-            .frame(width: 50, height: 50)
         }
         .frame(width: 50, height: 50)
         .clipShape(RoundedRectangle(cornerRadius: 5))
@@ -31,7 +30,7 @@ struct NowPlayingView: View {
             .fontWeight(.bold)
             .fixedSize(horizontal: false, vertical: true)
           Text(nowPlaying.album)
-          Text(nowPlaying.artist)
+          Text(nowPlaying.artist).fontWeight(.light)
         }
         .font(.system(.footnote, design: .rounded))
         .frame(maxWidth: .infinity, alignment: .leading)
