@@ -30,7 +30,7 @@ class MainMenu: NSObject {
     
     let nowPlayingView = NowPlayingView()
     let contentView = NSHostingController(rootView: nowPlayingView)
-    contentView.view.frame.size = CGSize(width: 200, height: 50)
+    contentView.view.frame.size = CGSize(width: 200, height: 80)
     
     let customMenuItem = NSMenuItem()
     customMenuItem.view = contentView.view

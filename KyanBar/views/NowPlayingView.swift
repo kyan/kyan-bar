@@ -12,6 +12,9 @@ struct NowPlayingView: View {
   
   var body: some View {
     VStack(alignment: .leading) {
+      Text("Jukebox now playing:")
+        .font(.system(.caption, design: .rounded))
+        .fontWeight(.light)
       HStack(alignment: .top) {
         AsyncImage(url: URL(string: nowPlaying.image)) { image in
           image.resizable()
@@ -25,17 +28,16 @@ struct NowPlayingView: View {
         
         VStack(alignment: .leading) {
           Text(nowPlaying.title)
-            .font(.system(.subheadline, design: .rounded))
             .fontWeight(.bold)
+            .fixedSize(horizontal: false, vertical: true)
           Text(nowPlaying.album)
-            .font(.system(.footnote, design: .rounded))
           Text(nowPlaying.artist)
-            .font(.system(.footnote, design: .rounded))
         }
-        .frame(alignment: .leading)
+        .font(.system(.footnote, design: .rounded))
+        .frame(maxWidth: .infinity, alignment: .leading)
       }
     }
-    .padding(.horizontal, 10.0)
+    .padding(.all, 15.0)
     .onAppear() {
       nowPlaying.load()
     }
