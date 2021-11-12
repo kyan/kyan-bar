@@ -1,0 +1,629 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AEFB5212273444BF0068CCFA /* KyanBarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFB5211273444BF0068CCFA /* KyanBarApp.swift */; };
+		AEFB5214273444BF0068CCFA /* NowPlayingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFB5213273444BF0068CCFA /* NowPlayingView.swift */; };
+		AEFB5216273444C10068CCFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEFB5215273444C10068CCFA /* Assets.xcassets */; };
+		AEFB5219273444C10068CCFA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEFB5218273444C10068CCFA /* Preview Assets.xcassets */; };
+		AEFB5224273444C10068CCFA /* KyanBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFB5223273444C10068CCFA /* KyanBarTests.swift */; };
+		AEFB522E273444C20068CCFA /* KyanBarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFB522D273444C20068CCFA /* KyanBarUITests.swift */; };
+		AEFB5230273444C20068CCFA /* KyanBarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFB522F273444C20068CCFA /* KyanBarUITestsLaunchTests.swift */; };
+		AEFB523D2734450C0068CCFA /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFB523C2734450C0068CCFA /* MainMenu.swift */; };
+		AEFC3DB2273C2CC500D04A4B /* NowPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFC3DB1273C2CC500D04A4B /* NowPlaying.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AEFB5220273444C10068CCFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEFB5206273444BF0068CCFA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEFB520D273444BF0068CCFA;
+			remoteInfo = KyanBar;
+		};
+		AEFB522A273444C20068CCFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEFB5206273444BF0068CCFA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEFB520D273444BF0068CCFA;
+			remoteInfo = KyanBar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AEC42DDA2735495000C99D53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AEFB520E273444BF0068CCFA /* KyanBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KyanBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEFB5211273444BF0068CCFA /* KyanBarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KyanBarApp.swift; sourceTree = "<group>"; };
+		AEFB5213273444BF0068CCFA /* NowPlayingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingView.swift; sourceTree = "<group>"; };
+		AEFB5215273444C10068CCFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AEFB5218273444C10068CCFA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AEFB521A273444C10068CCFA /* KyanBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KyanBar.entitlements; sourceTree = "<group>"; };
+		AEFB521F273444C10068CCFA /* KyanBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KyanBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEFB5223273444C10068CCFA /* KyanBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KyanBarTests.swift; sourceTree = "<group>"; };
+		AEFB5229273444C20068CCFA /* KyanBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KyanBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEFB522D273444C20068CCFA /* KyanBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KyanBarUITests.swift; sourceTree = "<group>"; };
+		AEFB522F273444C20068CCFA /* KyanBarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KyanBarUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AEFB523C2734450C0068CCFA /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		AEFC3DB1273C2CC500D04A4B /* NowPlaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlaying.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AEFB520B273444BF0068CCFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEFB521C273444C10068CCFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEFB5226273444C20068CCFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AEFB5205273444BF0068CCFA = {
+			isa = PBXGroup;
+			children = (
+				AEFB5210273444BF0068CCFA /* KyanBar */,
+				AEFB5222273444C10068CCFA /* KyanBarTests */,
+				AEFB522C273444C20068CCFA /* KyanBarUITests */,
+				AEFB520F273444BF0068CCFA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AEFB520F273444BF0068CCFA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AEFB520E273444BF0068CCFA /* KyanBar.app */,
+				AEFB521F273444C10068CCFA /* KyanBarTests.xctest */,
+				AEFB5229273444C20068CCFA /* KyanBarUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AEFB5210273444BF0068CCFA /* KyanBar */ = {
+			isa = PBXGroup;
+			children = (
+				AEC42DDA2735495000C99D53 /* Info.plist */,
+				AEFB5211273444BF0068CCFA /* KyanBarApp.swift */,
+				AEFB523C2734450C0068CCFA /* MainMenu.swift */,
+				AEFB5215273444C10068CCFA /* Assets.xcassets */,
+				AEFB521A273444C10068CCFA /* KyanBar.entitlements */,
+				AEFC3DB0273C2C8900D04A4B /* models */,
+				AEFC3DB3273D176B00D04A4B /* views */,
+				AEFB5217273444C10068CCFA /* Preview Content */,
+			);
+			path = KyanBar;
+			sourceTree = "<group>";
+		};
+		AEFB5217273444C10068CCFA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AEFB5218273444C10068CCFA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AEFB5222273444C10068CCFA /* KyanBarTests */ = {
+			isa = PBXGroup;
+			children = (
+				AEFB5223273444C10068CCFA /* KyanBarTests.swift */,
+			);
+			path = KyanBarTests;
+			sourceTree = "<group>";
+		};
+		AEFB522C273444C20068CCFA /* KyanBarUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AEFB522D273444C20068CCFA /* KyanBarUITests.swift */,
+				AEFB522F273444C20068CCFA /* KyanBarUITestsLaunchTests.swift */,
+			);
+			path = KyanBarUITests;
+			sourceTree = "<group>";
+		};
+		AEFC3DB0273C2C8900D04A4B /* models */ = {
+			isa = PBXGroup;
+			children = (
+				AEFC3DB1273C2CC500D04A4B /* NowPlaying.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		AEFC3DB3273D176B00D04A4B /* views */ = {
+			isa = PBXGroup;
+			children = (
+				AEFB5213273444BF0068CCFA /* NowPlayingView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AEFB520D273444BF0068CCFA /* KyanBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEFB5233273444C20068CCFA /* Build configuration list for PBXNativeTarget "KyanBar" */;
+			buildPhases = (
+				AEFB520A273444BF0068CCFA /* Sources */,
+				AEFB520B273444BF0068CCFA /* Frameworks */,
+				AEFB520C273444BF0068CCFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KyanBar;
+			productName = KyanBar;
+			productReference = AEFB520E273444BF0068CCFA /* KyanBar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AEFB521E273444C10068CCFA /* KyanBarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEFB5236273444C20068CCFA /* Build configuration list for PBXNativeTarget "KyanBarTests" */;
+			buildPhases = (
+				AEFB521B273444C10068CCFA /* Sources */,
+				AEFB521C273444C10068CCFA /* Frameworks */,
+				AEFB521D273444C10068CCFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AEFB5221273444C10068CCFA /* PBXTargetDependency */,
+			);
+			name = KyanBarTests;
+			productName = KyanBarTests;
+			productReference = AEFB521F273444C10068CCFA /* KyanBarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AEFB5228273444C20068CCFA /* KyanBarUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEFB5239273444C20068CCFA /* Build configuration list for PBXNativeTarget "KyanBarUITests" */;
+			buildPhases = (
+				AEFB5225273444C20068CCFA /* Sources */,
+				AEFB5226273444C20068CCFA /* Frameworks */,
+				AEFB5227273444C20068CCFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AEFB522B273444C20068CCFA /* PBXTargetDependency */,
+			);
+			name = KyanBarUITests;
+			productName = KyanBarUITests;
+			productReference = AEFB5229273444C20068CCFA /* KyanBarUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AEFB5206273444BF0068CCFA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					AEFB520D273444BF0068CCFA = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					AEFB521E273444C10068CCFA = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = AEFB520D273444BF0068CCFA;
+					};
+					AEFB5228273444C20068CCFA = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = AEFB520D273444BF0068CCFA;
+					};
+				};
+			};
+			buildConfigurationList = AEFB5209273444BF0068CCFA /* Build configuration list for PBXProject "KyanBar" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AEFB5205273444BF0068CCFA;
+			productRefGroup = AEFB520F273444BF0068CCFA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AEFB520D273444BF0068CCFA /* KyanBar */,
+				AEFB521E273444C10068CCFA /* KyanBarTests */,
+				AEFB5228273444C20068CCFA /* KyanBarUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AEFB520C273444BF0068CCFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEFB5219273444C10068CCFA /* Preview Assets.xcassets in Resources */,
+				AEFB5216273444C10068CCFA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEFB521D273444C10068CCFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEFB5227273444C20068CCFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AEFB520A273444BF0068CCFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEFB5214273444BF0068CCFA /* NowPlayingView.swift in Sources */,
+				AEFC3DB2273C2CC500D04A4B /* NowPlaying.swift in Sources */,
+				AEFB523D2734450C0068CCFA /* MainMenu.swift in Sources */,
+				AEFB5212273444BF0068CCFA /* KyanBarApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEFB521B273444C10068CCFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEFB5224273444C10068CCFA /* KyanBarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEFB5225273444C20068CCFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEFB522E273444C20068CCFA /* KyanBarUITests.swift in Sources */,
+				AEFB5230273444C20068CCFA /* KyanBarUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AEFB5221273444C10068CCFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AEFB520D273444BF0068CCFA /* KyanBar */;
+			targetProxy = AEFB5220273444C10068CCFA /* PBXContainerItemProxy */;
+		};
+		AEFB522B273444C20068CCFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AEFB520D273444BF0068CCFA /* KyanBar */;
+			targetProxy = AEFB522A273444C20068CCFA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AEFB5231273444C20068CCFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AEFB5232273444C20068CCFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		AEFB5234273444C20068CCFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = KyanBar/KyanBar.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"KyanBar/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KyanBar/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kyan.com.KyanBar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AEFB5235273444C20068CCFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = KyanBar/KyanBar.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"KyanBar/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KyanBar/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kyan.com.KyanBar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		AEFB5237273444C20068CCFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kyan.com.KyanBarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KyanBar.app/Contents/MacOS/KyanBar";
+			};
+			name = Debug;
+		};
+		AEFB5238273444C20068CCFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kyan.com.KyanBarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KyanBar.app/Contents/MacOS/KyanBar";
+			};
+			name = Release;
+		};
+		AEFB523A273444C20068CCFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kyan.com.KyanBarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = KyanBar;
+			};
+			name = Debug;
+		};
+		AEFB523B273444C20068CCFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kyan.com.KyanBarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = KyanBar;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AEFB5209273444BF0068CCFA /* Build configuration list for PBXProject "KyanBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEFB5231273444C20068CCFA /* Debug */,
+				AEFB5232273444C20068CCFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEFB5233273444C20068CCFA /* Build configuration list for PBXNativeTarget "KyanBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEFB5234273444C20068CCFA /* Debug */,
+				AEFB5235273444C20068CCFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEFB5236273444C20068CCFA /* Build configuration list for PBXNativeTarget "KyanBarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEFB5237273444C20068CCFA /* Debug */,
+				AEFB5238273444C20068CCFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEFB5239273444C20068CCFA /* Build configuration list for PBXNativeTarget "KyanBarUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEFB523A273444C20068CCFA /* Debug */,
+				AEFB523B273444C20068CCFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AEFB5206273444BF0068CCFA /* Project object */;
+}
