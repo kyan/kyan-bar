@@ -25,7 +25,7 @@ class NowPlaying: ObservableObject {
     let url = URL(string: "http://localhost:8080")!
     var request = URLRequest(url: url)
     request.httpMethod = "GET"
-    request.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringCacheData
+    request.cachePolicy = NSURLRequest.CachePolicy.useProtocolCachePolicy
     
     URLSession.shared.dataTask(with: request) { data, _, error in
       if let data = data {
