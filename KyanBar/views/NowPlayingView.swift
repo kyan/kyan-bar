@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NowPlayingView: View {
-  @StateObject var nowPlaying = NowPlaying()
+  @StateObject var nowPlaying = NowPlayingModel()
   
   var body: some View {
     VStack(alignment: .leading) {

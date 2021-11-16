@@ -4,5 +4,9 @@
 <dict>
 	<key>LSUIElement</key>
 	<true/>
+	<key>SUFeedURL</key>
+	<string>https://raw.githubusercontent.com/kyan/kyan_bar/master/appcast.xml</string>
+	<key>SUPublicEDKey</key>
+	<string>15i9PLKiWdieXMx1izIyLFSobkD4q64/Dp4CWMx1Aj4=</string>
 </dict>
 </plist>

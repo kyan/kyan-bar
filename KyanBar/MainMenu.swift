@@ -17,17 +17,7 @@ class MainMenu: NSObject {
     "Jukebox": "http://jukebox.kyan.com"
   ]
 
-  func build() -> NSMenu {
-    let aboutMenuItem = NSMenuItem(
-      title: "About KyanBar",
-      action: #selector(about),
-      keyEquivalent: ""
-    )
-    aboutMenuItem.target = self
-    
-    menu.addItem(aboutMenuItem)
-    menu.addItem(NSMenuItem.separator())
-    
+  func build(updatesMenuItem: NSMenuItem) -> NSMenu {
     let nowPlayingView = NowPlayingView()
     let contentView = NSHostingController(rootView: nowPlayingView)
     contentView.view.frame.size = CGSize(width: 200, height: 80)
@@ -38,10 +28,21 @@ class MainMenu: NSObject {
     
     menu.addItem(NSMenuItem.separator())
     
+    let aboutMenuItem = NSMenuItem(
+      title: "About KyanBar",
+      action: #selector(about),
+      keyEquivalent: ""
+    )
+    aboutMenuItem.target = self
+    
+    menu.addItem(aboutMenuItem)
+    menu.addItem(updatesMenuItem)
+    menu.addItem(NSMenuItem.separator())
+    
     for (title, link) in menuItems {
       let menuItem = NSMenuItem(
         title: title,
-        action: #selector(hello),
+        action: #selector(linkSelector),
         keyEquivalent: ""
       )
       menuItem.target = self
@@ -63,7 +64,7 @@ class MainMenu: NSObject {
     return menu
   }
 
-  @objc func hello(sender: NSMenuItem) {
+  @objc func linkSelector(sender: NSMenuItem) {
     let link = sender.representedObject as! String
     guard let url = URL(string: link) else { return }
     NSWorkspace.shared.open(url)

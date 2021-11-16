@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93D9A91A2DB59AE70A56BE74 /* Pods_KyanBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2ED83881F1DDC9EEEB55330 /* Pods_KyanBar.framework */; };
 		AEFB5212273444BF0068CCFA /* KyanBarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFB5211273444BF0068CCFA /* KyanBarApp.swift */; };
 		AEFB5214273444BF0068CCFA /* NowPlayingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFB5213273444BF0068CCFA /* NowPlayingView.swift */; };
 		AEFB5216273444C10068CCFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEFB5215273444C10068CCFA /* Assets.xcassets */; };
@@ -15,7 +16,7 @@
 		AEFB522E273444C20068CCFA /* KyanBarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFB522D273444C20068CCFA /* KyanBarUITests.swift */; };
 		AEFB5230273444C20068CCFA /* KyanBarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFB522F273444C20068CCFA /* KyanBarUITestsLaunchTests.swift */; };
 		AEFB523D2734450C0068CCFA /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFB523C2734450C0068CCFA /* MainMenu.swift */; };
-		AEFC3DB2273C2CC500D04A4B /* NowPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFC3DB1273C2CC500D04A4B /* NowPlaying.swift */; };
+		AEFC3DB2273C2CC500D04A4B /* NowPlayingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFC3DB1273C2CC500D04A4B /* NowPlayingModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		99F83A5DBDC80E1421D94CDD /* Pods-KyanBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KyanBar.release.xcconfig"; path = "Target Support Files/Pods-KyanBar/Pods-KyanBar.release.xcconfig"; sourceTree = "<group>"; };
+		A89DE6E589C4FE41015EFBE7 /* Pods-KyanBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KyanBar.debug.xcconfig"; path = "Target Support Files/Pods-KyanBar/Pods-KyanBar.debug.xcconfig"; sourceTree = "<group>"; };
 		AEC42DDA2735495000C99D53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AEFB520E273444BF0068CCFA /* KyanBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KyanBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEFB5211273444BF0068CCFA /* KyanBarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KyanBarApp.swift; sourceTree = "<group>"; };
@@ -49,7 +52,8 @@
 		AEFB522D273444C20068CCFA /* KyanBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KyanBarUITests.swift; sourceTree = "<group>"; };
 		AEFB522F273444C20068CCFA /* KyanBarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KyanBarUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AEFB523C2734450C0068CCFA /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
-		AEFC3DB1273C2CC500D04A4B /* NowPlaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlaying.swift; sourceTree = "<group>"; };
+		AEFC3DB1273C2CC500D04A4B /* NowPlayingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingModel.swift; sourceTree = "<group>"; };
+		D2ED83881F1DDC9EEEB55330 /* Pods_KyanBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KyanBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93D9A91A2DB59AE70A56BE74 /* Pods_KyanBar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +82,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12B4B132500989C5CF640D42 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A89DE6E589C4FE41015EFBE7 /* Pods-KyanBar.debug.xcconfig */,
+				99F83A5DBDC80E1421D94CDD /* Pods-KyanBar.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		84B41285DB72078616A85137 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2ED83881F1DDC9EEEB55330 /* Pods_KyanBar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AEFB5205273444BF0068CCFA = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +106,8 @@
 				AEFB5222273444C10068CCFA /* KyanBarTests */,
 				AEFB522C273444C20068CCFA /* KyanBarUITests */,
 				AEFB520F273444BF0068CCFA /* Products */,
+				12B4B132500989C5CF640D42 /* Pods */,
+				84B41285DB72078616A85137 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,7 +164,7 @@
 		AEFC3DB0273C2C8900D04A4B /* models */ = {
 			isa = PBXGroup;
 			children = (
-				AEFC3DB1273C2CC500D04A4B /* NowPlaying.swift */,
+				AEFC3DB1273C2CC500D04A4B /* NowPlayingModel.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -160,9 +184,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AEFB5233273444C20068CCFA /* Build configuration list for PBXNativeTarget "KyanBar" */;
 			buildPhases = (
+				A14CA41FABB811DAFE7B1D81 /* [CP] Check Pods Manifest.lock */,
 				AEFB520A273444BF0068CCFA /* Sources */,
 				AEFB520B273444BF0068CCFA /* Frameworks */,
 				AEFB520C273444BF0068CCFA /* Resources */,
+				4F9B97208364FF5A383EE0D8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -278,13 +304,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4F9B97208364FF5A383EE0D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KyanBar/Pods-KyanBar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KyanBar/Pods-KyanBar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KyanBar/Pods-KyanBar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A14CA41FABB811DAFE7B1D81 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KyanBar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AEFB520A273444BF0068CCFA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				AEFB5214273444BF0068CCFA /* NowPlayingView.swift in Sources */,
-				AEFC3DB2273C2CC500D04A4B /* NowPlaying.swift in Sources */,
+				AEFC3DB2273C2CC500D04A4B /* NowPlayingModel.swift in Sources */,
 				AEFB523D2734450C0068CCFA /* MainMenu.swift in Sources */,
 				AEFB5212273444BF0068CCFA /* KyanBarApp.swift in Sources */,
 			);
@@ -440,6 +508,7 @@
 		};
 		AEFB5234273444C20068CCFA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A89DE6E589C4FE41015EFBE7 /* Pods-KyanBar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -467,6 +536,7 @@
 		};
 		AEFB5235273444C20068CCFA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99F83A5DBDC80E1421D94CDD /* Pods-KyanBar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

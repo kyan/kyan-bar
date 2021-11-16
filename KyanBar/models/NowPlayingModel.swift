@@ -14,15 +14,14 @@ struct NowPlayingJson: Decodable {
   let image: String
 }
 
-class NowPlaying: ObservableObject {
+class NowPlayingModel: ObservableObject {
   @Published var title = "..."
   @Published var artist = "..."
   @Published var album = "..."
   @Published var image = ""
   
   func load() {
-    //let url = URL(string: "https://kyan-jukebox-now-playing.deno.dev")!
-    let url = URL(string: "http://localhost:8080")!
+    let url = URL(string: "https://kyan-jukebox-now-playing.deno.dev")!
     var request = URLRequest(url: url)
     request.httpMethod = "GET"
     request.cachePolicy = NSURLRequest.CachePolicy.useProtocolCachePolicy
