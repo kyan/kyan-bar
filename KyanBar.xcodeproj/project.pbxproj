@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		93D9A91A2DB59AE70A56BE74 /* Pods_KyanBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2ED83881F1DDC9EEEB55330 /* Pods_KyanBar.framework */; };
+		AE6D30EC2747C9E7000FA32C /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = AE6D30EB2747C9E7000FA32C /* Credits.html */; };
 		AEFB5212273444BF0068CCFA /* KyanBarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFB5211273444BF0068CCFA /* KyanBarApp.swift */; };
 		AEFB5214273444BF0068CCFA /* NowPlayingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFB5213273444BF0068CCFA /* NowPlayingView.swift */; };
 		AEFB5216273444C10068CCFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEFB5215273444C10068CCFA /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		99F83A5DBDC80E1421D94CDD /* Pods-KyanBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KyanBar.release.xcconfig"; path = "Target Support Files/Pods-KyanBar/Pods-KyanBar.release.xcconfig"; sourceTree = "<group>"; };
 		A89DE6E589C4FE41015EFBE7 /* Pods-KyanBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KyanBar.debug.xcconfig"; path = "Target Support Files/Pods-KyanBar/Pods-KyanBar.debug.xcconfig"; sourceTree = "<group>"; };
+		AE6D30EB2747C9E7000FA32C /* Credits.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Credits.html; sourceTree = "<group>"; };
 		AEC42DDA2735495000C99D53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AEFB520E273444BF0068CCFA /* KyanBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KyanBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEFB5211273444BF0068CCFA /* KyanBarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KyanBarApp.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				AEC42DDA2735495000C99D53 /* Info.plist */,
+				AE6D30EB2747C9E7000FA32C /* Credits.html */,
 				AEFB5211273444BF0068CCFA /* KyanBarApp.swift */,
 				AEFB523C2734450C0068CCFA /* MainMenu.swift */,
 				AEFB5215273444C10068CCFA /* Assets.xcassets */,
@@ -297,6 +300,7 @@
 			files = (
 				D2CB7C3827486E8B0077B9E0 /* exampleTrack.json in Resources */,
 				AEFB5219273444C10068CCFA /* Preview Assets.xcassets in Resources */,
+				AE6D30EC2747C9E7000FA32C /* Credits.html in Resources */,
 				AEFB5216273444C10068CCFA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -532,7 +536,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"KyanBar/Preview Content\"";
 				DEVELOPMENT_TEAM = 9QTT9CVFB6;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -545,7 +549,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kyan.KyanBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -563,7 +567,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"KyanBar/Preview Content\"";
 				DEVELOPMENT_TEAM = 9QTT9CVFB6;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -576,7 +580,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kyan.KyanBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
