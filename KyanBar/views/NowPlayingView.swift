@@ -37,8 +37,8 @@ struct NowPlayingView: View {
       }
     }
     .padding(.all, 15.0)
-    .onAppear() {
-      nowPlaying.load()
+    .task {
+      await nowPlaying.refresh()
     }
   }
 }
