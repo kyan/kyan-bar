@@ -7,19 +7,9 @@
 
 import Foundation
 
-struct NowPlayingJson: Decodable {
-  let title: String
-  let artist: String
-  let album: String
-  let image: String
-}
-
 class NowPlayingModel: ObservableObject {
-  @Published var title = "..."
-  @Published var artist = "..."
-  @Published var album = "..."
-  @Published var image = ""
-  
+  @Published var currentTrack: Track = .placeholder
+
   func load() {
     let url = URL(string: "https://kyan-jukebox-now-playing.deno.dev")!
     var request = URLRequest(url: url)
@@ -28,14 +18,11 @@ class NowPlayingModel: ObservableObject {
     
     URLSession.shared.dataTask(with: request) { data, _, error in
       if let data = data {
-        if let decodedResponse = try? JSONDecoder().decode(NowPlayingJson.self, from: data) {
+        if let decodedResponse = try? JSONDecoder().decode(Track.self, from: data) {
           print("JSON fetched")
           
           DispatchQueue.main.async {
-            self.title = decodedResponse.title
-            self.artist = decodedResponse.artist
-            self.album = decodedResponse.album
-            self.image = decodedResponse.image
+            self.currentTrack = decodedResponse
           }
           
           return

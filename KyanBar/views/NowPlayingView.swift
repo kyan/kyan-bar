@@ -16,7 +16,7 @@ struct NowPlayingView: View {
         .font(.system(.caption))
         .fontWeight(.light)
       HStack(alignment: .top) {
-        AsyncImage(url: URL(string: nowPlaying.image)) { image in
+        AsyncImage(url: URL(string: nowPlaying.currentTrack.image)) { image in
           image.resizable()
         } placeholder: {
           ProgressView()
@@ -26,11 +26,11 @@ struct NowPlayingView: View {
         .accessibilityLabel("Album art")
         
         VStack(alignment: .leading) {
-          Text(nowPlaying.title)
+          Text(nowPlaying.currentTrack.title)
             .fontWeight(.bold)
             .fixedSize(horizontal: false, vertical: true)
-          Text(nowPlaying.album)
-          Text(nowPlaying.artist).fontWeight(.light)
+          Text(nowPlaying.currentTrack.album)
+          Text(nowPlaying.currentTrack.artist).fontWeight(.light)
         }
         .font(.system(.footnote, design: .rounded))
         .frame(maxWidth: .infinity, alignment: .leading)
