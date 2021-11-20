@@ -18,6 +18,9 @@
 		AEFB523D2734450C0068CCFA /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFB523C2734450C0068CCFA /* MainMenu.swift */; };
 		AEFC3DB2273C2CC500D04A4B /* NowPlayingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFC3DB1273C2CC500D04A4B /* NowPlayingModel.swift */; };
 		D2CB7C34274847A10077B9E0 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CB7C33274847A10077B9E0 /* Track.swift */; };
+		D2CB7C3627486DEA0077B9E0 /* TrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CB7C3527486DEA0077B9E0 /* TrackView.swift */; };
+		D2CB7C3827486E8B0077B9E0 /* exampleTrack.json in Resources */ = {isa = PBXBuildFile; fileRef = D2CB7C3727486E8B0077B9E0 /* exampleTrack.json */; };
+		D2CB7C3A27486EB00077B9E0 /* Track+example.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CB7C3927486EB00077B9E0 /* Track+example.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		AEFB523C2734450C0068CCFA /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		AEFC3DB1273C2CC500D04A4B /* NowPlayingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingModel.swift; sourceTree = "<group>"; };
 		D2CB7C33274847A10077B9E0 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		D2CB7C3527486DEA0077B9E0 /* TrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackView.swift; sourceTree = "<group>"; };
+		D2CB7C3727486E8B0077B9E0 /* exampleTrack.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = exampleTrack.json; sourceTree = "<group>"; };
+		D2CB7C3927486EB00077B9E0 /* Track+example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Track+example.swift"; sourceTree = "<group>"; };
 		D2ED83881F1DDC9EEEB55330 /* Pods_KyanBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KyanBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -141,6 +147,8 @@
 		AEFB5217273444C10068CCFA /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				D2CB7C3727486E8B0077B9E0 /* exampleTrack.json */,
+				D2CB7C3927486EB00077B9E0 /* Track+example.swift */,
 				AEFB5218273444C10068CCFA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -176,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				AEFB5213273444BF0068CCFA /* NowPlayingView.swift */,
+				D2CB7C3527486DEA0077B9E0 /* TrackView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -286,6 +295,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2CB7C3827486E8B0077B9E0 /* exampleTrack.json in Resources */,
 				AEFB5219273444C10068CCFA /* Preview Assets.xcassets in Resources */,
 				AEFB5216273444C10068CCFA /* Assets.xcassets in Resources */,
 			);
@@ -355,9 +365,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEFB5214273444BF0068CCFA /* NowPlayingView.swift in Sources */,
+				D2CB7C3A27486EB00077B9E0 /* Track+example.swift in Sources */,
 				D2CB7C34274847A10077B9E0 /* Track.swift in Sources */,
 				AEFC3DB2273C2CC500D04A4B /* NowPlayingModel.swift in Sources */,
 				AEFB523D2734450C0068CCFA /* MainMenu.swift in Sources */,
+				D2CB7C3627486DEA0077B9E0 /* TrackView.swift in Sources */,
 				AEFB5212273444BF0068CCFA /* KyanBarApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
