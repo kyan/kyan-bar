@@ -13,32 +13,13 @@ struct NowPlayingView: View {
   var body: some View {
     VStack(alignment: .leading) {
       Text("Jukebox now playing:")
-        .font(.system(.caption))
+        .font(.caption)
         .fontWeight(.light)
-      HStack(alignment: .top) {
-        AsyncImage(url: URL(string: nowPlaying.image)) { image in
-          image.resizable()
-        } placeholder: {
-          ProgressView()
-        }
-        .frame(width: 50, height: 50)
-        .clipShape(RoundedRectangle(cornerRadius: 5))
-        .accessibilityLabel("Album art")
-        
-        VStack(alignment: .leading) {
-          Text(nowPlaying.title)
-            .fontWeight(.bold)
-            .fixedSize(horizontal: false, vertical: true)
-          Text(nowPlaying.album)
-          Text(nowPlaying.artist).fontWeight(.light)
-        }
-        .font(.system(.footnote, design: .rounded))
-        .frame(maxWidth: .infinity, alignment: .leading)
-      }
+      TrackView(track: nowPlaying.currentTrack)
     }
-    .padding(.all, 15.0)
-    .onAppear() {
-      nowPlaying.load()
+    .padding(15)
+    .task {
+      await nowPlaying.refresh()
     }
   }
 }
