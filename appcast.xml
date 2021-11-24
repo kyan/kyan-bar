@@ -1,15 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
-   <channel>
-      <title>KyanBar Changelog</title>
-      <link>https://raw.githubusercontent.com/kyan/kyan_bar/master/appcast.xml</link>
-      <description>Most recent changes with links to updates.</description>
-      <language>en</language>
-<!--         <item>-->
-<!--            <title>Version 1.0</title>-->
-<!--            <sparkle:releaseNotesLink>http://you.com/app/2.0.html</sparkle:releaseNotesLink>-->
-<!--            <pubDate>Wed, 09 Jan 2006 19:20:11 +0000</pubDate>-->
-<!--            <enclosure url="http://you.com/app/Your Great App 2.0.zip" sparkle:version="2.0" length="1623481" type="application/octet-stream" sparkle:dsaSignature="BAFJW4B6B1K1JyW30nbkBwainOzrN6EQuAh" />-->
-<!--         </item>-->
-   </channel>
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>KyanBar</title>
+        <item>
+            <title>2.0</title>
+            <pubDate>Wed, 24 Nov 2021 12:17:56 +0000</pubDate>
+            <sparkle:version>1</sparkle:version>
+            <sparkle:shortVersionString>2.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/kyan/kyan_bar/releases/download/2.0.1/KyanBar.zip" length="1533945" type="application/octet-stream" sparkle:edSignature="xTyQ/SSlfMgEX7HRP+XS128aSMuMelCKncHYUkznhtGDtdHhSVL3BVBxyHADe11SVusOp4/9gCTrAGhLyJkcDQ=="/>
+        </item>
+    </channel>
 </rss>
