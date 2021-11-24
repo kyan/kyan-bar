@@ -34,8 +34,12 @@ struct TrackView: View {
   }
 }
 
+// Add DEBUG line to fix bug where you can't archive the app
+// due to `Track.example` not being available
+#if DEBUG
 struct TrackView_Previews: PreviewProvider {
   static var previews: some View {
     TrackView(track: Track.example)
   }
 }
+#endif
