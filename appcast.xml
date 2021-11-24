@@ -1,11 +1,13 @@
 <?xml version="1.0" standalone="yes"?>
 <rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
     <channel>
-      <title>2.0.0</title>
-      <pubDate>Wed, 24 Nov 2021 15:22:21 +0000</pubDate>
-      <sparkle:version>5</sparkle:version>
-      <sparkle:shortVersionString>2.0.0</sparkle:shortVersionString>
-      <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
-      <enclosure url="https://github.com/kyan/kyan_bar/releases/download/2.0.0/KyanBar.2.0.0.zip" length="1534139" type="application/octet-stream" sparkle:edSignature="8p8B3S3qqzMNx4DjP8xFghvQSrA7LJLSia5+YkyKwXLukxxvmo7rNew6WfFMKtGQkqpSFFMJpJkBWSVRKSIPAQ=="/>
+        <item>
+          <title>2.0.0</title>
+          <pubDate>Wed, 24 Nov 2021 15:22:21 +0000</pubDate>
+          <sparkle:version>5</sparkle:version>
+          <sparkle:shortVersionString>2.0.0</sparkle:shortVersionString>
+          <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+          <enclosure url="https://github.com/kyan/kyan_bar/releases/download/2.0.0/KyanBar.2.0.0.zip" length="1534139" type="application/octet-stream" sparkle:edSignature="8p8B3S3qqzMNx4DjP8xFghvQSrA7LJLSia5+YkyKwXLukxxvmo7rNew6WfFMKtGQkqpSFFMJpJkBWSVRKSIPAQ=="/>
+        </item>
     </channel>
 </rss>
