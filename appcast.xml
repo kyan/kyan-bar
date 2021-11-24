@@ -4,11 +4,11 @@
         <title>KyanBar 2.0.0</title>
         <item>
             <title>2.0.0</title>
-            <pubDate>Wed, 24 Nov 2021 15:22:21 +0000</pubDate>
-            <sparkle:version>5</sparkle:version>
+            <pubDate>Wed, 24 Nov 2021 16:25:49 +0000</pubDate>
+            <sparkle:version>6</sparkle:version>
             <sparkle:shortVersionString>2.0.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/kyan/kyan_bar/releases/download/2.0.0/KyanBar.2.0.0.zip" length="1534139" type="application/octet-stream" sparkle:edSignature="8p8B3S3qqzMNx4DjP8xFghvQSrA7LJLSia5+YkyKwXLukxxvmo7rNew6WfFMKtGQkqpSFFMJpJkBWSVRKSIPAQ=="/>
+            <enclosure url="https://github.com/kyan/kyan_bar/releases/download/2.0.0/KyanBar.2.0.0.zip" length="1533817" type="application/octet-stream" sparkle:edSignature="kgIb+sXxczr3Ugr6rYnH+ww1aIL98l0l0wksdS3HtnFzLUUjcD/gPTeV2GAzWJpyzocQ45r1TN6x3AqrPoTkBg=="/>
         </item>
     </channel>
 </rss>
