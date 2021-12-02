@@ -15,7 +15,7 @@ struct Track: Decodable {
 }
 
 extension Track {
-    /// A construction of ``Track`` that can be used when no data has
-    /// been loaded.
+    // A construction of `Track` that can be used when no data has
+    // been loaded.
     static let placeholder = Track(title: "Loading...", artist: "", album: "", image: "")
 }
