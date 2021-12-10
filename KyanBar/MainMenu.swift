@@ -13,14 +13,9 @@ import SwiftUI
 class MainMenu: NSObject {
   // A new menu instance ready to add items to
   let menu = NSMenu()
-  // These are the available link which will appear as part of
-  // the menu. These could be remotely loaded or stored in environment vars
-  let menuItems: [String: String] = [
-    "Handbook": "https://handbook.kyan.com/",
-    "Holiday": "https://app.timetastic.co.uk/wallchart",
-    "Lattice": "https://kyan.latticehq.com/",
-    "Jukebox": "http://jukebox.kyan.com"
-  ]
+  // These are the available links shown in the menu
+  // These are fetched from the Info.plist file
+  let menuItems = Bundle.main.object(forInfoDictionaryKey: "KyanLinks") as! [String: String]
 
   // function called by KyanBarApp to create the menu
   func build(updatesMenuItem: NSMenuItem) -> NSMenu {
@@ -58,9 +53,9 @@ class MainMenu: NSObject {
     // Adding a seperator
     menu.addItem(NSMenuItem.separator())
 
-    // Loop though all our links and create a new menu item for
+    // Loop though our sorted link list and create a new menu item for
     // each, and then add it to the menu
-    for (title, link) in menuItems {
+    for (title, link) in menuItems.sorted( by: { $0.0 < $1.0 }) {
       let menuItem = NSMenuItem(
         title: title,
         action: #selector(linkSelector),

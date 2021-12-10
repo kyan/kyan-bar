@@ -17,5 +17,6 @@ It's also acts as a bit of a template for building apps that run in the status b
 * How to add an About pane
 * How to add a custom icon for the app
 * How to include the Sparkle update library for easy updates
+* How to read information from your Info.plist file
 
 The app is written using [Swift](https://developer.apple.com/swift/) and [SwiftUI](https://developer.apple.com/xcode/swiftui/) and is currently targeting macOS 12 (Monterey) and greater.

@@ -2,6 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>KyanLinks</key>
+	<dict>
+		<key>Handbook</key>
+		<string>https://handbook.kyan.com</string>
+		<key>Holiday</key>
+		<string>https://app.timetastic.co.uk/wallchart</string>
+		<key>Jukebox</key>
+		<string>http://jukebox.kyan.com</string>
+		<key>Lattice</key>
+		<string>https://kyan.latticehq.com</string>
+	</dict>
 	<key>LSUIElement</key>
 	<true/>
 	<key>SUEnableInstallerLauncherService</key>
