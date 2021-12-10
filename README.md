@@ -20,3 +20,23 @@ It's also acts as a bit of a template for building apps that run in the status b
 * How to read information from your Info.plist file
 
 The app is written using [Swift](https://developer.apple.com/swift/) and [SwiftUI](https://developer.apple.com/xcode/swiftui/) and is currently targeting macOS 12 (Monterey) and greater.
+
+## Build
+
+* Choose Product -> Archive
+* Go to Window -> Organizer
+* Choose your app and click Distribute App
+* Choose Developer ID from list and then Next
+* Choose Upload (to send to Notary service) and then Next
+* Once you get a Ready to distribute status
+* Choose your app and click Export Notorized App
+* Export to `builds` folder in the repo
+* You can now zip up the app for distribution
+
+### To update the `appcast.xml` file
+
+```
+./Pods/Sparkle/bin/generate_appcast builds/
+```
+
+This will create an updated `appcast.xml` which you can use in the root of the project. You may need to change the `enclosure:url` to point to where the application zip has been uploaded to.
