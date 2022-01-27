@@ -1,11 +1,15 @@
 {
+  "spotify": "https://open.spotify.com/track/73H5jxtNuncvfrfBuLcItL",
   "title": "Hotel California - 2013 Remaster",
   "artist": "Eagles",
-  "album": "Hotel California (2013 Remaster) (1976)",
-  "image": "https://i.scdn.co/image/ab67616d0000b2734637341b9f507521afa9a778",
-  "rating": "Rating: 2",
-  "voted_by": "Voted by: 4 users",
-  "played": "Played: 63 times",
-  "last_played": "Last Played: 2 days ago",
-  "added_by": "Added by BRH 10 minutes ago"
+  "album": "Hotel California (2013 Remaster)",
+  "year": "1976",
+  "image": "https://i.scdn.co/image/ab67616d0000b273db01d8ba247c49baaa189935",
+  "metrics": {
+    "rating" :-5,
+    "votes" :0,
+    "plays" :1},
+  "added_by": "Duncan Robertson",
+  "added_at": "5 minutes ago",
+  "last_played": null
 }
