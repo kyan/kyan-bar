@@ -3,6 +3,14 @@
   <channel>
     <title>KyanBar</title>
     <item>
+        <title>2.2.0</title>
+        <pubDate>Mon, 31 Jan 2022 12:46:46 +0000</pubDate>
+        <sparkle:version>8</sparkle:version>
+        <sparkle:shortVersionString>2.2.0</sparkle:shortVersionString>
+        <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+        <enclosure url="https://github.com/kyan/kyan_bar/releases/download/2.2.0/KyanBar.2.2.0.zip" length="1541108" type="application/octet-stream" sparkle:edSignature="ys/3AmGgiQKTLuh0F7bVbMJ9I3jEBEJYi7WxImjiGlCKO79BzPeTWHYXaqEbzsfCVF1YcERAsntZw6HAzGuwAQ=="/>
+    </item>
+    <item>
       <title>2.1.0</title>
       <pubDate>Fri, 10 Dec 2021 11:36:43 +0000</pubDate>
       <sparkle:version>7</sparkle:version>
