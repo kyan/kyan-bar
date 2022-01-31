@@ -25,7 +25,7 @@ struct TrackView: View {
         Text(track.title)
           .fontWeight(.bold)
           .fixedSize(horizontal: false, vertical: true)
-        Text(track.album)
+        Text("\(track.album) (\(track.year))")
         Text(track.artist).fontWeight(.light)
       }
       .font(.system(.footnote, design: .rounded))
