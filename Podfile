@@ -1,6 +1,6 @@
-platform :osx, '10.13'
+platform :osx, '15'
 use_frameworks!
 
 target 'KyanBar' do
-  pod 'Sparkle', '2.0.0-beta.5'
+  pod 'Sparkle', '2.6.4'
 end
