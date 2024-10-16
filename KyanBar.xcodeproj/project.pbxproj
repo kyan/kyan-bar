@@ -3,11 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		93D9A91A2DB59AE70A56BE74 /* Pods_KyanBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2ED83881F1DDC9EEEB55330 /* Pods_KyanBar.framework */; };
+		15A50ECE2060699B42D1A009 /* Pods_KyanBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F4C336C7A13657FC0E176D /* Pods_KyanBar.framework */; };
 		AE6D30EC2747C9E7000FA32C /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = AE6D30EB2747C9E7000FA32C /* Credits.html */; };
 		AEFB5212273444BF0068CCFA /* KyanBarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFB5211273444BF0068CCFA /* KyanBarApp.swift */; };
 		AEFB5214273444BF0068CCFA /* NowPlayingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFB5213273444BF0068CCFA /* NowPlayingView.swift */; };
@@ -42,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		71F4C336C7A13657FC0E176D /* Pods_KyanBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KyanBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99F83A5DBDC80E1421D94CDD /* Pods-KyanBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KyanBar.release.xcconfig"; path = "Target Support Files/Pods-KyanBar/Pods-KyanBar.release.xcconfig"; sourceTree = "<group>"; };
 		A89DE6E589C4FE41015EFBE7 /* Pods-KyanBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KyanBar.debug.xcconfig"; path = "Target Support Files/Pods-KyanBar/Pods-KyanBar.debug.xcconfig"; sourceTree = "<group>"; };
 		AE6D30EB2747C9E7000FA32C /* Credits.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Credits.html; sourceTree = "<group>"; };
@@ -63,7 +64,6 @@
 		D2CB7C3527486DEA0077B9E0 /* TrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackView.swift; sourceTree = "<group>"; };
 		D2CB7C3727486E8B0077B9E0 /* exampleTrack.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = exampleTrack.json; sourceTree = "<group>"; };
 		D2CB7C3927486EB00077B9E0 /* Track+example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Track+example.swift"; sourceTree = "<group>"; };
-		D2ED83881F1DDC9EEEB55330 /* Pods_KyanBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KyanBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93D9A91A2DB59AE70A56BE74 /* Pods_KyanBar.framework in Frameworks */,
+				15A50ECE2060699B42D1A009 /* Pods_KyanBar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +104,7 @@
 		84B41285DB72078616A85137 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D2ED83881F1DDC9EEEB55330 /* Pods_KyanBar.framework */,
+				71F4C336C7A13657FC0E176D /* Pods_KyanBar.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -258,7 +258,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1310;
-				LastUpgradeCheck = 1310;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					AEFB520D273444BF0068CCFA = {
 						CreatedOnToolsVersion = 13.1;
@@ -274,7 +274,7 @@
 				};
 			};
 			buildConfigurationList = AEFB5209273444BF0068CCFA /* Build configuration list for PBXProject "KyanBar" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -445,9 +445,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -506,9 +508,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -534,9 +538,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = KyanBar/KyanBar.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"KyanBar/Preview Content\"";
 				DEVELOPMENT_TEAM = 9QTT9CVFB6;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -549,7 +555,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 2.2.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 2.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kyan.KyanBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -565,9 +572,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = KyanBar/KyanBar.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"KyanBar/Preview Content\"";
 				DEVELOPMENT_TEAM = 9QTT9CVFB6;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -580,7 +589,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 2.2.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 2.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kyan.KyanBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -591,11 +601,11 @@
 		AEFB5237273444C20068CCFA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -615,11 +625,11 @@
 		AEFB5238273444C20068CCFA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -639,10 +649,10 @@
 		AEFB523A273444C20068CCFA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -661,10 +671,10 @@
 		AEFB523B273444C20068CCFA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
